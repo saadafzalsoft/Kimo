@@ -1,0 +1,1647 @@
+/* ==========================================================================
+   Kino Deodorant - Ultra-Premium Lymphoria Landing Page
+   ========================================================================== */
+
+:root {
+  --kino-navy: #0e1b4d;
+  --kino-navy-dark: #081131;
+  --kino-navy-light: #1e3a8a;
+  --kino-teal: #0f766e;
+  --kino-teal-dark: #0d5d57;
+  --kino-teal-light: #f0fdfa;
+  --kino-green: #059669;
+  --kino-green-light: #ecfdf5;
+  --kino-dark-text: #0f172a;
+  --kino-body-text: #475569;
+  --kino-light-bg: #f8fafc;
+  --kino-border: #e2e8f0;
+  --kino-gold: #f59e0b;
+  --kino-radius-sm: 8px;
+  --kino-radius-md: 12px;
+  --kino-radius-lg: 18px;
+  --kino-radius-pill: 9999px;
+  --kino-shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.05);
+  --kino-shadow-md: 0 6px 20px rgba(15, 23, 42, 0.07);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+.kino-lymph-wrap {
+  font-family: var(--font-body-family, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+  color: var(--kino-dark-text);
+  background-color: #ffffff;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+/* ================= 1. HERO SECTION ================= */
+.kino-l-hero {
+  padding: 30px 20px 50px;
+  background: #ffffff;
+}
+.kino-l-hero-grid {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 44px;
+  align-items: start;
+}
+
+/* Gallery (Left Column) - PROPERLY PROPORTIONED & RESPONSIVE */
+.kino-l-gallery-container {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  position: sticky;
+  top: 80px;
+}
+.kino-l-media-card {
+  position: relative;
+  border-radius: var(--kino-radius-lg);
+  overflow: hidden;
+  background-color: #fafbfc;
+  border: 1px solid var(--kino-border);
+  box-shadow: var(--kino-shadow-md);
+  max-height: 480px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  padding: 0;
+  box-sizing: border-box;
+}
+.kino-l-media-split {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.kino-l-media-main-img-box {
+  flex: 1 1 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  overflow: hidden;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.kino-l-main-img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: opacity 0.25s ease;
+}
+
+/* Feature Pillar Strip on Hero Product Card (Exact Match to Design Screenshot) */
+.kino-l-media-pillar {
+  width: 96px;
+  background-color: var(--kino-navy);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 24px 8px;
+  text-align: center;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+.kino-l-pillar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.kino-l-pillar-item i {
+  font-size: 20px;
+  color: #38bdf8;
+}
+.kino-l-pillar-item span {
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* Floating Bestseller Badge */
+.kino-l-float-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: var(--kino-navy);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: var(--kino-radius-pill);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.kino-l-float-badge i {
+  color: var(--kino-gold);
+  font-size: 11px;
+}
+
+/* Thumbs */
+.kino-l-thumbs-wrap {
+  margin-top: 14px;
+}
+.kino-l-thumbs-row {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 2px 2px 6px;
+  scrollbar-width: thin;
+}
+.kino-l-thumb {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--kino-radius-sm);
+  border: 2px solid #e2e8f0;
+  cursor: pointer;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-color: #ffffff;
+  transition: all 0.2s ease;
+}
+.kino-l-thumb.active,
+.kino-l-thumb:hover {
+  border-color: var(--kino-navy);
+}
+.kino-l-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 4 Trust Badges Under Gallery (FontAwesome Powered) */
+.kino-l-media-trust-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 16px;
+}
+.kino-l-media-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #ffffff;
+  border: 1px solid var(--kino-border);
+  padding: 10px 12px;
+  border-radius: var(--kino-radius-sm);
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--kino-navy);
+}
+.kino-l-media-trust-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--kino-teal-light);
+  color: var(--kino-teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+/* Buybox (Right Column) */
+.kino-l-buybox {
+  display: flex;
+  flex-direction: column;
+}
+.kino-l-social-proof {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.kino-l-stars {
+  color: var(--kino-gold);
+  font-size: 14px;
+  display: flex;
+  gap: 2px;
+}
+.kino-l-rating-txt {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--kino-dark-text);
+}
+.kino-l-verified-tag {
+  background-color: var(--kino-green-light);
+  color: var(--kino-green);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--kino-radius-pill);
+}
+
+.kino-l-title {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 8px;
+  color: var(--kino-navy);
+}
+.kino-l-subtitle {
+  font-size: 15px;
+  color: #334155;
+  margin: 0 0 18px;
+  line-height: 1.5;
+}
+
+/* Bundle Option Rows */
+.kino-l-bundle-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.kino-l-bundle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid var(--kino-border);
+  border-radius: var(--kino-radius-md);
+  padding: 12px 16px;
+  cursor: pointer;
+  background-color: #ffffff;
+  position: relative;
+  transition: all 0.2s ease;
+}
+.kino-l-bundle-row:hover {
+  border-color: #94a3b8;
+}
+.kino-l-bundle-row.active {
+  border-color: var(--kino-navy);
+  background: #f8fafc;
+  box-shadow: 0 4px 14px rgba(14, 27, 77, 0.08);
+}
+.kino-l-bundle-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.kino-l-bundle-radio {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #cbd5e1;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.kino-l-bundle-row.active .kino-l-bundle-radio {
+  border-color: var(--kino-navy);
+  background-color: var(--kino-navy);
+}
+.kino-l-bundle-radio::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: none;
+}
+.kino-l-bundle-row.active .kino-l-bundle-radio::after {
+  display: block;
+}
+.kino-l-bundle-thumb-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--kino-radius-sm);
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 1px solid var(--kino-border);
+}
+.kino-l-bundle-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.kino-l-bundle-info {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+.kino-l-bundle-name {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--kino-navy);
+  line-height: 1.25;
+}
+.kino-l-bundle-subtext {
+  font-size: 13px;
+  color: #475569;
+  font-weight: 500;
+  margin-top: 3px;
+}
+.kino-l-bundle-right {
+  text-align: right;
+  flex-shrink: 0;
+}
+.kino-l-bundle-price {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--kino-dark-text);
+}
+.kino-l-bundle-compare {
+  font-size: 13.5px;
+  color: #94a3b8;
+  text-decoration: line-through;
+  margin-right: 4px;
+}
+.kino-l-savings-pill {
+  display: inline-block;
+  background-color: var(--kino-green-light);
+  color: var(--kino-green);
+  font-size: 11.5px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+.kino-l-badge-popular {
+  position: absolute;
+  top: -10px;
+  right: 16px;
+  background: var(--kino-navy);
+  color: #ffffff;
+  font-size: 9.5px;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: var(--kino-radius-pill);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+.kino-l-badge-popular.best-value {
+  background: #059669;
+}
+
+/* Bonus Box */
+.kino-l-bonus-box {
+  background: #f0fdf4;
+  border: 1px dashed #86efac;
+  border-radius: var(--kino-radius-sm);
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 16px;
+}
+.kino-l-bonus-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #166534;
+}
+.kino-l-bonus-item i {
+  color: #059669;
+  font-size: 13px;
+}
+
+/* Purchase Mode */
+.kino-l-mode-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.kino-l-mode-label {
+  border: 1.5px solid var(--kino-border);
+  border-radius: var(--kino-radius-sm);
+  padding: 10px 12px;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  background: #ffffff;
+  transition: all 0.2s;
+  color: var(--kino-body-text);
+}
+.kino-l-mode-label.active,
+.kino-l-mode-label:has(input:checked) {
+  border-color: var(--kino-navy);
+  background-color: #f8fafc;
+  color: var(--kino-navy);
+}
+
+/* ATC Button */
+.kino-l-atc-btn {
+  width: 100%;
+  background: var(--kino-teal);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--kino-radius-sm);
+  padding: 16px 20px;
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(15, 118, 110, 0.35);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.kino-l-atc-btn:hover {
+  background: var(--kino-teal-dark);
+}
+
+/* ================= 2. OFFICIAL REAL PAYMENT ICONS ================= */
+.kino-payment-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0 18px;
+}
+.kino-payment-icons .kino-pay-icon,
+.kino-payment-icons svg {
+  height: 24px !important;
+  width: 38px !important;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+/* In-Hero Mini Accordions */
+.kino-l-mini-accordions {
+  border-top: 1px solid var(--kino-border);
+  margin-top: 6px;
+}
+.kino-l-mini-item {
+  border-bottom: 1px solid var(--kino-border);
+}
+.kino-l-mini-trigger {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 12px 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--kino-dark-text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.kino-l-mini-body {
+  display: none;
+  padding: 0 0 12px;
+  font-size: 13px;
+  color: var(--kino-body-text);
+  line-height: 1.5;
+}
+.kino-l-mini-item.active .kino-l-mini-body {
+  display: block;
+}
+.kino-l-mini-item.active .kino-l-mini-icon {
+  transform: rotate(45deg);
+}
+.kino-l-mini-icon {
+  font-size: 16px;
+  font-weight: 400;
+  transition: transform 0.2s;
+  color: var(--kino-navy);
+}
+
+/* ================= 3. LIFESTYLE (4 CARDS) ================= */
+.kino-l-lifestyle-sec {
+  padding: 60px 20px;
+  background-color: #f0fdfa;
+  text-align: center;
+}
+.kino-l-lifestyle-grid {
+  max-width: 1180px;
+  margin: 36px auto 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.kino-l-lifestyle-card {
+  background: #ffffff;
+  border-radius: var(--kino-radius-md);
+  overflow: hidden;
+  box-shadow: var(--kino-shadow-sm);
+  text-align: left;
+  border: 1px solid #ccfbf1;
+}
+.kino-l-lifestyle-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background-color: #e2e8f0;
+}
+.kino-l-lifestyle-content {
+  padding: 16px;
+}
+.kino-l-lifestyle-title {
+  font-size: 16px;
+  font-weight: 800;
+  margin: 0 0 6px;
+  color: var(--kino-navy);
+}
+.kino-l-lifestyle-desc {
+  font-size: 12.5px;
+  color: var(--kino-body-text);
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* ================= 4. REAL REVIEWS SLIDER ================= */
+.kino-l-reviews-sec {
+  padding: 70px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+.kino-slider-container {
+  max-width: 1180px;
+  margin: 36px auto 0;
+  position: relative;
+  overflow: hidden;
+}
+.kino-slider-track {
+  display: flex;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+.kino-review-slide {
+  flex: 0 0 calc(33.333% - 16px);
+  margin: 0 8px;
+  background: #ffffff;
+  border: 1px solid #ccfbf1;
+  border-radius: var(--kino-radius-md);
+  padding: 24px 20px;
+  text-align: left;
+  box-shadow: var(--kino-shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.kino-review-slide-top {
+  margin-bottom: 14px;
+}
+.kino-review-stars {
+  color: var(--kino-gold);
+  font-size: 13px;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 3px;
+}
+.kino-review-quote-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--kino-navy);
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
+.kino-review-quote-body {
+  font-size: 13.5px;
+  color: var(--kino-body-text);
+  line-height: 1.55;
+  margin: 0;
+}
+.kino-review-slide-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 12px;
+  margin-top: 14px;
+}
+.kino-reviewer-meta {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--kino-navy);
+}
+.kino-reviewer-badge {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--kino-teal);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Slider Controls */
+.kino-slider-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 26px;
+}
+.kino-slider-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--kino-border);
+  background: #ffffff;
+  color: var(--kino-navy);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+.kino-slider-btn:hover {
+  background: var(--kino-navy);
+  color: #ffffff;
+  border-color: var(--kino-navy);
+}
+.kino-slider-dots {
+  display: flex;
+  gap: 8px;
+}
+.kino-slider-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #cbd5e1;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.kino-slider-dot.active {
+  background-color: var(--kino-navy);
+  width: 22px;
+  border-radius: var(--kino-radius-pill);
+}
+
+/* ================= 5. DARK TRUST BANNER ================= */
+.kino-l-dark-trust {
+  padding: 50px 20px;
+  background: linear-gradient(135deg, var(--kino-navy-dark) 0%, var(--kino-navy) 100%);
+  color: #ffffff;
+  text-align: center;
+}
+.kino-l-dark-trust h2 {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0 0 24px;
+  color: #ffffff;
+}
+.kino-l-dark-pills {
+  max-width: 940px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+.kino-l-dark-pill {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  padding: 10px 20px;
+  border-radius: var(--kino-radius-pill);
+  font-size: 13.5px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.kino-l-dark-pill i {
+  color: #34d399;
+}
+
+/* ================= 6. BOTANICALS SECTION WITH ANIMATED GIF ================= */
+.kino-l-botanicals-sec {
+  padding: 70px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+.kino-l-spoke-wrap {
+  max-width: 1080px;
+  margin: 40px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  align-items: center;
+}
+.kino-l-gif-container {
+  border-radius: var(--kino-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--kino-shadow-md);
+  border: 1px solid var(--kino-border);
+  background: #fafbfc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.kino-l-gif-img {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: cover;
+}
+.kino-l-ingr-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  text-align: left;
+}
+.kino-l-ingr-card {
+  border: 1px solid var(--kino-border);
+  border-radius: var(--kino-radius-md);
+  padding: 18px;
+  background: #f8fafc;
+  transition: transform 0.2s;
+}
+.kino-l-ingr-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--kino-teal);
+}
+.kino-l-ingr-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.kino-l-ingr-icon-box {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #e6fffa;
+  color: var(--kino-teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+.kino-l-ingr-name {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--kino-navy);
+  margin: 0;
+}
+.kino-l-ingr-desc {
+  font-size: 12.5px;
+  color: var(--kino-body-text);
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* ================= 7. 5 REASONS PEOPLE CHOOSE KINO ================= */
+.kino-l-reasons-sec {
+  padding: 60px 20px;
+  background-color: #f0fdfa;
+  text-align: center;
+}
+.kino-l-reasons-grid {
+  max-width: 1100px;
+  margin: 36px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.kino-l-reason-card {
+  background: #ffffff;
+  border-radius: var(--kino-radius-md);
+  overflow: hidden;
+  box-shadow: var(--kino-shadow-sm);
+  text-align: left;
+  border: 1px solid #ccfbf1;
+}
+.kino-l-reason-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background-color: #e2e8f0;
+}
+.kino-l-reason-body {
+  padding: 18px;
+}
+.kino-l-reason-pill {
+  display: inline-block;
+  background-color: var(--kino-navy);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.kino-l-reason-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--kino-navy);
+  margin: 0 0 6px;
+}
+.kino-l-reason-desc {
+  font-size: 12.5px;
+  color: var(--kino-body-text);
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* ================= 8. COMPARISON TABLE WITH UNIQUE PROPS PHOTO ================= */
+.kino-l-compare-sec {
+  padding: 70px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+.kino-l-compare-wrap {
+  max-width: 1050px;
+  margin: 36px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 36px;
+  align-items: center;
+  text-align: left;
+}
+.kino-l-compare-photo {
+  width: 100%;
+  border-radius: var(--kino-radius-md);
+  box-shadow: var(--kino-shadow-md);
+  object-fit: cover;
+  max-height: 400px;
+}
+.kino-l-compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: var(--kino-radius-md);
+  overflow: hidden;
+  box-shadow: var(--kino-shadow-md);
+  border: 1px solid var(--kino-border);
+}
+.kino-l-compare-table th {
+  padding: 14px 18px;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  background-color: #f1f5f9;
+}
+.kino-l-compare-table th.col-brand {
+  background-color: var(--kino-navy);
+  color: #ffffff;
+  text-align: center;
+}
+.kino-l-compare-table th.col-others {
+  text-align: center;
+  background-color: #f8fafc;
+}
+.kino-l-compare-table td {
+  padding: 12px 18px;
+  font-size: 13.5px;
+  border-bottom: 1px solid var(--kino-border);
+  vertical-align: middle;
+}
+.kino-l-compare-table td.col-brand {
+  background-color: #eff6ff;
+  color: var(--kino-navy);
+  font-weight: 700;
+  text-align: center;
+}
+.kino-l-compare-table td.col-others {
+  text-align: center;
+  color: #94a3b8;
+}
+
+/* ================= 9. DARK FAQ ================= */
+.kino-l-dark-faq {
+  padding: 70px 20px;
+  background: linear-gradient(180deg, var(--kino-navy-dark) 0%, var(--kino-navy) 100%);
+  color: #ffffff;
+  text-align: center;
+}
+.kino-l-dark-faq h2 {
+  font-size: 30px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 36px;
+}
+.kino-l-faq-2col {
+  max-width: 1050px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  text-align: left;
+}
+.kino-l-faq-pill-item {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--kino-radius-md);
+  padding: 16px 18px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.kino-l-faq-pill-item.active {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+.kino-l-faq-pill-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.kino-l-faq-pill-body {
+  display: none;
+  font-size: 13px;
+  color: #cbd5e1;
+  line-height: 1.5;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.kino-l-faq-pill-item.active .kino-l-faq-pill-body {
+  display: block;
+}
+
+/* ================= 10. GUARANTEE BANNER ================= */
+.kino-l-guarantee-sec {
+  padding: 40px 20px 70px;
+  background-color: #ffffff;
+}
+.kino-l-guarantee-card {
+  max-width: 1050px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #047857 0%, #065f46 100%);
+  border-radius: var(--kino-radius-lg);
+  padding: 36px 40px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.kino-l-guar-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 650px;
+}
+.kino-l-guar-badge-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+.kino-l-guar-title {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0 0 6px;
+  color: #ffffff;
+}
+.kino-l-guar-text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #d1fae5;
+  margin: 0;
+}
+.kino-l-guar-img {
+  width: 160px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ================= RESPONSIVE SYSTEM ================= */
+
+/* Tablet (<= 991px) */
+@media (max-width: 991px) {
+  .kino-l-hero-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    gap: 20px !important;
+  }
+  .kino-l-spoke-wrap,
+  .kino-l-compare-wrap {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .kino-l-gallery-container {
+    position: static !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+  .kino-l-buybox {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+  .kino-review-slide {
+    flex: 0 0 calc(50% - 16px);
+  }
+  .kino-l-lifestyle-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile Devices (<= 768px) */
+@media (max-width: 768px) {
+  /* Hero Section */
+  .kino-l-hero {
+    padding: 10px 8px 24px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+  .kino-l-hero-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Gallery Container */
+  .kino-l-gallery-container {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+  }
+  .kino-l-media-card {
+    max-height: 310px !important;
+    padding: 0 !important;
+    border-radius: 12px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .kino-l-media-pillar {
+    display: none !important;
+  }
+  .kino-l-media-main-img-box {
+    width: 100% !important;
+    padding: 6px !important;
+    height: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .kino-l-main-img {
+    max-height: 285px !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+  }
+  .kino-l-float-badge {
+    top: 8px !important;
+    left: 8px !important;
+    font-size: 9px !important;
+    padding: 3px 8px !important;
+  }
+
+  /* Thumbnails Container & Row (Strictly Horizontally Contained!) */
+  .kino-l-thumbs-wrap {
+    margin-top: 8px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+  .kino-l-thumbs-row {
+    display: flex !important;
+    gap: 6px !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 2px 0 4px !important;
+    scrollbar-width: none !important;
+  }
+  .kino-l-thumbs-row::-webkit-scrollbar {
+    display: none !important;
+  }
+  .kino-l-thumb {
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 6px !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* 4 Media Trust Badges (2 Columns, Never Overflowing) */
+  .kino-l-media-trust-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 7px !important;
+    margin-top: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+  .kino-l-media-trust-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 7px !important;
+    padding: 8px 8px !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    border-radius: 8px !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+  .kino-l-media-trust-item span {
+    white-space: normal !important;
+    line-height: 1.2 !important;
+    word-break: break-word !important;
+    min-width: 0 !important;
+  }
+  .kino-l-media-trust-icon {
+    width: 20px !important;
+    height: 20px !important;
+    font-size: 11px !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Buybox */
+  .kino-l-buybox {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    margin-top: 10px !important;
+  }
+  .kino-l-social-proof {
+    margin: 4px 0 6px !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+  .kino-l-stars {
+    font-size: 13.5px !important;
+  }
+  .kino-l-rating-txt {
+    font-size: 13px !important;
+    font-weight: 700 !important;
+  }
+  .kino-l-verified-tag {
+    font-size: 11px !important;
+    padding: 3px 7px !important;
+  }
+  .kino-l-title {
+    font-size: 23px !important;
+    line-height: 1.25 !important;
+    margin: 0 0 6px !important;
+    word-break: break-word !important;
+  }
+  .kino-l-subtitle {
+    font-size: 14px !important;
+    margin: 0 0 12px !important;
+    line-height: 1.45 !important;
+    color: #334155 !important;
+    word-break: break-word !important;
+  }
+
+  /* Bundle Rows (Zero Clipping, 100% Visible Prices) */
+  .kino-l-bundle-rows {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 9px !important;
+    margin-bottom: 12px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+  .kino-l-bundle-row {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 11px 10px !important;
+    border-radius: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+  }
+  .kino-l-bundle-left {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+    overflow: hidden !important;
+  }
+  .kino-l-bundle-info,
+  .kino-l-bundle-left > div:last-child {
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+    overflow: hidden !important;
+  }
+  .kino-l-bundle-radio {
+    width: 18px !important;
+    height: 18px !important;
+    flex-shrink: 0 !important;
+  }
+  .kino-l-bundle-thumb-wrap {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 6px !important;
+    flex-shrink: 0 !important;
+  }
+  .kino-l-bundle-name {
+    font-size: 14px !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+    color: var(--kino-navy) !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    word-break: normal !important;
+  }
+  .kino-l-bundle-subtext {
+    font-size: 11.5px !important;
+    line-height: 1.35 !important;
+    color: #475569 !important;
+    font-weight: 500 !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    margin-top: 3px !important;
+  }
+  .kino-l-bundle-right {
+    flex-shrink: 0 !important;
+    text-align: right !important;
+    padding-left: 8px !important;
+    margin-left: auto !important;
+  }
+  .kino-l-bundle-price {
+    font-size: 17.5px !important;
+    font-weight: 800 !important;
+    white-space: nowrap !important;
+  }
+  .kino-l-bundle-compare {
+    font-size: 12px !important;
+    margin-right: 3px !important;
+    white-space: nowrap !important;
+  }
+  .kino-l-savings-pill {
+    font-size: 10px !important;
+    font-weight: 800 !important;
+    padding: 3px 6px !important;
+    white-space: nowrap !important;
+  }
+  .kino-l-badge-popular {
+    top: -8px !important;
+    right: 8px !important;
+    font-size: 9px !important;
+    font-weight: 800 !important;
+    padding: 2px 8px !important;
+    letter-spacing: 0.3px !important;
+  }
+
+  /* Bonus Box (3 Columns) */
+  .kino-l-bonus-box {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 4px !important;
+    padding: 9px 4px !important;
+    margin-bottom: 12px !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+  .kino-l-bonus-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 3px !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+  }
+  .kino-l-bonus-item i {
+    font-size: 13px !important;
+    margin: 0 auto !important;
+  }
+
+  /* Purchase Mode Toggle */
+  .kino-l-mode-row {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+    margin-bottom: 12px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+  .kino-l-mode-label {
+    padding: 10px 6px !important;
+    font-size: 12.5px !important;
+    font-weight: 700 !important;
+    line-height: 1.25 !important;
+    text-align: center !important;
+  }
+
+  /* CTA Button & Payment Icons */
+  .kino-l-atc-btn {
+    padding: 15px 16px !important;
+    font-size: 16px !important;
+    font-weight: 800 !important;
+    border-radius: 8px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .kino-payment-icons {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+    margin: 10px 0 14px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .kino-payment-icons .kino-pay-icon,
+  .kino-payment-icons svg {
+    height: 18px !important;
+    width: 28px !important;
+  }
+
+  /* Mini Accordions */
+  .kino-l-mini-trigger {
+    padding: 11px 0 !important;
+    font-size: 14.5px !important;
+    font-weight: 800 !important;
+  }
+  .kino-l-mini-body {
+    font-size: 13.5px !important;
+    line-height: 1.5 !important;
+    color: #334155 !important;
+    padding: 0 0 12px !important;
+  }
+
+  /* Lifestyle Section */
+  .kino-l-lifestyle-sec {
+    padding: 30px 8px !important;
+  }
+  .kino-l-lifestyle-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    margin-top: 16px !important;
+  }
+  .kino-l-lifestyle-img {
+    height: 150px !important;
+  }
+
+  /* Reviews Slider */
+  .kino-l-reviews-sec {
+    padding: 30px 8px !important;
+  }
+  .kino-slider-container {
+    margin: 16px auto 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .kino-review-slide {
+    flex: 0 0 calc(100% - 16px) !important;
+    padding: 14px 12px !important;
+  }
+  .kino-review-quote-title {
+    font-size: 14px !important;
+  }
+  .kino-review-quote-body {
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+  }
+
+  /* Dark Trust Banner (2 Columns) */
+  .kino-l-dark-trust {
+    padding: 28px 8px !important;
+  }
+  .kino-l-dark-trust h2 {
+    font-size: 19px !important;
+    margin-bottom: 14px !important;
+  }
+  .kino-l-dark-pills {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 6px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+  }
+  .kino-l-dark-pill {
+    width: 100% !important;
+    justify-content: center !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    padding: 9px 8px !important;
+    white-space: normal !important;
+    line-height: 1.25 !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Botanicals with GIF */
+  .kino-l-botanicals-sec {
+    padding: 30px 8px !important;
+  }
+  .kino-l-spoke-wrap {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    margin-top: 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    align-items: center !important;
+  }
+  .kino-l-gif-container {
+    width: 100% !important;
+    max-width: 280px !important;
+    margin: 0 auto !important;
+    border-radius: 10px !important;
+  }
+  .kino-l-gif-img {
+    width: 100% !important;
+    max-height: 220px !important;
+    object-fit: contain !important;
+  }
+  .kino-l-ingr-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 7px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .kino-l-ingr-card {
+    padding: 10px 8px !important;
+    border-radius: 8px !important;
+  }
+  .kino-l-ingr-name {
+    font-size: 13px !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+  }
+  .kino-l-ingr-desc {
+    font-size: 11.5px !important;
+    line-height: 1.4 !important;
+    color: #334155 !important;
+  }
+  .kino-l-ingr-icon-box {
+    width: 26px !important;
+    height: 26px !important;
+    font-size: 12px !important;
+  }
+
+  /* 5 Reasons Section */
+  .kino-l-reasons-sec {
+    padding: 30px 8px !important;
+  }
+  .kino-l-reasons-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+    margin-top: 16px !important;
+  }
+  .kino-l-reason-img {
+    height: 150px !important;
+  }
+  .kino-l-reason-body h3 {
+    font-size: 16px !important;
+    font-weight: 800 !important;
+  }
+  .kino-l-reason-body p {
+    font-size: 13.5px !important;
+    line-height: 1.45 !important;
+  }
+
+  /* Comparison Section */
+  .kino-l-compare-sec {
+    padding: 30px 8px !important;
+  }
+  .kino-l-compare-wrap {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    margin-top: 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .kino-l-compare-photo {
+    max-height: 200px !important;
+  }
+  .kino-l-compare-table-container {
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    border-radius: 8px !important;
+  }
+  .kino-l-compare-table th {
+    padding: 9px 6px !important;
+    font-size: 11.5px !important;
+    font-weight: 800 !important;
+  }
+  .kino-l-compare-table td {
+    padding: 9px 6px !important;
+    font-size: 12px !important;
+  }
+
+  /* FAQ Section */
+  .kino-l-dark-faq {
+    padding: 32px 8px !important;
+  }
+  .kino-l-dark-faq h2 {
+    font-size: 22px !important;
+    margin-bottom: 14px !important;
+  }
+  .kino-l-faq-2col {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+  .kino-l-faq-pill-header {
+    padding: 12px 14px !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+  }
+  .kino-l-faq-pill-body {
+    padding: 0 14px 12px !important;
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+  }
+
+  /* Guarantee Section */
+  .kino-l-guarantee-sec {
+    padding: 24px 8px !important;
+  }
+  .kino-l-guarantee-card {
+    flex-direction: column !important;
+    text-align: center !important;
+    padding: 18px 12px !important;
+    gap: 12px !important;
+  }
+  .kino-l-guar-left {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+  .kino-l-guar-badge-icon {
+    margin: 0 auto !important;
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 18px !important;
+  }
+  .kino-l-guar-title {
+    font-size: 17px !important;
+    font-weight: 800 !important;
+  }
+  .kino-l-guar-text {
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+  }
+  .kino-l-guar-img {
+    max-width: 120px !important;
+    margin: 0 auto !important;
+  }
+}
