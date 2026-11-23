@@ -32,9 +32,13 @@
     }
 
     * { box-sizing: border-box; }
-    body {
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
       margin: 0;
       padding: 0;
+    }
+    body {
       font-family: var(--font-family);
       color: var(--kino-dark-text);
       background-color: #ffffff;
@@ -44,6 +48,8 @@
 
     /* Top Announcement Bar */
     .kino-top-bar {
+      width: 100%;
+      box-sizing: border-box;
       background-color: var(--kino-navy);
       color: #ffffff;
       text-align: center;
@@ -118,76 +124,105 @@
 
     .kino-hero-media-wrapper {
       position: relative;
+      width: 100%;
     }
     .kino-hero-media-card {
       background: var(--kino-dark-card);
       border-radius: 20px;
-      padding: 36px 24px 28px;
+      padding: 36px 20px;
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 500px;
+      min-height: 480px;
       overflow: hidden;
       box-shadow: 0 10px 30px rgba(11, 37, 69, 0.15);
+      width: 100%;
+      box-sizing: border-box;
     }
-    @media (max-width: 600px) {
-      .kino-hero-media-card { min-height: 380px; padding: 24px 16px; }
+    @media (max-width: 768px) {
+      .kino-hero-media-card {
+        min-height: 340px;
+        padding: 28px 16px;
+      }
+    }
+    @media (max-width: 480px) {
+      .kino-hero-media-card {
+        min-height: 290px;
+        padding: 24px 12px;
+      }
     }
     .kino-hero-save-badge {
       position: absolute;
-      top: 18px;
+      top: 16px;
       left: 50%;
       transform: translateX(-50%);
       border: 1.5px solid rgba(255, 255, 255, 0.85);
       color: #ffffff;
-      padding: 5px 22px;
+      padding: 5px 20px;
       border-radius: 9999px;
-      font-size: 13.5px;
+      font-size: 13px;
       font-weight: 800;
-      letter-spacing: 1px;
+      letter-spacing: 0.8px;
       text-transform: uppercase;
-      background: rgba(11, 37, 69, 0.4);
+      background: rgba(11, 37, 69, 0.5);
       backdrop-filter: blur(4px);
       z-index: 2;
+      white-space: nowrap;
     }
     .kino-hero-img {
-      max-width: 86%;
-      max-height: 420px;
+      max-width: 90%;
+      max-height: 400px;
       object-fit: contain;
       filter: drop-shadow(0 20px 30px rgba(0,0,0,0.35));
       transition: transform 0.3s ease;
+      display: block;
+      margin: 0 auto;
     }
-    @media (max-width: 600px) {
-      .kino-hero-img { max-height: 310px; max-width: 92%; }
+    @media (max-width: 768px) {
+      .kino-hero-img { max-height: 280px; max-width: 92%; }
+    }
+    @media (max-width: 480px) {
+      .kino-hero-img { max-height: 230px; max-width: 94%; }
     }
 
-    /* Vertical Thumbnail Strip (Desktop) / Horizontal (Mobile) */
-    .kino-gallery-thumbs {
-      position: absolute;
-      right: 14px;
-      top: 50%;
-      transform: translateY(-50%);
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      z-index: 3;
+    /* Thumbnail Gallery Scroll Strip - 100% Responsive Below Card */
+    .kino-gallery-thumbs-wrapper {
+      width: 100%;
+      margin-top: 14px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(11, 37, 69, 0.25) transparent;
+      padding: 2px 2px 8px;
+      box-sizing: border-box;
     }
-    @media (max-width: 600px) {
+    .kino-gallery-thumbs-wrapper::-webkit-scrollbar {
+      height: 6px;
+    }
+    .kino-gallery-thumbs-wrapper::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 3px;
+    }
+    .kino-gallery-thumbs {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: center;
+      justify-content: flex-start;
+      width: max-content;
+      margin: 0 auto;
+    }
+    @media (max-width: 860px) {
       .kino-gallery-thumbs {
-        position: static;
-        transform: none;
-        flex-direction: row;
-        overflow-x: auto;
-        padding-top: 12px;
-        justify-content: flex-start;
+        margin: 0;
       }
     }
     .kino-thumb-item {
-      width: 58px;
-      height: 58px;
-      border-radius: 10px;
-      border: 2px solid rgba(255, 255, 255, 0.35);
+      width: 62px;
+      height: 62px;
+      border-radius: 12px;
+      border: 2px solid #e2e8f0;
       background: #ffffff;
       overflow: hidden;
       cursor: pointer;
@@ -195,13 +230,21 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 2px;
+      padding: 3px;
       flex-shrink: 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+    @media (max-width: 480px) {
+      .kino-thumb-item {
+        width: 54px;
+        height: 54px;
+        border-radius: 10px;
+      }
     }
     .kino-thumb-item.active, .kino-thumb-item:hover {
-      border-color: #34d399;
-      transform: scale(1.05);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+      border-color: #0b7a6f;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(11, 122, 111, 0.25);
     }
     .kino-thumb-item img {
       width: 100%;
@@ -1285,6 +1328,7 @@
       
       <!-- LEFT: Hero Media Card & Urgency Row -->
       <div class="kino-hero-media-wrapper">
+        <!-- Main Media Display Card -->
         <div class="kino-hero-media-card">
           <div class="kino-hero-save-badge" id="kinoTopSaveBadge">SAVE $39.99</div>
           
@@ -1295,8 +1339,10 @@
             src="assets/kino-bundle-hero.png"
             alt="Kino Whole Body Cream Deodorant Bundle"
           >
+        </div>
 
-          <!-- Thumbnails Column on Right Side of Image -->
+        <!-- Fully Responsive Thumbnail Scroll Strip (Outside Main Card) -->
+        <div class="kino-gallery-thumbs-wrapper">
           <div class="kino-gallery-thumbs">
             <div class="kino-thumb-item active" data-src="assets/kino-bundle-hero.png">
               <img src="assets/kino-bundle-hero.png" alt="Hero Bundle with Free Gifts">
