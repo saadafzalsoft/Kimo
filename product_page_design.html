@@ -1476,21 +1476,76 @@
       }
 
       .kino-trust-section {
-        padding: 32px 16px;
-        border-radius: 16px;
+        padding: 36px 16px 40px;
+        border-radius: 20px;
         margin: 36px 0;
       }
       .kino-trust-title {
-        font-size: 24px;
+        font-size: 26px;
+        font-weight: 800;
+        margin-bottom: 24px;
       }
       .kino-trust-row1 {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         gap: 10px;
+        margin-bottom: 12px;
+      }
+      .kino-trust-pill {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 18px 8px 14px;
+        border-radius: 14px;
+        min-height: auto;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        box-sizing: border-box;
+      }
+      .kino-trust-pill i {
+        font-size: 28px;
+        color: #34d399 !important;
+      }
+      .kino-trust-pill span {
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 1.25;
+        color: #ffffff !important;
+      }
+      .kino-trust-row2 {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
       }
       .kino-trust-pill-wide {
-        border-radius: 16px;
-        padding: 12px 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 18px 16px 16px;
+        border-radius: 14px;
+        width: 100%;
+        max-width: 220px;
+        min-height: auto;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        margin: 0 auto;
+        box-sizing: border-box;
+      }
+      .kino-trust-pill-wide i {
+        font-size: 30px;
+        color: #34d399 !important;
+      }
+      .kino-trust-pill-wide span {
         font-size: 13px;
+        font-weight: 700;
+        line-height: 1.35;
+        color: #ffffff !important;
       }
 
       .kino-botanicals-section {
