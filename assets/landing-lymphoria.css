@@ -90,15 +90,22 @@
 
     /* Global Container */
     .kino-container {
-      max-width: 1180px;
+      max-width: 1240px;
       margin: 0 auto;
       padding: 24px 20px 60px;
+      box-sizing: border-box;
+      width: 100%;
+    }
+    @media (max-width: 600px) {
+      .kino-container {
+        padding: 14px 12px 48px;
+      }
     }
 
     /* ================= 1. HERO PRODUCT BUY BOX ================= */
     .kino-hero-grid {
       display: grid;
-      grid-template-columns: 0.8fr 1.2fr;
+      grid-template-columns: 0.72fr 1.28fr;
       gap: 36px;
       align-items: start;
     }
@@ -120,12 +127,12 @@
     .kino-hero-media-card {
       background: var(--kino-dark-card);
       border-radius: 20px;
-      padding: 36px 20px;
+      padding: 28px 16px;
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 480px;
+      min-height: 440px;
       overflow: hidden;
       box-shadow: 0 10px 30px rgba(11, 37, 69, 0.15);
       width: 100%;
@@ -426,7 +433,9 @@
     .kino-bundle-left {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
+      flex: 1;
+      min-width: 0;
     }
     .kino-bundle-thumb {
       width: 52px;
@@ -447,10 +456,11 @@
       object-fit: contain;
     }
     .kino-bundle-name {
-      font-size: 15px;
+      font-size: 14.5px;
       font-weight: 800;
       color: var(--kino-dark-text);
-      line-height: 1.3;
+      line-height: 1.25;
+      word-break: normal;
     }
     .kino-bundle-save-pill {
       font-size: 13px;
@@ -458,7 +468,12 @@
       font-weight: 700;
       margin-top: 3px;
     }
-    .kino-bundle-right { text-align: right; }
+    .kino-bundle-right {
+      text-align: right;
+      flex-shrink: 0;
+      white-space: nowrap;
+      min-width: 68px;
+    }
     .kino-bundle-price {
       font-size: 18.5px;
       font-weight: 800;
@@ -625,6 +640,22 @@
       transform: translateY(-1px);
     }
     .kino-main-atc-btn:active { transform: translateY(1px); }
+
+    
+    @media (max-width: 600px) {
+      .kino-bundle-card { padding: 12px 10px; }
+      .kino-bundle-thumb { width: 44px; height: 44px; }
+      .kino-bundle-name { font-size: 13.5px; }
+      .kino-bundle-price { font-size: 16.5px; }
+      .kino-bundle-compare { font-size: 12px; }
+      .kino-bundle-save-pill { font-size: 11.5px; }
+      .kino-bundle-feature-row { font-size: 11.5px; gap: 4px; }
+      .kino-product-title { font-size: 23px; line-height: 1.25; }
+      .kino-benefit-bullets { margin: 12px 0 16px; }
+      .kino-bullet-item { font-size: 13px; }
+      .kino-hero-media-card { min-height: 270px; padding: 20px 10px; }
+      .kino-hero-img { max-height: 230px; }
+    }
 
     /* 100% Real Payment Card Images */
     .kino-payment-row {
