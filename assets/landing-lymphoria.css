@@ -125,18 +125,86 @@
       }
     }
     .kino-hero-media-card {
-      background: var(--kino-dark-card);
+      background: #f8fafc;
+      border: 1.5px solid #e2e8f0;
       border-radius: 20px;
-      padding: 28px 16px;
+      padding: 28px 20px;
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 440px;
+      min-height: 460px;
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(11, 37, 69, 0.15);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
       width: 100%;
       box-sizing: border-box;
+    }
+    .kino-bestseller-badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: #0B1B3D;
+      color: #ffffff;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      z-index: 5;
+    }
+    .kino-bestseller-badge i { color: #f59e0b; }
+    .kino-media-side-badges {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 82px;
+      background: #0B1B3D;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      padding: 24px 8px;
+      box-sizing: border-box;
+      z-index: 4;
+      border-top-right-radius: 18px;
+      border-bottom-right-radius: 18px;
+    }
+    @media (max-width: 500px) {
+      .kino-media-side-badges { width: 68px; padding: 16px 4px; }
+    }
+    .kino-side-badge-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 6px;
+    }
+    .kino-side-badge-item i {
+      color: #38bdf8;
+      font-size: 18px;
+    }
+    .kino-side-badge-item span {
+      color: #ffffff;
+      font-size: 9.5px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+    .kino-hero-img-wrap {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-right: 74px; /* Space for the right vertical badge strip */
+    }
+    @media (max-width: 500px) {
+      .kino-hero-img-wrap { padding-right: 60px; }
     }
     @media (max-width: 768px) {
       .kino-hero-media-card {
