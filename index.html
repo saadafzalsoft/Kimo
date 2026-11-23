@@ -122,16 +122,17 @@
     .kino-hero-media-card {
       background: var(--kino-dark-card);
       border-radius: 20px;
-      padding: 32px 24px 24px;
+      padding: 36px 24px 28px;
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 480px;
+      min-height: 500px;
       overflow: hidden;
+      box-shadow: 0 10px 30px rgba(11, 37, 69, 0.15);
     }
     @media (max-width: 600px) {
-      .kino-hero-media-card { min-height: 360px; padding: 24px 16px; }
+      .kino-hero-media-card { min-height: 380px; padding: 24px 16px; }
     }
     .kino-hero-save-badge {
       position: absolute;
@@ -151,14 +152,14 @@
       z-index: 2;
     }
     .kino-hero-img {
-      max-width: 82%;
-      max-height: 380px;
+      max-width: 86%;
+      max-height: 420px;
       object-fit: contain;
-      filter: drop-shadow(0 15px 25px rgba(0,0,0,0.3));
+      filter: drop-shadow(0 20px 30px rgba(0,0,0,0.35));
       transition: transform 0.3s ease;
     }
     @media (max-width: 600px) {
-      .kino-hero-img { max-height: 290px; }
+      .kino-hero-img { max-height: 310px; max-width: 92%; }
     }
 
     /* Vertical Thumbnail Strip (Desktop) / Horizontal (Mobile) */
@@ -179,7 +180,7 @@
         flex-direction: row;
         overflow-x: auto;
         padding-top: 12px;
-        justify-content: center;
+        justify-content: flex-start;
       }
     }
     .kino-thumb-item {
@@ -195,6 +196,7 @@
       align-items: center;
       justify-content: center;
       padding: 2px;
+      flex-shrink: 0;
     }
     .kino-thumb-item.active, .kino-thumb-item:hover {
       border-color: #34d399;
@@ -204,7 +206,7 @@
     .kino-thumb-item img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       border-radius: 8px;
     }
 
@@ -393,8 +395,8 @@
       gap: 12px;
     }
     .kino-bundle-thumb {
-      width: 48px;
-      height: 48px;
+      width: 52px;
+      height: 52px;
       border-radius: 8px;
       border: 1px solid #e2e8f0;
       background: #fff;
@@ -403,6 +405,7 @@
       justify-content: center;
       flex-shrink: 0;
       padding: 2px;
+      overflow: hidden;
     }
     .kino-bundle-thumb img {
       max-width: 100%;
@@ -495,6 +498,23 @@
       display: flex;
       align-items: center;
       gap: 14px;
+    }
+    .kino-gifts-unlocked-thumb {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      padding: 3px;
+    }
+    .kino-gifts-unlocked-thumb img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
     }
     .kino-gifts-unlocked-badge {
       background: var(--kino-primary);
@@ -636,8 +656,22 @@
       font-size: 18px;
       flex-shrink: 0;
     }
+    .kino-trust-pill span {
+      display: inline-block;
+      white-space: nowrap;
+    }
+    @media (max-width: 540px) {
+      .kino-trust-pill {
+        padding: 14px 16px;
+        font-size: 14px;
+        gap: 10px;
+      }
+      .kino-trust-pill span {
+        white-space: normal;
+      }
+    }
 
-    /* ================= 3. LIFESTYLE CARDS (3 CARDS FROM VERCEL PREVIEW) ================= */
+    /* ================= 3. LIFESTYLE CARDS ================= */
     .kino-lifestyle-section { margin: 48px 0; }
     .kino-sec-header {
       text-align: center;
@@ -773,6 +807,54 @@
       font-size: 13px;
       color: var(--kino-body-text);
       line-height: 1.45;
+    }
+    .kino-botanicals-showcase-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 28px 20px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+    }
+    .kino-botanicals-img {
+      max-width: 100%;
+      max-height: 420px;
+      object-fit: contain;
+    }
+    @media (max-width: 600px) {
+      .kino-botanicals-img { max-height: 290px; }
+    }
+    .kino-botanicals-cta-wrap {
+      margin-top: 28px;
+      text-align: center;
+    }
+    .kino-botanicals-atc-btn {
+      width: 100%;
+      max-width: 500px;
+      padding: 18px 24px;
+      background: var(--kino-accent-green);
+      color: #ffffff;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(13, 148, 136, 0.28);
+      transition: all 0.2s ease;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .kino-botanicals-atc-btn:hover {
+      background: #0b7a6f;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(13, 148, 136, 0.38);
     }
 
     /* ================= 5. 5 REASONS PEOPLE CHOOSE KINO ================= */
@@ -1206,29 +1288,48 @@
         <div class="kino-hero-media-card">
           <div class="kino-hero-save-badge" id="kinoTopSaveBadge">SAVE $39.99</div>
           
+          <!-- Transparent PNG Product Bundle (Rendered Seamlessly on Dark Navy Background) -->
           <img
             id="kinoMainImage"
             class="kino-hero-img"
-            src="assets/kino-tube-isolated.jpg"
-            alt="Kino Whole Body Cream Deodorant"
+            src="assets/kino-bundle-hero.png"
+            alt="Kino Whole Body Cream Deodorant Bundle"
           >
 
           <!-- Thumbnails Column on Right Side of Image -->
           <div class="kino-gallery-thumbs">
-            <div class="kino-thumb-item active" data-src="assets/kino-tube-isolated.jpg">
-              <img src="assets/kino-tube-isolated.jpg" alt="Kino Deodorant Tube">
+            <div class="kino-thumb-item active" data-src="assets/kino-bundle-hero.png">
+              <img src="assets/kino-bundle-hero.png" alt="Hero Bundle with Free Gifts">
+            </div>
+            <div class="kino-thumb-item" data-src="assets/kino-single-tube.png">
+              <img src="assets/kino-single-tube.png" alt="Single Tube Cutout">
+            </div>
+            <div class="kino-thumb-item" data-src="assets/kino-tube-cream-texture.png">
+              <img src="assets/kino-tube-cream-texture.png" alt="Silky Cream Texture">
+            </div>
+            <div class="kino-thumb-item" data-src="assets/kino-botanicals-center.png">
+              <img src="assets/kino-botanicals-center.png" alt="Clean Botanical Actives">
+            </div>
+            <div class="kino-thumb-item" data-src="assets/kino-soap-box.png">
+              <img src="assets/kino-soap-box.png" alt="Kino Soap Bar Box">
+            </div>
+            <div class="kino-thumb-item" data-src="assets/kino-gift-duo.png">
+              <img src="assets/kino-gift-duo.png" alt="Free Gift Scrubber + Soap">
+            </div>
+            <div class="kino-thumb-item" data-src="assets/kino-infographic-formula.jpg">
+              <img src="assets/kino-infographic-formula.jpg" alt="Meet The Formula">
+            </div>
+            <div class="kino-thumb-item" data-src="assets/kino-infographic-body.jpg">
+              <img src="assets/kino-infographic-body.jpg" alt="Whole Body Coverage">
             </div>
             <div class="kino-thumb-item" data-src="assets/works-anywhere.jpg">
               <img src="assets/works-anywhere.jpg" alt="Works Anywhere Flat Lay">
             </div>
             <div class="kino-thumb-item" data-src="assets/workout-tested.jpg">
-              <img src="assets/workout-tested.jpg" alt="Workout Tested Multi Tubes">
+              <img src="assets/workout-tested.jpg" alt="Workout Tested Studio Lineup">
             </div>
             <div class="kino-thumb-item" data-src="assets/zero-stains.jpg">
               <img src="assets/zero-stains.jpg" alt="Zero Stains Lifestyle">
-            </div>
-            <div class="kino-thumb-item" data-src="assets/ingredient-animation.gif">
-              <img src="assets/ingredient-animation.gif" alt="Ingredients Animation">
             </div>
           </div>
         </div>
@@ -1295,13 +1396,14 @@
           </div>
         </div>
 
-        <!-- BUNDLE SELECTION CARDS -->
+        <!-- BUNDLE SELECTION CARDS WITH TRANSPARENT PNG THUMBNAILS -->
         <div class="kino-bundles-list">
           
           <!-- Tier 1: Buy One -->
           <div
             class="kino-bundle-card"
             data-tier="1"
+            data-hero-img="assets/kino-single-tube.png"
             data-price="$24.99"
             data-compare="$29.99"
             data-save="$5.00"
@@ -1311,7 +1413,7 @@
             <div class="kino-bundle-main-row">
               <div class="kino-bundle-left">
                 <div class="kino-bundle-thumb">
-                  <img src="assets/kino-tube-isolated.jpg" alt="Buy 1 Tube">
+                  <img src="assets/kino-single-tube.png" alt="Buy 1 Tube">
                 </div>
                 <div>
                   <div class="kino-bundle-name">Buy One</div>
@@ -1329,6 +1431,7 @@
           <div
             class="kino-bundle-card active"
             data-tier="2"
+            data-hero-img="assets/kino-bundle-hero.png"
             data-price="$49.98"
             data-compare="$74.97"
             data-save="$39.99"
@@ -1339,7 +1442,7 @@
             <div class="kino-bundle-main-row">
               <div class="kino-bundle-left">
                 <div class="kino-bundle-thumb">
-                  <img src="assets/works-anywhere.jpg" alt="Buy 2 Get 1 Free">
+                  <img src="assets/kino-tier2-bundle.png" alt="Buy 2 Get 1 Free">
                 </div>
                 <div>
                   <div class="kino-bundle-name">Buy 2, Get 1 FREE GIFT</div>
@@ -1361,6 +1464,7 @@
           <div
             class="kino-bundle-card"
             data-tier="3"
+            data-hero-img="assets/kino-tier3-bundle.png"
             data-price="$74.97"
             data-compare="$139.90"
             data-save="$64.93"
@@ -1371,7 +1475,7 @@
             <div class="kino-bundle-main-row">
               <div class="kino-bundle-left">
                 <div class="kino-bundle-thumb">
-                  <img src="assets/workout-tested.jpg" alt="Buy 3 Get 3 Free">
+                  <img src="assets/kino-tier3-bundle.png" alt="Buy 3 Get 3 Free">
                 </div>
                 <div>
                   <div class="kino-bundle-name">Buy 3, Get 3 FREE GIFTS</div>
@@ -1397,13 +1501,15 @@
           <div class="kino-good-choice-sub">You save <strong id="kinoSaveDynamic">$39.99</strong> compared with buying individually</div>
         </div>
 
-        <!-- GIFTS UNLOCKED Section -->
+        <!-- GIFTS UNLOCKED Section With Transparent PNG Cutout -->
         <div class="kino-gifts-unlocked-card" id="kinoGiftsUnlocked">
-          <i class="fa-solid fa-gift" style="color: var(--kino-primary); font-size: 26px;"></i>
+          <div class="kino-gifts-unlocked-thumb">
+            <img src="assets/kino-gift-duo.png" alt="Free Soap & Scrubber">
+          </div>
           <div>
             <span class="kino-gifts-unlocked-badge">GIFTS UNLOCKED</span>
-            <div class="kino-gifts-unlocked-title" id="kinoGiftTitle">FREE Kino Exfoliating Soap Bar Added!</div>
-            <div class="kino-gifts-unlocked-desc">100% natural, full-body brightening cleansing bar automatically added to your order.</div>
+            <div class="kino-gifts-unlocked-title" id="kinoGiftTitle">FREE Kino Exfoliating Soap Bar + Scrubber!</div>
+            <div class="kino-gifts-unlocked-desc" id="kinoGiftDesc">100% natural, full-body brightening cleansing bar automatically added to your order.</div>
           </div>
         </div>
 
@@ -1465,7 +1571,7 @@
       </div>
     </section>
 
-    <!-- ================= 3. LIFESTYLE CARDS (3 CARDS FROM VERCEL PREVIEW) ================= -->
+    <!-- ================= 3. LIFESTYLE CARDS ================= -->
     <section class="kino-lifestyle-section">
       <div class="kino-sec-header">
         <h2>Engineered for Whole Body Performance</h2>
@@ -1509,51 +1615,57 @@
       </div>
     </section>
 
-    <!-- ================= 4. CLEAN BOTANICALS WITH USER ANIMATED GIF ================= -->
+    <!-- ================= 4. CLEAN BOTANICALS WITH USER ANIMATED GIF & BOTANICALS SHOWCASE ================= -->
     <section class="kino-clean-ingr-section" id="clean-ingredients">
       <div class="kino-sec-header">
         <h2>A Thoughtful Blend of Clean Botanicals</h2>
         <p>Skincare-grade actives that neutralize odor while nourishing delicate skin.</p>
       </div>
+
+      <!-- Center Botanical Composite Transparent Showcase -->
+      <div class="kino-botanicals-showcase-card">
+        <img src="assets/kino-botanicals-center.png" alt="Kino Clean Botanicals Formula" class="kino-botanicals-img">
+      </div>
       
-      <div class="kino-ingr-split">
-        <div class="kino-ingr-gif-box">
-          <img src="assets/ingredient-animation.gif" alt="Kino Clean Ingredients Animation">
+      <div class="kino-ingr-grid-items">
+        <div class="kino-ingr-card">
+          <div class="kino-ingr-card-head">
+            <i class="fa-solid fa-droplet"></i>
+            <h4>Niacinamide (Vitamin B3)</h4>
+          </div>
+          <p>Soothes delicate skin, calms shaving irritation, and helps restore natural skin barrier health.</p>
         </div>
-        
-        <div class="kino-ingr-grid-items">
-          <div class="kino-ingr-card">
-            <div class="kino-ingr-card-head">
-              <i class="fa-solid fa-droplet"></i>
-              <h4>Niacinamide (Vitamin B3)</h4>
-            </div>
-            <p>Soothes delicate skin, calms shaving irritation, and helps restore natural skin barrier health.</p>
-          </div>
 
-          <div class="kino-ingr-card">
-            <div class="kino-ingr-card-head">
-              <i class="fa-solid fa-seedling"></i>
-              <h4>Avocado &amp; Coconut Oils</h4>
-            </div>
-            <p>Provides deep, non-greasy hydration while naturally balancing skin moisture levels.</p>
+        <div class="kino-ingr-card">
+          <div class="kino-ingr-card-head">
+            <i class="fa-solid fa-seedling"></i>
+            <h4>Avocado &amp; Coconut Oils</h4>
           </div>
-
-          <div class="kino-ingr-card">
-            <div class="kino-ingr-card-head">
-              <i class="fa-solid fa-wand-magic-sparkles"></i>
-              <h4>Resveratrol &amp; Apple Extract</h4>
-            </div>
-            <p>Antioxidant powerhouses that inhibit the oxidation of sweat lipids that causes foul odor.</p>
-          </div>
-
-          <div class="kino-ingr-card">
-            <div class="kino-ingr-card-head">
-              <i class="fa-solid fa-shield-heart"></i>
-              <h4>Vitamin E (Tocopherol)</h4>
-            </div>
-            <p>Protective anti-inflammatory that keeps sensitive areas soft, calm, and chafe-free.</p>
-          </div>
+          <p>Provides deep, non-greasy hydration while naturally balancing skin moisture levels.</p>
         </div>
+
+        <div class="kino-ingr-card">
+          <div class="kino-ingr-card-head">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <h4>Resveratrol &amp; Apple Extract</h4>
+          </div>
+          <p>Antioxidant powerhouses that inhibit the oxidation of sweat lipids that causes foul odor.</p>
+        </div>
+
+        <div class="kino-ingr-card">
+          <div class="kino-ingr-card-head">
+            <i class="fa-solid fa-shield-heart"></i>
+            <h4>Vitamin E (Tocopherol)</h4>
+          </div>
+          <p>Protective anti-inflammatory that keeps sensitive areas soft, calm, and chafe-free.</p>
+        </div>
+      </div>
+
+      <!-- DTC High-Converting CTA Button as seen in reference screenshot -->
+      <div class="kino-botanicals-cta-wrap">
+        <button class="kino-botanicals-atc-btn" onclick="document.getElementById('kino-order-sec').scrollIntoView({behavior: 'smooth'})">
+          <i class="fa-solid fa-lock"></i> CLAIM OFFER &amp; ADD TO CART
+        </button>
       </div>
     </section>
 
@@ -1630,7 +1742,10 @@
           <thead>
             <tr>
               <th>Feature</th>
-              <th class="col-kino">Kino® Cream</th>
+              <th class="col-kino">
+                <img src="assets/kino-single-tube.png" alt="Kino Whole Body Deodorant" style="max-height: 48px; object-fit: contain; margin: 0 auto 6px; display: block;">
+                Kino® Cream
+              </th>
               <th class="col-others">Ordinary Sticks</th>
             </tr>
           </thead>
@@ -2021,12 +2136,13 @@
         });
       });
 
-      // 2. Bundle Tier Click Switcher
+      // 2. Bundle Tier Click Switcher (Updates Hero Image & Discounts Dynamically)
       const bundleCards = document.querySelectorAll('.kino-bundle-card');
       const dynamicSaveSpan = document.getElementById('kinoSaveDynamic');
       const topSaveBadge = document.getElementById('kinoTopSaveBadge');
       const giftSection = document.getElementById('kinoGiftsUnlocked');
       const giftTitle = document.getElementById('kinoGiftTitle');
+      const giftDesc = document.getElementById('kinoGiftDesc');
 
       bundleCards.forEach(card => {
         card.addEventListener('click', function () {
@@ -2036,21 +2152,27 @@
           const tier = this.getAttribute('data-tier');
           const save = this.getAttribute('data-save');
           const badge = this.getAttribute('data-badge');
+          const heroImg = this.getAttribute('data-hero-img');
 
           if (dynamicSaveSpan) dynamicSaveSpan.textContent = save;
           if (topSaveBadge) topSaveBadge.textContent = badge;
+          if (heroImg && mainImg) {
+            mainImg.src = heroImg;
+          }
 
           if (tier === '1') {
             if (giftSection) giftSection.style.display = 'none';
           } else if (tier === '2') {
             if (giftSection) {
               giftSection.style.display = 'flex';
-              giftTitle.textContent = 'FREE Kino Exfoliating Soap Bar Added!';
+              giftTitle.textContent = 'FREE Kino Gentle Exfoliating Soap Bar Added!';
+              giftDesc.textContent = '100% natural, full-body brightening cleansing bar automatically added to your order.';
             }
           } else if (tier === '3') {
             if (giftSection) {
               giftSection.style.display = 'flex';
               giftTitle.textContent = 'FREE Soap Bar + Body Scrubber + Free Shipping Added!';
+              giftDesc.textContent = 'Full luxury bundle with 2 free physical gifts + priority US delivery automatically included.';
             }
           }
         });
