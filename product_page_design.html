@@ -8,10 +8,10 @@
   <!-- FontAwesome 6 Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   
-  <!-- Google Fonts: Plus Jakarta Sans -->
+  <!-- Google Fonts: Inter (Exact font family used by Lymphoria) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -26,7 +26,8 @@
       --kino-body-text: #334155;        /* Body Slate */
       --kino-muted-text: #64748b;
       --kino-border: #e2e8f0;
-      --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     }
 
     *, *::before, *::after { box-sizing: border-box; }
@@ -40,6 +41,11 @@
       background-color: #ffffff;
       -webkit-font-smoothing: antialiased;
       line-height: 1.5;
+    }
+
+    h1, h2, h3, h4, .kino-product-title, .kino-section-title, .kino-trust-title, .kino-bundle-name {
+      font-family: var(--font-heading);
+      letter-spacing: -0.025em;
     }
 
     /* Top Announcement Bar */
@@ -666,10 +672,10 @@
     }
     .kino-quote-author i { color: var(--kino-accent-green); }
 
-    /* ================= 4. WHY TRUST KINO? SECTION (Exact Lymphoria Screenshot 2) ================= */
+    /* ================= 4. WHY TRUST KINO? SECTION (Exact Lymphoria Structure) ================= */
     .kino-trust-section {
       background: var(--kino-primary) !important;
-      border-radius: 24px;
+      border-radius: 20px;
       padding: 56px 32px;
       margin: 56px 0;
       color: #ffffff !important;
@@ -679,9 +685,10 @@
     }
     .kino-trust-title {
       font-size: 32px;
-      font-weight: 800;
-      margin: 0 0 28px;
+      font-weight: 700;
+      margin: 0 0 32px;
       color: #ffffff !important;
+      letter-spacing: -0.025em;
     }
     .kino-trust-row1 {
       display: grid;
@@ -692,45 +699,59 @@
     }
     .kino-trust-pill {
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      padding: 14px 20px;
-      background: rgba(255, 255, 255, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      border-radius: 9999px;
+      gap: 12px;
+      padding: 24px 16px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 14px;
       color: #ffffff !important;
-      font-size: 14.5px;
-      font-weight: 700;
-      min-height: 52px;
+      font-size: 15px;
+      font-weight: 600;
+      min-height: 110px;
+      text-align: center;
+      line-height: 1.3;
+      box-sizing: border-box;
     }
     .kino-trust-pill i {
       color: #34d399 !important;
-      font-size: 18px;
+      font-size: 28px;
       flex-shrink: 0;
     }
+    .kino-trust-pill span {
+      color: #ffffff !important;
+    }
     .kino-trust-row2 {
-      max-width: 620px;
+      max-width: 340px;
       margin: 0 auto;
     }
     .kino-trust-pill-wide {
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       gap: 12px;
-      padding: 14px 28px;
-      background: rgba(255, 255, 255, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      border-radius: 9999px;
+      padding: 24px 20px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 14px;
       color: #ffffff !important;
-      font-size: 14.5px;
-      font-weight: 700;
-      min-height: 52px;
+      font-size: 15px;
+      font-weight: 600;
+      min-height: 110px;
+      text-align: center;
+      line-height: 1.35;
+      box-sizing: border-box;
     }
     .kino-trust-pill-wide i {
       color: #34d399 !important;
-      font-size: 20px;
+      font-size: 28px;
       flex-shrink: 0;
+    }
+    .kino-trust-pill-wide span {
+      color: #ffffff !important;
     }
 
     /* ================= 5. BOTANICALS 2x2 SECTION ================= */
@@ -1476,20 +1497,22 @@
       }
 
       .kino-trust-section {
-        padding: 36px 16px 40px;
-        border-radius: 20px;
+        padding: 32px 14px 36px;
+        border-radius: 16px;
         margin: 36px 0;
       }
       .kino-trust-title {
-        font-size: 26px;
-        font-weight: 800;
-        margin-bottom: 24px;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        letter-spacing: -0.025em;
       }
       .kino-trust-row1 {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-        margin-bottom: 12px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+        margin-bottom: 10px;
+        width: 100%;
       }
       .kino-trust-pill {
         display: flex;
@@ -1497,28 +1520,30 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        padding: 18px 8px 14px;
-        border-radius: 14px;
-        min-height: auto;
-        gap: 10px;
-        background: rgba(255, 255, 255, 0.12);
-        border: 1px solid rgba(255, 255, 255, 0.22);
+        padding: 16px 4px 14px;
+        border-radius: 12px;
+        min-height: 94px;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.14);
         box-sizing: border-box;
       }
       .kino-trust-pill i {
-        font-size: 28px;
+        font-size: 24px;
         color: #34d399 !important;
       }
       .kino-trust-pill span {
-        font-size: 13px;
-        font-weight: 700;
+        font-size: 11.5px;
+        font-weight: 600;
         line-height: 1.25;
         color: #ffffff !important;
+        display: block;
       }
       .kino-trust-row2 {
         display: flex;
         justify-content: center;
-        margin-top: 10px;
+        margin-top: 6px;
+        width: 100%;
       }
       .kino-trust-pill-wide {
         display: flex;
@@ -1526,26 +1551,28 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        padding: 18px 16px 16px;
-        border-radius: 14px;
-        width: 100%;
-        max-width: 220px;
-        min-height: auto;
-        gap: 10px;
-        background: rgba(255, 255, 255, 0.12);
-        border: 1px solid rgba(255, 255, 255, 0.22);
+        padding: 16px 12px 14px;
+        border-radius: 12px;
+        width: 65%;
+        min-width: 170px;
+        max-width: 215px;
+        min-height: 94px;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.14);
         margin: 0 auto;
         box-sizing: border-box;
       }
       .kino-trust-pill-wide i {
-        font-size: 30px;
+        font-size: 24px;
         color: #34d399 !important;
       }
       .kino-trust-pill-wide span {
-        font-size: 13px;
-        font-weight: 700;
+        font-size: 11.5px;
+        font-weight: 600;
         line-height: 1.35;
         color: #ffffff !important;
+        display: block;
       }
 
       .kino-botanicals-section {
@@ -1936,27 +1963,27 @@
     <section class="kino-trust-section">
       <h2 class="kino-trust-title">Why Trust Kino?</h2>
       
-      <!-- Row 1: 3 Pills -->
+      <!-- Row 1: 3 Cards -->
       <div class="kino-trust-row1">
         <div class="kino-trust-pill">
           <i class="fa-solid fa-mortar-pestle"></i>
-          <span>Herbalist Inspired</span>
+          <span>Herbalist<br>Inspired</span>
         </div>
         <div class="kino-trust-pill">
           <i class="fa-solid fa-leaf"></i>
-          <span>Vegan-Friendly</span>
+          <span>Vegan-<br>Friendly</span>
         </div>
         <div class="kino-trust-pill">
           <i class="fa-solid fa-certificate"></i>
-          <span>30-Day Guarantee</span>
+          <span>30-Day<br>Guarantee</span>
         </div>
       </div>
 
-      <!-- Row 2: 1 Wide Pill -->
+      <!-- Row 2: 1 Centered Card -->
       <div class="kino-trust-row2">
         <div class="kino-trust-pill-wide">
           <i class="fa-solid fa-flag-usa"></i>
-          <span>Manufactured In The U.S. With Globally Sourced Ingredients</span>
+          <span>Manufactured In The U.S.<br>With Globally Sourced Ingredients</span>
         </div>
       </div>
     </section>
