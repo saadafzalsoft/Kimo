@@ -619,7 +619,7 @@
     }
     .kino-main-atc-btn:active { transform: translateY(1px); }
 
-    /* 100% Real Payment Icons */
+    /* 100% Real Payment Card Images */
     .kino-payment-row {
       display: flex;
       align-items: center;
@@ -628,11 +628,14 @@
       margin-top: 14px;
       flex-wrap: wrap;
     }
-    .kino-pay-icon {
-      width: 38px;
+    .kino-pay-img {
       height: 24px;
+      width: auto;
       border-radius: 4px;
+      object-fit: contain;
       box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      display: inline-block;
+    }
       border: 1px solid #e2e8f0;
       display: block;
     }
