@@ -29,12 +29,13 @@
       --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
 
-    * { box-sizing: border-box; }
+    *, *::before, *::after { box-sizing: border-box; }
     html, body {
       width: 100%;
+      max-width: 100%;
       margin: 0;
       padding: 0;
-      overflow-x: hidden;
+      overflow-x: hidden !important;
       font-family: var(--font-family);
       color: var(--kino-dark-text);
       background-color: #ffffff;
@@ -42,7 +43,7 @@
       line-height: 1.5;
     }
     @media (min-width: 901px) {
-      html, body { overflow-x: visible; }
+      html, body { overflow-x: clip; }
     }
 
     /* Top Announcement Bar */
@@ -109,25 +110,45 @@
       padding: 28px 24px 60px;
       box-sizing: border-box;
       width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
     }
     @media (max-width: 600px) {
-      .kino-container { padding: 18px 16px 44px; }
+      .kino-container {
+        padding: 16px 14px 44px;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+      }
     }
 
     /* ================= 1. HERO PRODUCT BUY BOX ================= */
     .kino-hero-grid {
       display: grid;
-      grid-template-columns: 0.95fr 1.05fr;
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
       gap: 40px;
       align-items: start;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
     }
     @media (max-width: 900px) {
-      .kino-hero-grid { grid-template-columns: 1fr; gap: 24px; }
+      .kino-hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+        width: 100%;
+        max-width: 100%;
+      }
     }
 
     .kino-hero-media-wrapper {
       position: relative;
       width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      overflow: hidden;
+      box-sizing: border-box;
     }
     @media (min-width: 901px) {
       .kino-hero-media-wrapper {
@@ -157,6 +178,7 @@
 
     .kino-hero-photo-wrap {
       flex: 1;
+      min-width: 0;
       height: 100%;
       position: relative;
       overflow: hidden;
@@ -213,6 +235,8 @@
     /* Thumbnail Gallery */
     .kino-gallery-thumbs-wrapper {
       width: 100%;
+      max-width: 100%;
+      min-width: 0;
       margin-top: 14px;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
@@ -254,6 +278,10 @@
     .kino-hero-info {
       display: flex;
       flex-direction: column;
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      box-sizing: border-box;
     }
     .kino-social-proof {
       display: flex;
@@ -304,6 +332,7 @@
       transition: all 0.2s ease;
       margin-bottom: 12px;
       width: 100%;
+      max-width: 100%;
       box-sizing: border-box;
     }
     .kino-bundle-card:hover { border-color: #94a3b8; }
@@ -314,7 +343,7 @@
     .kino-bundle-corner-badge {
       position: absolute;
       top: -10px;
-      right: 18px;
+      right: 16px;
       background: var(--kino-primary);
       color: #ffffff;
       font-size: 11px;
@@ -330,11 +359,13 @@
       justify-content: space-between;
       gap: 10px;
       width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
     }
     .kino-bundle-left {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       flex: 1;
       min-width: 0;
     }
@@ -357,22 +388,18 @@
       object-fit: contain;
     }
     .kino-bundle-name {
-      font-size: 15.5px;
+      font-size: 15px;
       font-weight: 700;
       color: var(--kino-dark-text);
       line-height: 1.25;
-      word-break: normal;
-    }
-    @media (max-width: 600px) {
-      .kino-bundle-card { padding: 12px 14px; }
-      .kino-bundle-thumb { width: 40px; height: 40px; }
-      .kino-bundle-name { font-size: 14px; }
+      word-break: break-word;
+      min-width: 0;
     }
     .kino-bundle-right {
       text-align: right;
       flex-shrink: 0;
       white-space: nowrap;
-      min-width: 70px;
+      margin-left: auto;
     }
     .kino-bundle-price {
       font-size: 17.5px;
@@ -381,7 +408,12 @@
       line-height: 1.2;
     }
     @media (max-width: 600px) {
-      .kino-bundle-price { font-size: 16px; }
+      .kino-bundle-card { padding: 12px 10px; }
+      .kino-bundle-corner-badge { right: 10px; font-size: 10px; padding: 2px 8px; top: -9px; }
+      .kino-bundle-thumb { width: 38px; height: 38px; }
+      .kino-bundle-name { font-size: 13.5px; }
+      .kino-bundle-price { font-size: 15px; }
+      .kino-bundle-main-row { gap: 6px; }
     }
 
     /* SUBSCRIBE & UNLOCKED GIFTS */
@@ -389,73 +421,87 @@
       background: var(--kino-light-green);
       border: 1.5px solid #a7f3d0;
       border-radius: 12px;
-      padding: 16px;
+      padding: 16px 12px;
       margin: 16px 0;
       position: relative;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
     }
     .kino-unlocked-tab {
       position: absolute;
       top: -12px;
-      left: 18px;
+      left: 14px;
       background: #dcfce7;
       border: 1px solid #86efac;
       color: #065f46;
-      font-size: 11px;
+      font-size: 10.5px;
       font-weight: 800;
-      padding: 3px 12px;
+      padding: 3px 10px;
       border-radius: 9999px;
       letter-spacing: 0.5px;
       text-transform: uppercase;
     }
     .kino-gifts-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 6px;
       margin-top: 6px;
+      width: 100%;
+      box-sizing: border-box;
     }
     .kino-gift-box {
       background: #ffffff;
       border: 1px dashed #6ee7b7;
       border-radius: 8px;
-      padding: 12px 6px;
+      padding: 10px 4px;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      gap: 6px;
+      gap: 4px;
+      min-width: 0;
+      box-sizing: border-box;
     }
     .kino-gift-box i {
       color: var(--kino-accent-green);
-      font-size: 18px;
+      font-size: 16px;
     }
     .kino-gift-box span {
-      font-size: 11px;
+      font-size: 10.5px;
       font-weight: 700;
       color: var(--kino-primary);
       line-height: 1.2;
+      word-break: break-word;
+      min-width: 0;
     }
 
     /* Segmented Toggle */
     .kino-purchase-type-toggle {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 6px;
       background: #f1f5f9;
       padding: 4px;
       border-radius: 10px;
       margin: 16px 0;
+      width: 100%;
+      box-sizing: border-box;
     }
     .kino-toggle-btn {
-      padding: 10px 14px;
+      padding: 10px 6px;
       border: none;
       background: transparent;
       border-radius: 8px;
-      font-size: 13.5px;
+      font-size: 12.5px;
       font-weight: 700;
       color: #64748b;
       cursor: pointer;
       text-align: center;
       transition: all 0.2s ease;
+      min-width: 0;
+      line-height: 1.25;
+      white-space: normal;
     }
     .kino-toggle-btn.active {
       background: #ffffff;
@@ -779,6 +825,14 @@
     }
 
     /* ================= 5. EXPERIENCE IT FOR YOURSELF (Comparison Table - Image 1) ================= */
+    
+    @media (max-width: 600px) {
+      .kino-exp-photo-wrap { height: 280px; }
+      .kino-trust-pill-wide { border-radius: 16px; padding: 12px 14px; font-size: 13px; }
+      .kino-lifestyle-section { margin: 36px 0; }
+      .kino-trust-section { margin: 36px 0; padding: 32px 16px; }
+      .kino-faq-section { margin: 36px 0; }
+    }
     .kino-exp-section {
       margin: 60px 0;
     }
