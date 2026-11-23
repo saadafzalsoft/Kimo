@@ -6,26 +6,24 @@
   <title>Kino® Whole Body Cream Deodorant | Nature's Clinical Odor Protection</title>
   
   <!-- FontAwesome 6 Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   
-  <!-- Google Fonts: Plus Jakarta Sans (Exact Humanist Geometric Sans Used by Top DTC Wellness Brands) -->
+  <!-- Google Fonts: Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --kino-primary: #064e3b;          /* Exact Luxury Forest Brand Green */
+      --kino-primary: #064e3b;          /* Forest Brand Green */
       --kino-primary-hover: #04392b;
-      --kino-accent-green: #059669;    /* Vibrant Emerald */
-      --kino-light-green: #eef9f2;     /* Subtle Mint Tint */
+      --kino-accent-green: #059669;    /* Emerald */
+      --kino-light-green: #eef9f2;     /* Mint Tint */
       --kino-light-border: #bbf7d0;
-      --kino-navy: #0e1b4d;             /* Deep Slate Brand Navy */
-      --kino-dark-card: #0B2545;        /* Premium Dark Hero Media Box */
-      --kino-trust-bg: #0B1B3D;         /* High-Contrast Trust Badge Background */
+      --kino-navy: #0B1B3D;             /* Slate Brand Navy */
       --kino-gold: #f59e0b;             /* 5-Star Amber Gold */
-      --kino-dark-text: #0f172a;        /* High-Legibility Title Dark */
-      --kino-body-text: #334155;        /* Clear High-Contrast Body Slate */
+      --kino-dark-text: #0f172a;        /* Title Dark */
+      --kino-body-text: #334155;        /* Body Slate */
       --kino-muted-text: #64748b;
       --kino-border: #e2e8f0;
       --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -33,24 +31,24 @@
 
     * { box-sizing: border-box; }
     html, body {
-      overflow-x: clip;
       width: 100%;
       margin: 0;
       padding: 0;
-    }
-    body {
+      overflow-x: hidden;
       font-family: var(--font-family);
       color: var(--kino-dark-text);
       background-color: #ffffff;
       -webkit-font-smoothing: antialiased;
       line-height: 1.5;
     }
+    @media (min-width: 901px) {
+      html, body { overflow-x: visible; }
+    }
 
     /* Top Announcement Bar */
     .kino-top-bar {
       width: 100%;
-      box-sizing: border-box;
-      background-color: var(--kino-navy);
+      background-color: var(--kino-primary);
       color: #ffffff;
       text-align: center;
       padding: 9px 16px;
@@ -72,18 +70,18 @@
       z-index: 100;
     }
     .kino-header-logo {
-      font-size: 26px;
+      font-size: 24px;
       font-weight: 900;
-      letter-spacing: 2.5px;
-      color: var(--kino-navy);
+      letter-spacing: 2px;
+      color: var(--kino-primary);
       text-decoration: none;
       display: flex;
       align-items: center;
       gap: 8px;
+      margin: 0 auto;
     }
-    .kino-header-logo i { color: var(--kino-accent-green); font-size: 22px; }
     .kino-header-cart {
-      color: var(--kino-navy);
+      color: var(--kino-dark-text);
       font-size: 20px;
       position: relative;
       text-decoration: none;
@@ -108,21 +106,19 @@
     .kino-container {
       max-width: 1240px;
       margin: 0 auto;
-      padding: 24px 20px 60px;
+      padding: 28px 24px 60px;
       box-sizing: border-box;
       width: 100%;
     }
     @media (max-width: 600px) {
-      .kino-container {
-        padding: 14px 12px 48px;
-      }
+      .kino-container { padding: 16px 14px 44px; }
     }
 
     /* ================= 1. HERO PRODUCT BUY BOX ================= */
     .kino-hero-grid {
       display: grid;
-      grid-template-columns: 0.72fr 1.28fr;
-      gap: 36px;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 44px;
       align-items: start;
     }
     @media (max-width: 900px) {
@@ -138,290 +134,141 @@
         position: sticky;
         top: 24px;
         align-self: start;
+        z-index: 10;
       }
     }
+
+    /* Media Display Card - Clean Organic Lifestyle Layout */
     .kino-hero-media-card {
       background: #f8fafc;
-      border: 1.5px solid #e2e8f0;
+      border: 1px solid #e2e8f0;
       border-radius: 20px;
-      padding: 28px 20px;
       position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 460px;
       overflow: hidden;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
       width: 100%;
-      box-sizing: border-box;
-    }
-    .kino-bestseller-badge {
-      position: absolute;
-      top: 16px;
-      left: 16px;
-      background: #0B1B3D;
-      color: #ffffff;
-      padding: 6px 14px;
-      border-radius: 9999px;
-      font-size: 11.5px;
-      font-weight: 800;
-      letter-spacing: 1px;
-      text-transform: uppercase;
+      height: 520px;
       display: flex;
-      align-items: center;
-      gap: 6px;
-      z-index: 5;
+      align-items: stretch;
     }
-    .kino-bestseller-badge i { color: #f59e0b; }
-    .kino-media-side-badges {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      width: 82px;
-      background: #0B1B3D;
+    @media (max-width: 600px) {
+      .kino-hero-media-card { height: 380px; }
+    }
+
+    .kino-hero-photo-wrap {
+      flex: 1;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      background: #f1f5f9;
+    }
+    .kino-hero-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    /* Vertical Green Feature Sidebar (Exact Lymphoria Screenshot 1) */
+    .kino-hero-side-bar {
+      width: 120px;
+      background: var(--kino-primary);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-around;
-      padding: 24px 8px;
+      padding: 24px 10px;
       box-sizing: border-box;
-      z-index: 4;
-      border-top-right-radius: 18px;
-      border-bottom-right-radius: 18px;
+      flex-shrink: 0;
     }
-    @media (max-width: 500px) {
-      .kino-media-side-badges { width: 68px; padding: 16px 4px; }
+    @media (max-width: 600px) {
+      .kino-hero-side-bar { width: 92px; padding: 14px 6px; }
     }
-    .kino-side-badge-item {
+    .kino-side-feat-item {
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      gap: 6px;
+      gap: 8px;
     }
-    .kino-side-badge-item i {
-      color: #38bdf8;
-      font-size: 18px;
+    .kino-side-feat-item i {
+      color: #34d399;
+      font-size: 26px;
     }
-    .kino-side-badge-item span {
+    @media (max-width: 600px) {
+      .kino-side-feat-item i { font-size: 20px; }
+    }
+    .kino-side-feat-item span {
       color: #ffffff;
-      font-size: 9.5px;
+      font-size: 12px;
       font-weight: 800;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      line-height: 1.2;
+      letter-spacing: 0.3px;
+      line-height: 1.25;
     }
-    .kino-hero-img-wrap {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding-right: 74px; /* Space for the right vertical badge strip */
-    }
-    @media (max-width: 500px) {
-      .kino-hero-img-wrap { padding-right: 60px; }
-    }
-    @media (max-width: 768px) {
-      .kino-hero-media-card {
-        min-height: 340px;
-        padding: 28px 16px;
-      }
-    }
-    @media (max-width: 480px) {
-      .kino-hero-media-card {
-        min-height: 290px;
-        padding: 24px 12px;
-      }
-    }
-    .kino-hero-save-badge {
-      position: absolute;
-      top: 16px;
-      left: 50%;
-      transform: translateX(-50%);
-      border: 1.5px solid rgba(255, 255, 255, 0.85);
-      color: #ffffff;
-      padding: 5px 20px;
-      border-radius: 9999px;
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 0.8px;
-      text-transform: uppercase;
-      background: rgba(11, 37, 69, 0.5);
-      backdrop-filter: blur(4px);
-      z-index: 2;
-      white-space: nowrap;
-    }
-    .kino-hero-img {
-      max-width: 90%;
-      max-height: 400px;
-      object-fit: contain;
-      filter: drop-shadow(0 20px 30px rgba(0,0,0,0.35));
-      transition: transform 0.3s ease;
-      display: block;
-      margin: 0 auto;
-    }
-    @media (max-width: 768px) {
-      .kino-hero-img { max-height: 280px; max-width: 92%; }
-    }
-    @media (max-width: 480px) {
-      .kino-hero-img { max-height: 230px; max-width: 94%; }
+    @media (max-width: 600px) {
+      .kino-side-feat-item span { font-size: 10.5px; }
     }
 
-    /* Thumbnail Gallery Scroll Strip - 100% Responsive Below Card */
+    /* Thumbnail Gallery */
     .kino-gallery-thumbs-wrapper {
       width: 100%;
       margin-top: 14px;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
-      scrollbar-width: thin;
-      scrollbar-color: rgba(11, 37, 69, 0.25) transparent;
       padding: 2px 2px 8px;
       box-sizing: border-box;
     }
-    .kino-gallery-thumbs-wrapper::-webkit-scrollbar {
-      height: 6px;
-    }
-    .kino-gallery-thumbs-wrapper::-webkit-scrollbar-thumb {
-      background: #cbd5e1;
-      border-radius: 3px;
-    }
     .kino-gallery-thumbs {
       display: flex;
-      flex-direction: row;
       gap: 10px;
-      align-items: center;
-      justify-content: flex-start;
       width: max-content;
-      margin: 0 auto;
-    }
-    @media (max-width: 860px) {
-      .kino-gallery-thumbs {
-        margin: 0;
-      }
     }
     .kino-thumb-item {
-      width: 62px;
-      height: 62px;
+      width: 64px;
+      height: 64px;
       border-radius: 12px;
       border: 2px solid #e2e8f0;
       background: #ffffff;
       overflow: hidden;
       cursor: pointer;
-      transition: all 0.2s ease;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 3px;
       flex-shrink: 0;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-    }
-    @media (max-width: 480px) {
-      .kino-thumb-item {
-        width: 54px;
-        height: 54px;
-        border-radius: 10px;
-      }
+      transition: all 0.2s ease;
     }
     .kino-thumb-item.active, .kino-thumb-item:hover {
-      border-color: #0b7a6f;
+      border-color: var(--kino-primary);
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(11, 122, 111, 0.25);
     }
     .kino-thumb-item img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
       border-radius: 8px;
     }
 
-    /* Urgency Progress Bar & Clean Ingredients Button Row */
-    .kino-urgency-row {
+    /* RIGHT COLUMN: Buy Box Details */
+    .kino-hero-info {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      margin-top: 16px;
-      padding: 12px 16px;
-      background: #f8fafc;
-      border-radius: 12px;
-      border: 1px solid #e2e8f0;
+      flex-direction: column;
     }
-    @media (max-width: 500px) {
-      .kino-urgency-row { flex-direction: column; align-items: stretch; gap: 10px; }
-    }
-    .kino-urgency-left {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex: 1;
-    }
-    .kino-progress-track {
-      flex: 1;
-      height: 8px;
-      background: #fee2e2;
-      border-radius: 9999px;
-      overflow: hidden;
-    }
-    .kino-progress-fill {
-      height: 100%;
-      background: #ef4444;
-      border-radius: 9999px;
-    }
-    .kino-urgency-text {
-      font-size: 13.5px;
-      font-weight: 800;
-      color: #dc2626;
-      white-space: nowrap;
-    }
-    .kino-ingredients-btn {
-      background: var(--kino-primary);
-      color: #ffffff;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 9999px;
-      font-size: 13px;
-      font-weight: 700;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: background 0.2s ease;
-      white-space: nowrap;
-    }
-    .kino-ingredients-btn:hover { background: var(--kino-primary-hover); }
-
-    /* RIGHT COLUMN: Product Details & Purchase Controls */
     .kino-social-proof {
       display: flex;
       align-items: center;
-      gap: 10px;
-      margin-bottom: 14px;
-      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 8px;
     }
     .kino-stars {
       color: var(--kino-gold);
       font-size: 15px;
       display: flex;
-      gap: 3px;
+      gap: 2px;
     }
-    .kino-avatar-stack {
-      display: flex;
-      align-items: center;
-    }
-    .kino-avatar-circle {
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      border: 2px solid #ffffff;
-      margin-left: -7px;
-      background-size: cover;
-      background-position: center;
-      background-color: #cbd5e1;
-    }
-    .kino-avatar-circle:first-child { margin-left: 0; }
     .kino-rating-label {
-      font-size: 14px;
+      font-size: 13.5px;
       font-weight: 600;
       color: var(--kino-body-text);
     }
@@ -429,109 +276,77 @@
       color: var(--kino-accent-green);
       font-weight: 800;
     }
-
     .kino-product-title {
       font-size: 32px;
       font-weight: 800;
       color: var(--kino-dark-text);
-      margin: 0 0 10px;
+      margin: 0 0 8px;
       line-height: 1.2;
     }
-    @media (max-width: 600px) { .kino-product-title { font-size: 26px; } }
-
-    /* 3 Value Props Bullet Points */
-    .kino-benefit-bullets {
-      margin: 18px 0 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      border-top: 1px solid #f1f5f9;
-      padding-top: 16px;
+    @media (max-width: 600px) {
+      .kino-product-title { font-size: 24px; line-height: 1.25; }
     }
-    .kino-bullet-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-    }
-    .kino-bullet-icon {
-      color: var(--kino-accent-green);
-      font-size: 18px;
-      margin-top: 2px;
-      flex-shrink: 0;
-    }
-    .kino-bullet-text {
-      font-size: 14px;
-      line-height: 1.45;
-      color: var(--kino-body-text);
-    }
-    .kino-bullet-text strong {
-      color: var(--kino-dark-text);
-      display: block;
-      font-size: 14.5px;
-      margin-bottom: 2px;
+    .kino-product-sub {
+      font-size: 15px;
+      color: #475569;
+      margin: 0 0 20px;
+      line-height: 1.5;
     }
 
-    /* BUNDLE SELECTION CARDS */
-    .kino-bundles-list {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-bottom: 16px;
-    }
+    /* ================= BUNDLE CARDS (Exact Lymphoria Screenshot 1) ================= */
     .kino-bundle-card {
-      border: 1.5px solid #d1d5db;
+      border: 1.5px solid #e2e8f0;
       border-radius: 12px;
-      padding: 14px 16px;
+      padding: 14px 18px;
       background: #ffffff;
       cursor: pointer;
       position: relative;
       transition: all 0.2s ease;
+      margin-bottom: 12px;
+      width: 100%;
+      box-sizing: border-box;
     }
-    .kino-bundle-card:hover { border-color: #94a3b8; }
+    .kino-bundle-card:hover { border-color: #cbd5e1; }
     .kino-bundle-card.active {
-      border: 2px solid var(--kino-primary);
-      background: #f7fbf9;
-      box-shadow: 0 4px 14px rgba(6, 78, 59, 0.08);
+      border: 2px solid var(--kino-accent-green);
+      background: var(--kino-light-green);
     }
     .kino-bundle-corner-badge {
       position: absolute;
-      top: -11px;
+      top: -10px;
       right: 18px;
       background: var(--kino-primary);
       color: #ffffff;
-      font-size: 11.5px;
+      font-size: 11px;
       font-weight: 800;
-      letter-spacing: 0.3px;
       padding: 3px 12px;
       border-radius: 9999px;
-      text-transform: uppercase;
+      text-transform: capitalize;
       z-index: 2;
     }
-    .kino-bundle-corner-badge.best-deal { background: #0f172a; }
     .kino-bundle-main-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 12px;
+      width: 100%;
     }
     .kino-bundle-left {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       flex: 1;
       min-width: 0;
     }
     .kino-bundle-thumb {
-      width: 52px;
-      height: 52px;
+      width: 48px;
+      height: 48px;
       border-radius: 8px;
-      border: 1px solid #e2e8f0;
-      background: #fff;
+      background: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      padding: 2px;
       overflow: hidden;
     }
     .kino-bundle-thumb img {
@@ -540,882 +355,409 @@
       object-fit: contain;
     }
     .kino-bundle-name {
-      font-size: 14.5px;
-      font-weight: 800;
+      font-size: 16px;
+      font-weight: 700;
       color: var(--kino-dark-text);
       line-height: 1.25;
-      word-break: normal;
     }
-    .kino-bundle-save-pill {
-      font-size: 13px;
-      color: var(--kino-primary);
-      font-weight: 700;
-      margin-top: 3px;
+    @media (max-width: 600px) {
+      .kino-bundle-name { font-size: 14.5px; }
     }
     .kino-bundle-right {
       text-align: right;
       flex-shrink: 0;
       white-space: nowrap;
-      min-width: 68px;
+      min-width: 75px;
     }
     .kino-bundle-price {
-      font-size: 18.5px;
+      font-size: 17px;
       font-weight: 800;
       color: var(--kino-primary);
       line-height: 1.2;
     }
-    .kino-bundle-compare {
-      font-size: 13.5px;
-      color: #94a3b8;
-      text-decoration: line-through;
-      margin-top: 2px;
+
+    /* SUBSCRIBE & UNLOCKED GIFTS (Exact Lymphoria Screenshot 1) */
+    .kino-unlocked-gifts-container {
+      background: var(--kino-light-green);
+      border: 1.5px solid #a7f3d0;
+      border-radius: 12px;
+      padding: 16px;
+      margin: 16px 0;
+      position: relative;
     }
-    .kino-bundle-feature-row {
-      margin-top: 10px;
-      padding-top: 10px;
-      border-top: 1px solid rgba(6, 78, 59, 0.15);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 13px;
-      color: var(--kino-primary);
-      font-weight: 700;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-    .kino-bundle-feature-row i {
-      color: var(--kino-accent-green);
-      font-size: 14px;
-      margin-right: 4px;
-    }
-    .kino-badge-free-ship {
+    .kino-unlocked-tab {
+      position: absolute;
+      top: -12px;
+      left: 18px;
       background: #dcfce7;
-      color: #15803d;
+      border: 1px solid #86efac;
+      color: #065f46;
       font-size: 11px;
       font-weight: 800;
-      padding: 2px 8px;
+      padding: 3px 12px;
       border-radius: 9999px;
-      display: inline-block;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
     }
-
-    /* "Good Choice!" Callout Box */
-    .kino-good-choice-box {
-      background: #eef9f2;
-      border: 1px solid #bbf7d0;
-      border-radius: 12px;
-      padding: 13px 18px;
-      margin: 16px 0;
+    .kino-gifts-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 6px;
+    }
+    .kino-gift-box {
+      background: #ffffff;
+      border: 1px dashed #6ee7b7;
+      border-radius: 8px;
+      padding: 14px 8px;
       display: flex;
       flex-direction: column;
-      gap: 2px;
-    }
-    .kino-good-choice-title {
-      font-weight: 800;
-      color: var(--kino-primary);
-      font-size: 15.5px;
-    }
-    .kino-good-choice-sub {
-      font-size: 13.5px;
-      color: var(--kino-primary);
-      font-weight: 500;
-    }
-    .kino-good-choice-sub strong { font-weight: 800; }
-
-    /* GIFTS UNLOCKED Section */
-    .kino-gifts-unlocked-card {
-      border: 1.5px dashed var(--kino-primary);
-      border-radius: 12px;
-      background: #fcfefd;
-      padding: 12px 16px;
-      margin: 16px 0;
-      display: flex;
       align-items: center;
-      gap: 14px;
+      text-align: center;
+      gap: 6px;
     }
-    .kino-gifts-unlocked-thumb {
-      width: 60px;
-      height: 60px;
-      border-radius: 8px;
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      padding: 3px;
+    .kino-gift-box i {
+      color: var(--kino-accent-green);
+      font-size: 20px;
     }
-    .kino-gifts-unlocked-thumb img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-    }
-    .kino-gifts-unlocked-badge {
-      background: var(--kino-primary);
-      color: #fff;
+    .kino-gift-box span {
       font-size: 11px;
-      font-weight: 800;
-      padding: 3px 8px;
-      border-radius: 6px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      display: inline-block;
-      margin-bottom: 4px;
-    }
-    .kino-gifts-unlocked-title {
-      font-size: 13.5px;
-      font-weight: 800;
-      color: var(--kino-dark-text);
-    }
-    .kino-gifts-unlocked-desc {
-      font-size: 12.5px;
-      color: #64748b;
+      font-weight: 700;
+      color: var(--kino-primary);
+      line-height: 1.2;
     }
 
-    /* Segmented Subscription Toggle */
-    .kino-sub-toggle-wrap {
+    /* Segmented Toggle */
+    .kino-purchase-type-toggle {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 8px;
+      gap: 6px;
       background: #f1f5f9;
       padding: 4px;
       border-radius: 10px;
       margin: 16px 0;
     }
-    .kino-sub-btn {
-      padding: 10px 12px;
+    .kino-toggle-btn {
+      padding: 10px 14px;
       border: none;
       background: transparent;
       border-radius: 8px;
-      font-size: 13px;
+      font-size: 13.5px;
       font-weight: 700;
       color: #64748b;
       cursor: pointer;
       text-align: center;
       transition: all 0.2s ease;
     }
-    .kino-sub-btn.active {
+    .kino-toggle-btn.active {
       background: #ffffff;
       color: var(--kino-dark-text);
       box-shadow: 0 2px 6px rgba(0,0,0,0.06);
     }
 
-    /* Main CTA Button */
+    /* Add To Cart CTA Button */
     .kino-main-atc-btn {
       width: 100%;
+      padding: 18px 24px;
       background: var(--kino-primary);
       color: #ffffff;
       border: none;
-      padding: 18px 24px;
       border-radius: 12px;
-      font-size: 16.5px;
+      font-size: 17px;
       font-weight: 800;
       letter-spacing: 0.5px;
-      text-transform: uppercase;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      transition: background 0.2s ease, transform 0.1s ease;
       box-shadow: 0 4px 14px rgba(6, 78, 59, 0.25);
+      transition: all 0.2s ease;
     }
     .kino-main-atc-btn:hover {
       background: var(--kino-primary-hover);
       transform: translateY(-1px);
     }
-    .kino-main-atc-btn:active { transform: translateY(1px); }
 
-    
-    @media (max-width: 600px) {
-      .kino-bundle-card { padding: 12px 10px; }
-      .kino-bundle-thumb { width: 44px; height: 44px; }
-      .kino-bundle-name { font-size: 13.5px; }
-      .kino-bundle-price { font-size: 16.5px; }
-      .kino-bundle-compare { font-size: 12px; }
-      .kino-bundle-save-pill { font-size: 11.5px; }
-      .kino-bundle-feature-row { font-size: 11.5px; gap: 4px; }
-      .kino-product-title { font-size: 23px; line-height: 1.25; }
-      .kino-benefit-bullets { margin: 12px 0 16px; }
-      .kino-bullet-item { font-size: 13px; }
-      .kino-hero-media-card { min-height: 270px; padding: 20px 10px; }
-      .kino-hero-img { max-height: 230px; }
-    }
-
-    /* 100% Real Payment Card Images */
+    /* Official Vector Payment Badges */
     .kino-payment-row {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 8px;
       margin-top: 16px;
       flex-wrap: wrap;
     }
-    .kino-pay-img {
-      height: 26px;
-      width: auto;
+    .kino-pay-icon {
+      height: 24px;
+      width: 38px;
       border-radius: 4px;
-      object-fit: contain;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
       display: inline-block;
       transition: transform 0.2s ease;
     }
-    .kino-pay-img:hover {
-      transform: translateY(-1px);
-    }
+    .kino-pay-icon:hover { transform: translateY(-1px); }
 
-    /* ================= 2. WHY TRUST KINO? SECTION ================= */
-    .kino-trust-section {
-      background: #0B1B3D !important;
-      border-radius: 20px;
-      padding: 44px 28px;
-      margin: 48px 0;
-      color: #ffffff !important;
-      text-align: center;
-      box-sizing: border-box;
-      width: 100%;
+    /* ================= 2. 4 LIFESTYLE CARDS (Exact Lymphoria Screenshot 4) ================= */
+    .kino-lifestyle-section {
+      margin: 60px 0;
     }
-    .kino-trust-title {
-      font-size: 30px;
+    .kino-section-title {
+      text-align: center;
+      font-size: 32px;
       font-weight: 800;
-      margin: 0 0 28px;
-      color: #ffffff !important;
-      letter-spacing: -0.3px;
+      color: var(--kino-dark-text);
+      margin: 0 0 32px;
     }
-    .kino-trust-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-      max-width: 760px;
-      margin: 0 auto;
-    }
-    @media (max-width: 768px) {
-      .kino-trust-grid {
-        grid-template-columns: 1fr;
-        max-width: 460px;
-      }
-    }
-    .kino-trust-pill {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 14px;
-      padding: 14px 24px;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      border-radius: 9999px;
-      color: #ffffff !important;
-      font-size: 14.5px;
-      font-weight: 700;
-      box-sizing: border-box;
-      line-height: 1.35;
-      min-height: 54px;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-    .kino-trust-pill:hover {
-      background: rgba(255, 255, 255, 0.14);
-      transform: translateY(-1px);
-    }
-    .kino-trust-pill i {
-      color: #34d399 !important;
-      font-size: 18px;
-      flex-shrink: 0;
-      width: 22px;
-      text-align: center;
-    }
-    .kino-trust-pill span {
-      display: inline-block;
-      white-space: normal !important;
-      text-align: left;
-    }
-    @media (max-width: 540px) {
-      .kino-trust-section {
-        padding: 32px 16px;
-        border-radius: 16px;
-      }
-      .kino-trust-title {
-        font-size: 24px;
-        margin-bottom: 20px;
-      }
-      .kino-trust-pill {
-        padding: 12px 18px;
-        font-size: 13.5px;
-        gap: 12px;
-        min-height: 48px;
-      }
-      .kino-trust-pill i {
-        font-size: 16px;
-        width: 18px;
-      }
-    }
-
-    /* ================= 3. LIFESTYLE CARDS ================= */
-    .kino-lifestyle-section { margin: 48px 0; }
-    .kino-sec-header {
-      text-align: center;
-      margin-bottom: 32px;
-    }
-    .kino-sec-header h2 {
-      font-size: 28px;
-      font-weight: 800;
-      color: var(--kino-navy);
-      margin: 0 0 8px;
-    }
-    .kino-sec-header p {
-      font-size: 14.5px;
-      color: var(--kino-body-text);
-      margin: 0;
+    @media (max-width: 600px) {
+      .kino-section-title { font-size: 24px; margin-bottom: 24px; }
     }
     .kino-lifestyle-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
     }
-    @media (max-width: 860px) { .kino-lifestyle-grid { grid-template-columns: 1fr; gap: 20px; } }
+    @media (max-width: 900px) {
+      .kino-lifestyle-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 500px) {
+      .kino-lifestyle-grid { grid-template-columns: 1fr; }
+    }
     .kino-lifestyle-card {
       background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
       display: flex;
       flex-direction: column;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+      transition: transform 0.2s ease;
     }
-    .kino-lifestyle-img-wrap {
+    .kino-lifestyle-card:hover { transform: translateY(-2px); }
+    .kino-lifestyle-card-img {
       width: 100%;
-      height: 240px;
-      background: #f1f5f9;
-      position: relative;
-      overflow: hidden;
-    }
-    .kino-lifestyle-img-wrap img {
-      width: 100%;
-      height: 100%;
+      height: 220px;
       object-fit: cover;
       display: block;
-      transition: transform 0.3s ease;
     }
-    .kino-lifestyle-card:hover .kino-lifestyle-img-wrap img { transform: scale(1.03); }
-    .kino-lifestyle-badge {
-      position: absolute;
-      top: 14px;
-      right: 14px;
-      background: #8b5cf6;
-      color: #ffffff;
-      font-size: 11px;
-      font-weight: 800;
-      padding: 4px 10px;
-      border-radius: 9999px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .kino-lifestyle-body {
-      padding: 20px;
-      flex: 1;
+    .kino-lifestyle-card-body {
+      padding: 18px;
       display: flex;
       flex-direction: column;
+      flex: 1;
     }
-    .kino-lifestyle-title {
-      font-size: 18px;
+    .kino-lifestyle-card-title {
+      font-size: 17px;
       font-weight: 800;
       color: var(--kino-dark-text);
       margin: 0 0 8px;
     }
-    .kino-lifestyle-desc {
-      font-size: 14px;
-      color: var(--kino-body-text);
+    .kino-lifestyle-card-text {
+      font-size: 13.5px;
+      color: #64748b;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* ================= 3. BOTANICALS INGREDIENT SECTION (Exact Lymphoria Screenshot 5) ================= */
+    .kino-botanicals-section {
+      margin: 60px 0;
+      background: #f8fafc;
+      border-radius: 24px;
+      padding: 48px 32px;
+      box-sizing: border-box;
+    }
+    @media (max-width: 600px) {
+      .kino-botanicals-section { padding: 32px 16px; border-radius: 16px; }
+    }
+    .kino-botanicals-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 36px;
+    }
+    .kino-botanicals-header h2 {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--kino-dark-text);
+      margin: 0 0 10px;
+    }
+    @media (max-width: 600px) {
+      .kino-botanicals-header h2 { font-size: 24px; }
+    }
+    .kino-botanicals-header p {
+      font-size: 15px;
+      color: #64748b;
       margin: 0;
       line-height: 1.5;
     }
-
-    /* ================= 4. CLEAN BOTANICALS WITH USER ANIMATED GIF ================= */
-    .kino-clean-ingr-section {
-      background: #f8fafc;
-      border-radius: 20px;
-      padding: 40px 24px;
-      margin: 48px 0;
-    }
-    .kino-ingr-split {
+    .kino-botanicals-layout {
       display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 32px;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 36px;
       align-items: center;
     }
-    @media (max-width: 800px) { .kino-ingr-split { grid-template-columns: 1fr; } }
-    .kino-ingr-gif-box {
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid #e2e8f0;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-      background: #fff;
+    @media (max-width: 900px) {
+      .kino-botanicals-layout { grid-template-columns: 1fr; }
     }
-    .kino-ingr-gif-box img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
+    .kino-botanicals-visual-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
     }
-    .kino-ingr-grid-items {
+    .kino-botanicals-visual-img {
+      max-width: 100%;
+      max-height: 400px;
+      object-fit: contain;
+    }
+    .kino-botanicals-cards-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px;
     }
-    @media (max-width: 500px) { .kino-ingr-grid-items { grid-template-columns: 1fr; } }
+    @media (max-width: 500px) {
+      .kino-botanicals-cards-grid { grid-template-columns: 1fr; }
+    }
     .kino-ingr-card {
       background: #ffffff;
-      padding: 16px;
-      border-radius: 12px;
       border: 1px solid #e2e8f0;
-    }
-    .kino-ingr-card-head {
+      border-radius: 14px;
+      padding: 16px;
       display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 8px;
+      gap: 12px;
+      align-items: flex-start;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
     }
-    .kino-ingr-card-head i { color: var(--kino-accent-green); font-size: 18px; }
-    .kino-ingr-card-head h4 {
-      margin: 0;
-      font-size: 14.5px;
-      font-weight: 800;
-      color: var(--kino-dark-text);
-    }
-    .kino-ingr-card p {
-      margin: 0;
-      font-size: 13px;
-      color: var(--kino-body-text);
-      line-height: 1.45;
-    }
-    .kino-botanicals-showcase-card {
-      background: #ffffff;
-      border-radius: 20px;
-      padding: 28px 20px;
-      margin-bottom: 24px;
+    .kino-ingr-card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      background: var(--kino-light-green);
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 1px solid #e2e8f0;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      flex-shrink: 0;
     }
-    .kino-botanicals-img {
-      max-width: 100%;
-      max-height: 420px;
-      object-fit: contain;
+    .kino-ingr-card-icon i {
+      color: var(--kino-accent-green);
+      font-size: 22px;
     }
-    @media (max-width: 600px) {
-      .kino-botanicals-img { max-height: 290px; }
+    .kino-ingr-card-body h3 {
+      font-size: 15.5px;
+      font-weight: 800;
+      color: var(--kino-dark-text);
+      margin: 0 0 4px;
+    }
+    .kino-ingr-card-body p {
+      font-size: 12.5px;
+      color: #64748b;
+      margin: 0;
+      line-height: 1.4;
     }
     .kino-botanicals-cta-wrap {
-      margin-top: 28px;
+      margin-top: 36px;
       text-align: center;
     }
     .kino-botanicals-atc-btn {
       width: 100%;
-      max-width: 500px;
+      max-width: 460px;
       padding: 18px 24px;
       background: var(--kino-accent-green);
       color: #ffffff;
       border: none;
       border-radius: 12px;
-      font-size: 16px;
+      font-size: 16.5px;
       font-weight: 800;
       letter-spacing: 0.5px;
       cursor: pointer;
-      box-shadow: 0 6px 18px rgba(13, 148, 136, 0.28);
-      transition: all 0.2s ease;
-      text-transform: uppercase;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
+      box-shadow: 0 6px 18px rgba(5, 150, 105, 0.28);
+      transition: all 0.2s ease;
     }
     .kino-botanicals-atc-btn:hover {
-      background: #0b7a6f;
+      background: #047857;
       transform: translateY(-2px);
-      box-shadow: 0 8px 22px rgba(13, 148, 136, 0.38);
+    }
+    .kino-guarantee-note {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 10px;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--kino-primary);
     }
 
-    /* ================= 5. 5 REASONS PEOPLE CHOOSE KINO ================= */
-    .kino-reasons-section { margin: 52px 0; }
-    .kino-reasons-grid {
+    /* ================= 4. REVIEWS SECTION ================= */
+    .kino-reviews-section {
+      margin: 60px 0;
+      text-align: center;
+    }
+    .kino-reviews-header h2 {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--kino-dark-text);
+      margin: 0 0 10px;
+    }
+    @media (max-width: 600px) {
+      .kino-reviews-header h2 { font-size: 24px; }
+    }
+    .kino-reviews-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
+      margin-top: 32px;
     }
-    @media (max-width: 840px) { .kino-reasons-grid { grid-template-columns: 1fr; } }
-    .kino-reason-card {
+    @media (max-width: 768px) {
+      .kino-reviews-grid { grid-template-columns: 1fr; }
+    }
+    .kino-review-card {
       background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 16px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
+      padding: 24px;
+      text-align: left;
       box-shadow: 0 4px 12px rgba(0,0,0,0.03);
     }
-    .kino-reason-header-pill {
-      background: #f1f5f9;
-      color: var(--kino-primary);
-      font-size: 12px;
-      font-weight: 800;
-      padding: 4px 10px;
-      border-radius: 6px;
-      display: inline-block;
-      margin-bottom: 10px;
-      width: fit-content;
+    .kino-rev-stars {
+      color: var(--kino-gold);
+      font-size: 14px;
+      margin-bottom: 12px;
+      display: flex;
+      gap: 2px;
     }
-    .kino-reason-body { padding: 22px; flex: 1; }
-    .kino-reason-title {
-      font-size: 17px;
+    .kino-rev-title {
+      font-size: 16px;
       font-weight: 800;
       color: var(--kino-dark-text);
       margin: 0 0 8px;
     }
-    .kino-reason-desc {
-      font-size: 13.5px;
-      color: var(--kino-body-text);
-      margin: 0;
-      line-height: 1.5;
-    }
-
-    /* ================= 6. COMPARISON TABLE SECTION ================= */
-    .kino-compare-section {
-      background: #f8fafc;
-      border-radius: 20px;
-      padding: 44px 24px;
-      margin: 48px 0;
-    }
-    .kino-compare-table-wrapper {
-      max-width: 720px;
-      margin: 0 auto;
-      background: #ffffff;
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid #e2e8f0;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.04);
-    }
-    .kino-compare-table {
-      width: 100%;
-      border-collapse: collapse;
-      text-align: left;
-    }
-    .kino-compare-table th, .kino-compare-table td {
-      padding: 14px 18px;
-      border-bottom: 1px solid #f1f5f9;
+    .kino-rev-text {
       font-size: 14px;
-    }
-    .kino-compare-table th {
-      background: #f8fafc;
-      font-weight: 800;
-      color: var(--kino-dark-text);
-    }
-    .kino-compare-table th.col-kino {
-      background: var(--kino-light-green);
-      color: var(--kino-primary);
-      text-align: center;
-      font-size: 15px;
-    }
-    .kino-compare-table td.col-kino {
-      background: #fcfefd;
-      text-align: center;
-      font-weight: 700;
-      color: var(--kino-accent-green);
-    }
-    .kino-compare-table th.col-others, .kino-compare-table td.col-others {
-      text-align: center;
-      color: #94a3b8;
-    }
-
-    /* ================= 7. FAQ ACCORDION ================= */
-    .kino-faq-section {
-      max-width: 760px;
-      margin: 50px auto;
-    }
-    .kino-faq-item {
-      border: 1px solid #e2e8f0;
-      border-radius: 12px;
-      margin-bottom: 12px;
-      background: #ffffff;
-      overflow: hidden;
-    }
-    .kino-faq-question {
-      padding: 18px 20px;
-      font-weight: 800;
-      font-size: 15.5px;
-      color: var(--kino-dark-text);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      user-select: none;
-    }
-    .kino-faq-question i {
-      color: var(--kino-primary);
-      transition: transform 0.2s ease;
-    }
-    .kino-faq-answer {
-      padding: 0 20px 18px;
-      font-size: 14px;
-      color: var(--kino-body-text);
+      color: #475569;
       line-height: 1.5;
-      display: none;
-    }
-    .kino-faq-item.open .kino-faq-answer { display: block; }
-    .kino-faq-item.open .kino-faq-question i { transform: rotate(180deg); }
-
-    /* ================= 8. 30-DAY GUARANTEE BOX ================= */
-    .kino-guar-box {
-      background: #f0fdf4;
-      border: 1.5px solid #bbf7d0;
-      border-radius: 16px;
-      padding: 24px;
-      margin: 40px auto;
-      max-width: 800px;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-    @media (max-width: 600px) { .kino-guar-box { flex-direction: column; text-align: center; } }
-    .kino-guar-icon {
-      width: 54px;
-      height: 54px;
-      border-radius: 50%;
-      background: var(--kino-primary);
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      flex-shrink: 0;
-    }
-    .kino-guar-title {
-      font-size: 17px;
-      font-weight: 800;
-      color: var(--kino-primary);
-      margin: 0 0 4px;
-    }
-    .kino-guar-desc {
-      font-size: 13.5px;
-      color: var(--kino-body-text);
-      margin: 0;
-      line-height: 1.45;
-    }
-
-    /* ================= 9. JUDGE.ME REVIEWS WIDGET AT BOTTOM ================= */
-    .kino-judgeme-section {
-      margin: 60px 0 40px;
-      border-top: 2px solid #e2e8f0;
-      padding-top: 48px;
-    }
-    .jdgm-widget-box {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    .jdgm-header {
-      text-align: center;
-      margin-bottom: 32px;
-    }
-    .jdgm-title {
-      font-size: 28px;
-      font-weight: 800;
-      color: var(--kino-dark-text);
       margin: 0 0 16px;
     }
-    .jdgm-summary-flex {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 36px;
-      flex-wrap: wrap;
-      margin-bottom: 28px;
-    }
-    .jdgm-big-rating {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 4px;
-    }
-    .jdgm-big-number {
-      font-size: 42px;
-      font-weight: 900;
-      color: var(--kino-dark-text);
-      line-height: 1;
-    }
-    .jdgm-stars-big {
-      color: var(--kino-gold);
-      font-size: 20px;
-      display: flex;
-      gap: 4px;
-    }
-    .jdgm-count-label {
-      font-size: 13.5px;
-      color: #64748b;
-      margin-top: 4px;
-    }
-    .jdgm-histogram {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      min-width: 260px;
-    }
-    .jdgm-histo-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 13px;
-      color: #475569;
-    }
-    .jdgm-histo-label { width: 50px; text-align: right; }
-    .jdgm-histo-track {
-      flex: 1;
-      height: 8px;
-      background: #e2e8f0;
-      border-radius: 9999px;
-      overflow: hidden;
-    }
-    .jdgm-histo-fill {
-      height: 100%;
-      background: var(--kino-gold);
-      border-radius: 9999px;
-    }
-    .jdgm-histo-qty { width: 40px; font-weight: 600; text-align: left; }
-    .jdgm-write-btn {
-      background: #ffffff;
-      border: 1.5px solid var(--kino-dark-text);
-      color: var(--kino-dark-text);
-      padding: 10px 22px;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .jdgm-write-btn:hover {
-      background: var(--kino-dark-text);
-      color: #ffffff;
-    }
-    .jdgm-toolbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      border-top: 1px solid #e2e8f0;
-      border-bottom: 1px solid #e2e8f0;
-      padding: 14px 0;
-      margin-bottom: 24px;
-      flex-wrap: wrap;
-    }
-    .jdgm-tabs { display: flex; gap: 8px; }
-    .jdgm-tab-btn {
-      padding: 6px 14px;
-      border-radius: 9999px;
-      border: 1px solid #cbd5e1;
-      background: #fff;
+    .kino-rev-author {
       font-size: 13px;
       font-weight: 700;
-      color: #475569;
-      cursor: pointer;
-    }
-    .jdgm-tab-btn.active {
-      background: var(--kino-primary);
-      color: #fff;
-      border-color: var(--kino-primary);
-    }
-    .jdgm-sort-select {
-      padding: 6px 12px;
-      border-radius: 6px;
-      border: 1px solid #cbd5e1;
-      font-size: 13px;
-      font-weight: 600;
-      color: #334155;
-    }
-    .jdgm-review-item {
-      padding: 24px 0;
-      border-bottom: 1px solid #f1f5f9;
-    }
-    .jdgm-rev-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 8px;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .jdgm-rev-author-wrap {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .jdgm-rev-avatar {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: #e2e8f0;
-      color: #334155;
-      font-weight: 800;
-      font-size: 13px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .jdgm-rev-author-name {
-      font-weight: 800;
-      font-size: 14.5px;
       color: var(--kino-dark-text);
     }
-    .jdgm-rev-badge {
-      display: inline-flex;
+    .kino-rev-verified {
+      font-size: 12px;
+      color: var(--kino-accent-green);
+      font-weight: 700;
+      display: flex;
       align-items: center;
       gap: 4px;
-      color: #059669;
-      font-size: 12px;
-      font-weight: 700;
-    }
-    .jdgm-rev-date { font-size: 12.5px; color: #94a3b8; }
-    .jdgm-rev-stars {
-      color: var(--kino-gold);
-      font-size: 14px;
-      display: flex;
-      gap: 2px;
-      margin-bottom: 8px;
-    }
-    .jdgm-rev-title {
-      font-size: 15px;
-      font-weight: 800;
-      color: var(--kino-dark-text);
-      margin: 0 0 6px;
-    }
-    .jdgm-rev-body {
-      font-size: 14px;
-      color: var(--kino-body-text);
-      line-height: 1.5;
-      margin: 0 0 12px;
-    }
-    .jdgm-rev-footer {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      font-size: 12.5px;
-      color: #64748b;
-    }
-    .jdgm-helpful-btn {
-      background: none;
-      border: 1px solid #e2e8f0;
-      padding: 3px 8px;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 12px;
-      color: #475569;
-    }
-    .jdgm-powered-by {
-      text-align: center;
-      padding: 30px 0 10px;
-      font-size: 12px;
-      color: #94a3b8;
+      margin-top: 2px;
     }
 
-    /* Store Footer */
+    /* Footer */
     .kino-footer {
       background: #0f172a;
       color: #94a3b8;
@@ -1423,27 +765,19 @@
       text-align: center;
       font-size: 13px;
     }
-    .kino-footer-logo {
-      font-size: 22px;
-      font-weight: 900;
-      letter-spacing: 2px;
-      color: #ffffff;
-      margin-bottom: 12px;
-      display: inline-block;
-    }
-    .kino-footer p { max-width: 600px; margin: 8px auto; line-height: 1.6; }
+    .kino-footer a { color: #cbd5e1; text-decoration: none; margin: 0 10px; }
+    .kino-footer a:hover { color: #fff; }
   </style>
 </head>
 <body>
 
   <!-- Top Announcement Bar -->
   <div class="kino-top-bar">
-    Free US Shipping on Orders Over $25 · 30-Day Money-Back Guarantee
+    Free US Shipping on Orders Over $25 &bull; 30-Day Money-Back Guarantee
   </div>
 
-  <!-- Store Header -->
+  <!-- Site Header -->
   <header class="kino-header">
-    <div style="width: 24px;"><i class="fa-solid fa-bars" style="color:#0f172a; cursor:pointer;"></i></div>
     <a href="#" class="kino-header-logo">
       <i class="fa-solid fa-seedling"></i>
       <span>KINO</span>
@@ -1458,46 +792,44 @@
   <div class="kino-container">
     
     <!-- ================= 1. HERO PRODUCT BUY BOX ================= -->
-    <div class="kino-hero-grid">
+    <div class="kino-hero-grid" id="kino-order-sec">
       
-      <!-- LEFT: Hero Media Card & Urgency Row -->
+      <!-- LEFT: Lifestyle Media Card with Side Feature Bar -->
       <div class="kino-hero-media-wrapper">
-        <!-- Main Media Display Card -->
         <div class="kino-hero-media-card">
-          <div class="kino-bestseller-badge">
-            <i class="fa-solid fa-award"></i>
-            <span>BESTSELLER</span>
-          </div>
-
-          <div class="kino-hero-img-wrap">
+          <!-- Lifestyle Photo -->
+          <div class="kino-hero-photo-wrap">
             <img
               id="kinoMainImage"
-              class="kino-hero-img"
-              src="assets/kino-bundle-hero-v3.png"
-              alt="Kino Whole Body Cream Deodorant Bundle"
+              src="assets/kino-lifestyle-hero.jpg"
+              alt="Kino Whole Body Cream Deodorant"
             >
           </div>
 
-          <div class="kino-media-side-badges">
-            <div class="kino-side-badge-item">
-              <i class="fa-solid fa-shield-halved"></i>
-              <span>EVERYDAY ODOR DEFENSE</span>
+          <!-- Vertical Feature Sidebar (Exact Lymphoria Screenshot 1) -->
+          <div class="kino-hero-side-bar">
+            <div class="kino-side-feat-item">
+              <i class="fa-solid fa-person"></i>
+              <span>Everyday Body Balance</span>
             </div>
-            <div class="kino-side-badge-item">
+            <div class="kino-side-feat-item">
               <i class="fa-solid fa-leaf"></i>
-              <span>100% ALUMINUM FREE</span>
+              <span>Herbal Formula</span>
             </div>
-            <div class="kino-side-badge-item">
+            <div class="kino-side-feat-item">
               <i class="fa-solid fa-bolt"></i>
-              <span>72-HR PROTECTION</span>
+              <span>Everyday Energy*</span>
             </div>
           </div>
         </div>
 
-        <!-- Fully Responsive Thumbnail Scroll Strip (Outside Main Card) -->
+        <!-- Thumbnail Strip -->
         <div class="kino-gallery-thumbs-wrapper">
           <div class="kino-gallery-thumbs">
-            <div class="kino-thumb-item active" data-src="assets/kino-bundle-hero-v3.png">
+            <div class="kino-thumb-item active" data-src="assets/kino-lifestyle-hero.jpg">
+              <img src="assets/kino-lifestyle-hero.jpg" alt="Kino Lifestyle Hero">
+            </div>
+            <div class="kino-thumb-item" data-src="assets/kino-bundle-hero-v3.png">
               <img src="assets/kino-bundle-hero-v3.png" alt="Hero Bundle with Free Gifts">
             </div>
             <div class="kino-thumb-item" data-src="assets/kino-single-tube-v3.png">
@@ -1506,51 +838,23 @@
             <div class="kino-thumb-item" data-src="assets/kino-tube-cream-texture.png">
               <img src="assets/kino-tube-cream-texture.png" alt="Silky Cream Texture">
             </div>
-            <div class="kino-thumb-item" data-src="assets/kino-botanicals-center.png">
-              <img src="assets/kino-botanicals-center.png" alt="Clean Botanical Actives">
-            </div>
-            <div class="kino-thumb-item" data-src="assets/kino-soap-box.png">
-              <img src="assets/kino-soap-box.png" alt="Kino Soap Bar Box">
-            </div>
-            <div class="kino-thumb-item" data-src="assets/kino-gift-duo-v3.png">
-              <img src="assets/kino-gift-duo-v3.png" alt="Free Gift Scrubber + Soap">
-            </div>
-            <div class="kino-thumb-item" data-src="assets/kino-infographic-formula.jpg">
-              <img src="assets/kino-infographic-formula.jpg" alt="Meet The Formula">
-            </div>
-            <div class="kino-thumb-item" data-src="assets/kino-infographic-body.jpg">
-              <img src="assets/kino-infographic-body.jpg" alt="Whole Body Coverage">
-            </div>
             <div class="kino-thumb-item" data-src="assets/works-anywhere.jpg">
-              <img src="assets/works-anywhere.jpg" alt="Works Anywhere Flat Lay">
+              <img src="assets/works-anywhere.jpg" alt="Works Anywhere">
             </div>
             <div class="kino-thumb-item" data-src="assets/workout-tested.jpg">
-              <img src="assets/workout-tested.jpg" alt="Workout Tested Studio Lineup">
+              <img src="assets/workout-tested.jpg" alt="Workout Tested">
             </div>
             <div class="kino-thumb-item" data-src="assets/zero-stains.jpg">
-              <img src="assets/zero-stains.jpg" alt="Zero Stains Lifestyle">
+              <img src="assets/zero-stains.jpg" alt="Zero Stains">
             </div>
           </div>
-        </div>
-
-        <!-- 93% Sold Progress Bar + See Clean Ingredients Button -->
-        <div class="kino-urgency-row">
-          <div class="kino-urgency-left">
-            <div class="kino-progress-track">
-              <div class="kino-progress-fill" style="width: 93%;"></div>
-            </div>
-            <span class="kino-urgency-text">93% Sold</span>
-          </div>
-          <button class="kino-ingredients-btn" onclick="document.getElementById('clean-ingredients').scrollIntoView({behavior: 'smooth'})">
-            <i class="fa-solid fa-leaf"></i> See Clean Ingredients
-          </button>
         </div>
       </div>
 
-      <!-- RIGHT: Product Title, Value Props, Bundles, CTA -->
-      <div class="kino-product-info-col" id="kino-order-sec">
+      <!-- RIGHT: Buy Box (Exact Lymphoria Screenshot 1) -->
+      <div class="kino-hero-info">
         
-        <!-- Social Proof Line -->
+        <!-- Social Proof Rating -->
         <div class="kino-social-proof">
           <div class="kino-stars">
             <i class="fa-solid fa-star"></i>
@@ -1559,769 +863,334 @@
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
           </div>
-          <div class="kino-avatar-stack">
-            <div class="kino-avatar-circle" style="background-image: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80');"></div>
-            <div class="kino-avatar-circle" style="background-image: url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&q=80');"></div>
-            <div class="kino-avatar-circle" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80');"></div>
+          <div class="kino-rating-label">
+            Rated 4.9 <strong>'Excellent'</strong> | 1,475+ Reviews
           </div>
-          <span class="kino-rating-label">Rated 4.9 <strong>"Excellent"</strong> | 1,475+ Reviews</span>
         </div>
 
-        <!-- Product Heading -->
+        <!-- Title & Subtitle -->
         <h1 class="kino-product-title">Kino® Whole Body Cream Deodorant</h1>
+        <p class="kino-product-sub">
+          The 30-second daily ritual your whole body odor defense has been waiting for.
+        </p>
 
-        <!-- 3 Benefit Bullet Points -->
-        <div class="kino-benefit-bullets">
-          <div class="kino-bullet-item">
-            <i class="fa-solid fa-shield-halved kino-bullet-icon"></i>
-            <div class="kino-bullet-text">
-              <strong>72-Hour Clinical Protection</strong>
-              Helps neutralize odor-causing bacteria before it starts.
-            </div>
-          </div>
-          <div class="kino-bullet-item">
-            <i class="fa-solid fa-leaf kino-bullet-icon"></i>
-            <div class="kino-bullet-text">
-              <strong>100% Aluminum &amp; Baking Soda-Free</strong>
-              Non-toxic, skin-friendly formula that respects your natural skin barrier.
-            </div>
-          </div>
-          <div class="kino-bullet-item">
-            <i class="fa-solid fa-heart-pulse kino-bullet-icon"></i>
-            <div class="kino-bullet-text">
-              <strong>Whole Body &amp; Intimate Area Safe</strong>
-              Engineered for underarms, private parts, underboob, creases, and feet.
-            </div>
-          </div>
-        </div>
-
-        <!-- BUNDLE SELECTION CARDS WITH TRANSPARENT PNG THUMBNAILS -->
-        <div class="kino-bundles-list">
+        <!-- Bundle Option Cards (Exact Lymphoria Screenshot 1) -->
+        <div class="kino-bundle-selector">
           
-          <!-- Tier 1: Buy One -->
+          <!-- Card 1: Buy One -->
           <div
             class="kino-bundle-card"
             data-tier="1"
             data-hero-img="assets/kino-single-tube-v3.png"
             data-price="$24.99"
-            data-compare="$29.99"
-            data-save="$5.00"
-            data-badge="SAVE $5.00"
-            data-qty="1"
           >
             <div class="kino-bundle-main-row">
               <div class="kino-bundle-left">
                 <div class="kino-bundle-thumb">
                   <img src="assets/kino-single-tube-v3.png" alt="Buy 1 Tube">
                 </div>
-                <div>
-                  <div class="kino-bundle-name">Buy One</div>
-                  <div class="kino-bundle-save-pill" style="color: #475569;">You save $5.00</div>
-                </div>
+                <div class="kino-bundle-name">Buy One</div>
               </div>
               <div class="kino-bundle-right">
                 <div class="kino-bundle-price">$24.99</div>
-                <div class="kino-bundle-compare">$29.99</div>
               </div>
             </div>
           </div>
 
-          <!-- Tier 2: Buy 2, Get 1 FREE GIFT [MOST POPULAR] -->
+          <!-- Card 2: Buy Two (Most Popular) -->
           <div
             class="kino-bundle-card active"
             data-tier="2"
-            data-hero-img="assets/kino-bundle-hero-v3.png"
+            data-hero-img="assets/kino-tier2-bundle-v3.png"
             data-price="$49.98"
-            data-compare="$74.97"
-            data-save="$39.99"
-            data-badge="SAVE $39.99"
-            data-qty="3"
           >
             <span class="kino-bundle-corner-badge">Most Popular</span>
             <div class="kino-bundle-main-row">
               <div class="kino-bundle-left">
                 <div class="kino-bundle-thumb">
-                  <img src="assets/kino-tier2-bundle-v3.png" alt="Buy 2 Get 1 Free">
+                  <img src="assets/kino-tier2-bundle-v3.png" alt="Buy 2 Tubes">
                 </div>
-                <div>
-                  <div class="kino-bundle-name">Buy 2, Get 1 FREE GIFT</div>
-                  <div class="kino-bundle-save-pill">You save $39.99</div>
-                </div>
+                <div class="kino-bundle-name">Buy Two (Get 1 Free)</div>
               </div>
               <div class="kino-bundle-right">
                 <div class="kino-bundle-price">$49.98</div>
-                <div class="kino-bundle-compare">$74.97</div>
               </div>
-            </div>
-            <div class="kino-bundle-feature-row">
-              <span><i class="fa-solid fa-circle-check"></i> FREE Kino Gentle Exfoliating Soap Bar ($14.99 value)</span>
-              <span style="color:#64748b; font-weight:600; font-size:12px;">Premium Quality</span>
             </div>
           </div>
 
-          <!-- Tier 3: Buy 3, Get 3 FREE GIFTS [BEST DEAL] -->
+          <!-- Card 3: Buy Three (Free Shipping) -->
           <div
             class="kino-bundle-card"
             data-tier="3"
             data-hero-img="assets/kino-tier3-bundle-v3.png"
             data-price="$74.97"
-            data-compare="$139.90"
-            data-save="$64.93"
-            data-badge="SAVE $64.93"
-            data-qty="5"
           >
-            <span class="kino-bundle-corner-badge best-deal">Best Deal</span>
+            <span class="kino-bundle-corner-badge">Free Shipping</span>
             <div class="kino-bundle-main-row">
               <div class="kino-bundle-left">
                 <div class="kino-bundle-thumb">
-                  <img src="assets/kino-tier3-bundle-v3.png" alt="Buy 3 Get 3 Free">
+                  <img src="assets/kino-tier3-bundle-v3.png" alt="Buy 3 Tubes">
                 </div>
-                <div>
-                  <div class="kino-bundle-name">Buy 3, Get 3 FREE GIFTS</div>
-                  <div class="kino-bundle-save-pill">You save $64.93</div>
-                </div>
+                <div class="kino-bundle-name">Buy Three (Get 2 Free + Soap)</div>
               </div>
               <div class="kino-bundle-right">
                 <div class="kino-bundle-price">$74.97</div>
-                <div class="kino-bundle-compare">$139.90</div>
               </div>
             </div>
-            <div class="kino-bundle-feature-row">
-              <span><i class="fa-solid fa-circle-check"></i> FREE Soap Bar + Body Scrubber + Free US Shipping ($29.98 value)</span>
-              <span class="kino-badge-free-ship">Free Shipping</span>
+          </div>
+
+        </div>
+
+        <!-- SUBSCRIBE & UNLOCKED GIFTS (Exact Lymphoria Screenshot 1) -->
+        <div class="kino-unlocked-gifts-container">
+          <div class="kino-unlocked-tab">SUBSCRIBE &amp; UNLOCKED GIFTS</div>
+          <div class="kino-gifts-grid">
+            <div class="kino-gift-box">
+              <i class="fa-solid fa-lock"></i>
+              <span>Locked<br>Free Soap Bar</span>
+            </div>
+            <div class="kino-gift-box">
+              <i class="fa-solid fa-lock"></i>
+              <span>Locked<br>Body Scrubber</span>
+            </div>
+            <div class="kino-gift-box">
+              <i class="fa-solid fa-lock"></i>
+              <span>Locked<br>Free Shipping</span>
             </div>
           </div>
-
         </div>
 
-        <!-- "Good Choice!" Callout Box -->
-        <div class="kino-good-choice-box" id="kinoGoodChoice">
-          <div class="kino-good-choice-title">Good Choice!</div>
-          <div class="kino-good-choice-sub">You save <strong id="kinoSaveDynamic">$39.99</strong> compared with buying individually</div>
+        <!-- Segmented Toggle -->
+        <div class="kino-purchase-type-toggle">
+          <button type="button" class="kino-toggle-btn active">One-Time Purchase</button>
+          <button type="button" class="kino-toggle-btn">Subscribe &amp; Save (10% Extra)</button>
         </div>
 
-        <!-- GIFTS UNLOCKED Section With Transparent PNG Cutout -->
-        <div class="kino-gifts-unlocked-card" id="kinoGiftsUnlocked">
-          <div class="kino-gifts-unlocked-thumb">
-            <img src="assets/kino-gift-duo-v3.png" alt="Free Soap & Scrubber">
-          </div>
-          <div>
-            <span class="kino-gifts-unlocked-badge">GIFTS UNLOCKED</span>
-            <div class="kino-gifts-unlocked-title" id="kinoGiftTitle">FREE Kino Exfoliating Soap Bar + Scrubber!</div>
-            <div class="kino-gifts-unlocked-desc" id="kinoGiftDesc">100% natural, full-body brightening cleansing bar automatically added to your order.</div>
-          </div>
-        </div>
-
-        <!-- Segmented Toggle: One-Time Purchase vs Subscribe & Save -->
-        <div class="kino-sub-toggle-wrap">
-          <button class="kino-sub-btn active" id="btnOneTime">One-Time Purchase</button>
-          <button class="kino-sub-btn" id="btnSubscribe">Subscribe &amp; Save (10% Extra)</button>
-        </div>
-
-        <!-- Full-Width Add To Cart Button -->
-        <button class="kino-main-atc-btn" id="kinoAtcBtn">
+        <!-- Add To Cart Button -->
+        <button type="button" class="kino-main-atc-btn">
           <i class="fa-solid fa-lock"></i>
-          <span id="atcBtnText">CLAIM OFFER &amp; ADD TO CART</span>
+          <span>CLAIM OFFER &amp; ADD TO CART</span>
         </button>
 
-        
-    <!-- 100% REAL OFFICIAL VECTOR PAYMENT BADGES (INLINE SVG) -->
-    <div class="kino-payment-row">
-      <!-- Visa -->
-      <svg class="kino-pay-icon" viewBox="0 0 38 24" width="38" height="24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Visa"><path opacity=".07" d="M35 1.5H3a1.5 1.5 0 0 0-1.5 1.5v18A1.5 1.5 0 0 0 3 22.5h32a1.5 1.5 0 0 0 1.5-1.5V3A1.5 1.5 0 0 0 35 1.5Z"/><path fill="#fff" d="M35 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h32Z"/><path fill="#1434CB" d="M28.3 10.1c-.1-.5-.6-.9-1.2-.9h-3.8c-.3 0-.5.2-.6.5l-5.6 13.3h4l.8-2.2h4.9l.5 2.2h3.5l-2.5-12.9zm-4.3 8.3 1.9-5.3 1.1 5.3h-3zm-6.6-8.3h-3.9l-2.4 9.2-1-5.3c-.2-.9-.9-1.5-1.8-1.5H4.2l-.1.4c1.8.4 3.9 1.5 5.1 3.2l3.4 9.2h4l4.8-15.2zm-12.2.1-2.6 15h3.8l2.6-15H5.2zm28.2 4.4c0-2.8-3.9-3-3.9-4.3 0-.5.5-.8 1.5-.8.9 0 2.1.2 3 .7l.5-3.2c-1-.4-2.2-.6-3.6-.6-3.8 0-6.5 2-6.5 4.9 0 4.3 5.9 4.3 5.9 6.5 0 .7-.8 1-1.7 1-1.4 0-2.7-.4-3.8-1l-.5 3.3c1.2.6 2.8.9 4.3.9 4.1 0 6.3-2 6.3-5.4z"/></svg>
-      <!-- Mastercard -->
-      <svg class="kino-pay-icon" viewBox="0 0 38 24" width="38" height="24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mastercard"><path opacity=".07" d="M35 1.5H3a1.5 1.5 0 0 0-1.5 1.5v18A1.5 1.5 0 0 0 3 22.5h32a1.5 1.5 0 0 0 1.5-1.5V3A1.5 1.5 0 0 0 35 1.5Z"/><path fill="#fff" d="M35 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h32Z"/><path fill="#EB001B" d="M15 12a8 8 0 0 1 3.1-6.4 8 8 0 1 0 0 12.8A8 8 0 0 1 15 12Z"/><path fill="#F79E1B" d="M26.1 12a8 8 0 0 1-11.1 6.4A8 8 0 0 1 18.1 5.6 8 8 0 0 1 26.1 12Z"/><path fill="#FF5F00" d="M18.1 5.6a8 8 0 0 0-3.1 6.4 8 8 0 0 0 3.1 6.4 8 8 0 0 0 0-12.8Z"/></svg>
-      <!-- Amex -->
-      <svg class="kino-pay-icon" viewBox="0 0 38 24" width="38" height="24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="American Express"><path opacity=".07" d="M35 1.5H3a1.5 1.5 0 0 0-1.5 1.5v18A1.5 1.5 0 0 0 3 22.5h32a1.5 1.5 0 0 0 1.5-1.5V3A1.5 1.5 0 0 0 35 1.5Z"/><path fill="#016FD0" d="M35 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h32Z"/><path fill="#fff" d="M12.5 10.3h-2.1L9 13.9l-1.4-3.6H5.5L7.7 15l-2.2 4.7h2.1L9 16.1l1.4 3.6h2.1L10.3 15l2.2-4.7zm13 0h-3.6v9.4h3.6c2.5 0 4.1-1.8 4.1-4.7s-1.6-4.7-4.1-4.7zm0 7.4h-1.6v-5.4h1.6c1.3 0 2.1 1 2.1 2.7s-.8 2.7-2.1 2.7zm-8.8-7.4h-5.4v9.4h5.4v-1.9h-3.4v-1.9h3v-1.9h-3v-1.8h3.4v-1.9z"/></svg>
-      <!-- Apple Pay -->
-      <svg class="kino-pay-icon" viewBox="0 0 38 24" width="38" height="24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Apple Pay"><path opacity=".07" d="M35 1.5H3a1.5 1.5 0 0 0-1.5 1.5v18A1.5 1.5 0 0 0 3 22.5h32a1.5 1.5 0 0 0 1.5-1.5V3A1.5 1.5 0 0 0 35 1.5Z"/><path fill="#000" d="M35 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h32Z"/><path fill="#fff" d="M14.9 14.8c-.3.8-.7 1.5-1.3 2.1-.5.5-1.1.9-1.7.9-.5 0-.9-.1-1.3-.3-.4-.2-.8-.3-1.2-.3-.4 0-.8.1-1.2.3-.4.2-.8.3-1.3.3-.6 0-1.2-.4-1.7-.9-.6-.6-1-1.3-1.3-2.1-.4-1.2-.6-2.3-.6-3.4 0-1.4.3-2.5 1-3.3.6-.8 1.5-1.2 2.5-1.2.5 0 1 .1 1.4.3.4.2.8.4 1.1.4.3 0 .7-.2 1.1-.4.4-.2.9-.3 1.4-.3.9 0 1.7.3 2.3.9-.8.5-1.3 1.2-1.5 2.1-.2.9-.1 1.8.4 2.5.4.8 1.1 1.3 1.9 1.6-.2.6-.4 1.2-.6 1.7zm-2.2-8.3c0 .5-.2 1-.5 1.4-.3.4-.8.7-1.3.9 0-.5.2-1 .5-1.4.3-.4.8-.7 1.3-.9zm5.9 8.2v-7.1h2.2c.8 0 1.4.2 1.8.6.4.4.6 1 .6 1.7 0 .7-.2 1.3-.6 1.7-.4.4-1 .6-1.8.6h-1.1v2.5h-1.1zm1.1-3.5h1c.5 0 .8-.1 1.1-.3.2-.2.3-.6.3-1s-.1-.8-.3-1c-.2-.2-.6-.3-1.1-.3h-1v2.6zm6.8 3.5c-.3 0-.6-.1-.8-.2-.2-.1-.4-.3-.5-.6-.3.3-.6.5-.9.7-.3.1-.7.2-1.1.2-.6 0-1.1-.2-1.4-.5-.4-.3-.5-.8-.5-1.3 0-.7.3-1.2.8-1.5.5-.3 1.2-.5 2.1-.5h1v-.4c0-.4-.1-.7-.3-.9-.2-.2-.6-.3-1.1-.3-.4 0-.7.1-1 .2-.3.1-.6.3-.9.6l-.6-.7c.4-.3.8-.6 1.3-.8.5-.2 1.1-.3 1.7-.3.8 0 1.4.2 1.8.6.4.4.6 1 .6 1.7v3.5h-1.1zm-1.8-.9c.4 0 .8-.1 1.1-.3.3-.2.6-.5.7-.9v-.8h-.9c-.6 0-1 .1-1.3.3-.3.2-.4.5-.4.8 0 .3.1.5.3.7.2.1.4.2.5.2zm7.9.9-1.2-3.4-1.2 3.4h-1.2l2-5.3-1.9-4.3h1.2l1.3 3.3 1.2-3.3h1.2l-3.2 7.6h-1.2z"/></svg>
-      <!-- PayPal -->
-      <svg class="kino-pay-icon" viewBox="0 0 38 24" width="38" height="24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PayPal"><path opacity=".07" d="M35 1.5H3a1.5 1.5 0 0 0-1.5 1.5v18A1.5 1.5 0 0 0 3 22.5h32a1.5 1.5 0 0 0 1.5-1.5V3A1.5 1.5 0 0 0 35 1.5Z"/><path fill="#fff" d="M35 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h32Z"/><path fill="#003087" d="M15.5 6.5h4.6c2.4 0 4.2 1.4 3.7 3.8-.4 2.1-2.2 3.3-4.3 3.3h-1.4l-.8 4.2h-2.8l1-11.3z"/><path fill="#0079C1" d="M17.5 9h4.6c2.4 0 4.2 1.4 3.7 3.8-.4 2.1-2.2 3.3-4.3 3.3h-1.4l-.8 4.2h-2.8l1-11.3z"/><path fill="#00457C" d="M19.3 13.5h-1.4l-.8 4.2h-2.8l.2-1.9 1.4-1.8 1.4-.5h2z"/></svg>
-      <!-- Discover -->
-      <svg class="kino-pay-icon" viewBox="0 0 38 24" width="38" height="24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Discover"><path opacity=".07" d="M35 1.5H3a1.5 1.5 0 0 0-1.5 1.5v18A1.5 1.5 0 0 0 3 22.5h32a1.5 1.5 0 0 0 1.5-1.5V3A1.5 1.5 0 0 0 35 1.5Z"/><path fill="#fff" d="M35 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h32Z"/><path fill="#444" d="M6.3 13.7v-3.4h1.7c1.1 0 1.8.6 1.8 1.7 0 1.1-.7 1.7-1.8 1.7H6.3zm-.9.8h2.6c1.6 0 2.8-.9 2.8-2.5 0-1.5-1.2-2.5-2.8-2.5H5.4v5zm7.3 0v-5h-.9v5h.9zm4.7-1.3c0 .5-.3.8-.8.8-.6 0-.9-.3-.9-.9 0-.4.3-.8.7-.9l.9-.3.1 1.3zm.1-2c-.3-.2-.7-.3-1.1-.3-.9 0-1.5.5-1.6 1.3h.9c0-.4.3-.6.8-.6.4 0 .7.2.7.5 0 .2-.1.3-.4.4l-1.1.4c-.8.3-1.2.7-1.2 1.4 0 .9.7 1.5 1.7 1.5.7 0 1.2-.3 1.5-.7v.6h.9v-3.4c0-.7-.4-1.1-1.2-1.1zm11 1.6-1.5 3.7h-.9l-1.6-3.7-1.6 3.7h-.9l2-4.5-.6-1.5h.9l1.2 3.1 1.2-3.1h.9l2 4.5.6-1.5h.8l-1.5 3.7zm-9.5-3.3c-1.9 0-3.4 1.5-3.4 3.4s1.5 3.4 3.4 3.4 3.4-1.5 3.4-3.4-1.5-3.4-3.4-3.4z"/><path fill="#F47216" d="M20.5 13.7a1.8 1.8 0 1 0 0-3.6 1.8 1.8 0 0 0 0 3.6Z"/></svg>
-      <!-- Shop Pay -->
-      <svg class="kino-pay-icon" viewBox="0 0 38 24" width="38" height="24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shop Pay"><path opacity=".07" d="M35 1.5H3a1.5 1.5 0 0 0-1.5 1.5v18A1.5 1.5 0 0 0 3 22.5h32a1.5 1.5 0 0 0 1.5-1.5V3A1.5 1.5 0 0 0 35 1.5Z"/><path fill="#5A31F4" d="M35 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h32Z"/><path fill="#fff" d="M11.9 14.5c0-.6.4-1 1.2-1.2l1.6-.3c.7-.1 1.1-.5 1.1-1 0-.6-.5-1-1.3-1-.8 0-1.3.4-1.4 1h-1.3c.1-1.2 1.1-2 2.7-2 1.6 0 2.6.8 2.6 2v4.8h-1.3v-1.1c-.4.8-1.2 1.2-2.1 1.2-1.1 0-1.8-.7-1.8-1.7zm3.9-.9v-.5c-.3.3-.8.4-1.3.5l-1.2.2c-.4.1-.7.3-.7.6s.3.6.8.6c.9 0 1.5-.5 1.5-1.2zm6.6-4.6v1.3c-.4-.2-.8-.3-1.2-.3-.9 0-1.5.6-1.5 1.7v4.1h-1.3v-6.9h1.3v1.1c.4-.8 1.1-1.2 1.9-1.2.3 0 .6.1.8.2zm6.6 3.5c0 2-1.4 3.6-3.4 3.6s-3.4-1.6-3.4-3.6 1.4-3.6 3.4-3.6 3.4 1.6 3.4 3.6zm-5.5 0c0 1.3.9 2.4 2.1 2.4s2.1-1.1 2.1-2.4-.9-2.4-2.1-2.4-2.1 1.1-2.1 2.4z"/></svg>
-    </div>
-
+        <!-- 100% Real Official Vector Payment Badges -->
+        <div class="kino-payment-row">
+          <!-- Visa -->
+          <svg class="kino-pay-icon" viewBox="0 0 38 24" width="38" height="24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Visa"><path opacity=".07" d="M35 1.5H3a1.5 1.5 0 0 0-1.5 1.5v18A1.5 1.5 0 0 0 3 22.5h32a1.5 1.5 0 0 0 1.5-1.5V3A1.5 1.5 0 0 0 35 1.5Z"/><path fill="#fff" d="M35 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h32Z"/><path fill="#1434CB" d="M28.3 10.1c-.1-.5-.6-.9-1.2-.9h-3.8c-.3 0-.5.2-.6.5l-5.6 13.3h4l.8-2.2h4.9l.5 2.2h3.5l-2.5-12.9zm-4.3 8.3 1.9-5.3 1.1 5.3h-3zm-6.6-8.3h-3.9l-2.4 9.2-1-5.3c-.2-.9-.9-1.5-1.8-1.5H4.2l-.1.4c1.8.4 3.9 1.5 5.1 3.2l3.4 9.2h4l4.8-15.2zm-12.2.1-2.6 15h3.8l2.6-15H5.2zm28.2 4.4c0-2.8-3.9-3-3.9-4.3 0-.5.5-.8 1.5-.8.9 0 2.1.2 3 .7l.5-3.2c-1-.4-2.2-.6-3.6-.6-3.8 0-6.5 2-6.5 4.9 0 4.3 5.9 4.3 5.9 6.5 0 .7-.8 1-1.7 1-1.4 0-2.7-.4-3.8-1l-.5 3.3c1.2.6 2.8.9 4.3.9 4.1 0 6.3-2 6.3-5.4z"/></svg>
+          <!-- Mastercard -->
+          <svg class="kino-pay-icon" viewBox="0 0 38 24" width="38" height="24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mastercard"><path opacity=".07" d="M35 1.5H3a1.5 1.5 0 0 0-1.5 1.5v18A1.5 1.5 0 0 0 3 22.5h32a1.5 1.5 0 0 0 1.5-1.5V3A1.5 1.5 0 0 0 35 1.5Z"/><path fill="#fff" d="M35 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h32Z"/><path fill="#EB001B" d="M15 12a8 8 0 0 1 3.1-6.4 8 8 0 1 0 0 12.8A8 8 0 0 1 15 12Z"/><path fill="#F79E1B" d="M26.1 12a8 8 0 0 1-11.1 6.4A8 8 0 0 1 18.1 5.6 8 8 0 0 1 26.1 12Z"/><path fill="#FF5F00" d="M18.1 5.6a8 8 0 0 0-3.1 6.4 8 8 0 0 0 3.1 6.4 8 8 0 0 0 0-12.8Z"/></svg>
+          <!-- Amex -->
+          <svg class="kino-pay-icon" viewBox="0 0 38 24" width="38" height="24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="American Express"><path opacity=".07" d="M35 1.5H3a1.5 1.5 0 0 0-1.5 1.5v18A1.5 1.5 0 0 0 3 22.5h32a1.5 1.5 0 0 0 1.5-1.5V3A1.5 1.5 0 0 0 35 1.5Z"/><path fill="#016FD0" d="M35 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h32Z"/><path fill="#fff" d="M12.5 10.3h-2.1L9 13.9l-1.4-3.6H5.5L7.7 15l-2.2 4.7h2.1L9 16.1l1.4 3.6h2.1L10.3 15l2.2-4.7zm13 0h-3.6v9.4h3.6c2.5 0 4.1-1.8 4.1-4.7s-1.6-4.7-4.1-4.7zm0 7.4h-1.6v-5.4h1.6c1.3 0 2.1 1 2.1 2.7s-.8 2.7-2.1 2.7zm-8.8-7.4h-5.4v9.4h5.4v-1.9h-3.4v-1.9h3v-1.9h-3v-1.8h3.4v-1.9z"/></svg>
+          <!-- Apple Pay -->
+          <svg class="kino-pay-icon" viewBox="0 0 38 24" width="38" height="24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Apple Pay"><path opacity=".07" d="M35 1.5H3a1.5 1.5 0 0 0-1.5 1.5v18A1.5 1.5 0 0 0 3 22.5h32a1.5 1.5 0 0 0 1.5-1.5V3A1.5 1.5 0 0 0 35 1.5Z"/><path fill="#000" d="M35 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h32Z"/><path fill="#fff" d="M14.9 14.8c-.3.8-.7 1.5-1.3 2.1-.5.5-1.1.9-1.7.9-.5 0-.9-.1-1.3-.3-.4-.2-.8-.3-1.2-.3-.4 0-.8.1-1.2.3-.4.2-.8.3-1.3.3-.6 0-1.2-.4-1.7-.9-.6-.6-1-1.3-1.3-2.1-.4-1.2-.6-2.3-.6-3.4 0-1.4.3-2.5 1-3.3.6-.8 1.5-1.2 2.5-1.2.5 0 1 .1 1.4.3.4.2.8.4 1.1.4.3 0 .7-.2 1.1-.4.4-.2.9-.3 1.4-.3.9 0 1.7.3 2.3.9-.8.5-1.3 1.2-1.5 2.1-.2.9-.1 1.8.4 2.5.4.8 1.1 1.3 1.9 1.6-.2.6-.4 1.2-.6 1.7zm-2.2-8.3c0 .5-.2 1-.5 1.4-.3.4-.8.7-1.3.9 0-.5.2-1 .5-1.4.3-.4.8-.7 1.3-.9zm5.9 8.2v-7.1h2.2c.8 0 1.4.2 1.8.6.4.4.6 1 .6 1.7 0 .7-.2 1.3-.6 1.7-.4.4-1 .6-1.8.6h-1.1v2.5h-1.1zm1.1-3.5h1c.5 0 .8-.1 1.1-.3.2-.2.3-.6.3-1s-.1-.8-.3-1c-.2-.2-.6-.3-1.1-.3h-1v2.6zm6.8 3.5c-.3 0-.6-.1-.8-.2-.2-.1-.4-.3-.5-.6-.3.3-.6.5-.9.7-.3.1-.7.2-1.1.2-.6 0-1.1-.2-1.4-.5-.4-.3-.5-.8-.5-1.3 0-.7.3-1.2.8-1.5.5-.3 1.2-.5 2.1-.5h1v-.4c0-.4-.1-.7-.3-.9-.2-.2-.6-.3-1.1-.3-.4 0-.7.1-1 .2-.3.1-.6.3-.9.6l-.6-.7c.4-.3.8-.6 1.3-.8.5-.2 1.1-.3 1.7-.3.8 0 1.4.2 1.8.6.4.4.6 1 .6 1.7v3.5h-1.1zm-1.8-.9c.4 0 .8-.1 1.1-.3.3-.2.6-.5.7-.9v-.8h-.9c-.6 0-1 .1-1.3.3-.3.2-.4.5-.4.8 0 .3.1.5.3.7.2.1.4.2.5.2zm7.9.9-1.2-3.4-1.2 3.4h-1.2l2-5.3-1.9-4.3h1.2l1.3 3.3 1.2-3.3h1.2l-3.2 7.6h-1.2z"/></svg>
+          <!-- PayPal -->
+          <svg class="kino-pay-icon" viewBox="0 0 38 24" width="38" height="24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PayPal"><path opacity=".07" d="M35 1.5H3a1.5 1.5 0 0 0-1.5 1.5v18A1.5 1.5 0 0 0 3 22.5h32a1.5 1.5 0 0 0 1.5-1.5V3A1.5 1.5 0 0 0 35 1.5Z"/><path fill="#fff" d="M35 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h32Z"/><path fill="#003087" d="M15.5 6.5h4.6c2.4 0 4.2 1.4 3.7 3.8-.4 2.1-2.2 3.3-4.3 3.3h-1.4l-.8 4.2h-2.8l1-11.3z"/><path fill="#0079C1" d="M17.5 9h4.6c2.4 0 4.2 1.4 3.7 3.8-.4 2.1-2.2 3.3-4.3 3.3h-1.4l-.8 4.2h-2.8l1-11.3z"/><path fill="#00457C" d="M19.3 13.5h-1.4l-.8 4.2h-2.8l.2-1.9 1.4-1.8 1.4-.5h2z"/></svg>
+          <!-- Discover -->
+          <svg class="kino-pay-icon" viewBox="0 0 38 24" width="38" height="24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Discover"><path opacity=".07" d="M35 1.5H3a1.5 1.5 0 0 0-1.5 1.5v18A1.5 1.5 0 0 0 3 22.5h32a1.5 1.5 0 0 0 1.5-1.5V3A1.5 1.5 0 0 0 35 1.5Z"/><path fill="#fff" d="M35 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h32Z"/><path fill="#444" d="M6.3 13.7v-3.4h1.7c1.1 0 1.8.6 1.8 1.7 0 1.1-.7 1.7-1.8 1.7H6.3zm-.9.8h2.6c1.6 0 2.8-.9 2.8-2.5 0-1.5-1.2-2.5-2.8-2.5H5.4v5zm7.3 0v-5h-.9v5h.9zm4.7-1.3c0 .5-.3.8-.8.8-.6 0-.9-.3-.9-.9 0-.4.3-.8.7-.9l.9-.3.1 1.3zm.1-2c-.3-.2-.7-.3-1.1-.3-.9 0-1.5.5-1.6 1.3h.9c0-.4.3-.6.8-.6.4 0 .7.2.7.5 0 .2-.1.3-.4.4l-1.1.4c-.8.3-1.2.7-1.2 1.4 0 .9.7 1.5 1.7 1.5.7 0 1.2-.3 1.5-.7v.6h.9v-3.4c0-.7-.4-1.1-1.2-1.1zm11 1.6-1.5 3.7h-.9l-1.6-3.7-1.6 3.7h-.9l2-4.5-.6-1.5h.9l1.2 3.1 1.2-3.1h.9l2 4.5.6-1.5h.8l-1.5 3.7zm-9.5-3.3c-1.9 0-3.4 1.5-3.4 3.4s1.5 3.4 3.4 3.4 3.4-1.5 3.4-3.4-1.5-3.4-3.4-3.4z"/><path fill="#F47216" d="M20.5 13.7a1.8 1.8 0 1 0 0-3.6 1.8 1.8 0 0 0 0 3.6Z"/></svg>
+          <!-- Shop Pay -->
+          <svg class="kino-pay-icon" viewBox="0 0 38 24" width="38" height="24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shop Pay"><path opacity=".07" d="M35 1.5H3a1.5 1.5 0 0 0-1.5 1.5v18A1.5 1.5 0 0 0 3 22.5h32a1.5 1.5 0 0 0 1.5-1.5V3A1.5 1.5 0 0 0 35 1.5Z"/><path fill="#5A31F4" d="M35 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h32Z"/><path fill="#fff" d="M11.9 14.5c0-.6.4-1 1.2-1.2l1.6-.3c.7-.1 1.1-.5 1.1-1 0-.6-.5-1-1.3-1-.8 0-1.3.4-1.4 1h-1.3c.1-1.2 1.1-2 2.7-2 1.6 0 2.6.8 2.6 2v4.8h-1.3v-1.1c-.4.8-1.2 1.2-2.1 1.2-1.1 0-1.8-.7-1.8-1.7zm3.9-.9v-.5c-.3.3-.8.4-1.3.5l-1.2.2c-.4.1-.7.3-.7.6s.3.6.8.6c.9 0 1.5-.5 1.5-1.2zm6.6-4.6v1.3c-.4-.2-.8-.3-1.2-.3-.9 0-1.5.6-1.5 1.7v4.1h-1.3v-6.9h1.3v1.1c.4-.8 1.1-1.2 1.9-1.2.3 0 .6.1.8.2zm6.6 3.5c0 2-1.4 3.6-3.4 3.6s-3.4-1.6-3.4-3.6 1.4-3.6 3.4-3.6 3.4 1.6 3.4 3.6zm-5.5 0c0 1.3.9 2.4 2.1 2.4s2.1-1.1 2.1-2.4-.9-2.4-2.1-2.4-2.1 1.1-2.1 2.4z"/></svg>
+        </div>
 
       </div>
     </div>
 
-    <!-- ================= 2. WHY TRUST KINO? SECTION ================= -->
-    <section class="kino-trust-section">
-      <h2 class="kino-trust-title">Why Trust Kino?</h2>
-      <div class="kino-trust-grid">
-        <div class="kino-trust-pill">
-          <i class="fa-solid fa-shield-halved"></i>
-          <span>72-Hour Clinical Protection</span>
-        </div>
-        <div class="kino-trust-pill">
-          <i class="fa-solid fa-leaf"></i>
-          <span>100% Aluminum &amp; Paraben Free</span>
-        </div>
-        <div class="kino-trust-pill">
-          <i class="fa-solid fa-user-doctor"></i>
-          <span>Dermatologist Approved</span>
-        </div>
-        <div class="kino-trust-pill">
-          <i class="fa-solid fa-flag-usa"></i>
-          <span>Made in USA &amp; Cruelty-Free</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 3. LIFESTYLE CARDS ================= -->
+    <!-- ================= 2. 4 LIFESTYLE CARDS (Exact Lymphoria Screenshot 4) ================= -->
     <section class="kino-lifestyle-section">
-      <div class="kino-sec-header">
-        <h2>Engineered for Whole Body Performance</h2>
-        <p>From workouts to intimate areas, experience effortless odor confidence anywhere.</p>
-      </div>
-
+      <h2 class="kino-section-title">The Natural Way to Whole Body Freshness</h2>
+      
       <div class="kino-lifestyle-grid">
+        
         <!-- Card 1 -->
         <div class="kino-lifestyle-card">
-          <div class="kino-lifestyle-img-wrap">
-            <img src="assets/works-anywhere.jpg" alt="Works Anywhere - Underarms, privates, underboob">
-          </div>
-          <div class="kino-lifestyle-body">
-            <h3 class="kino-lifestyle-title">Works Anywhere</h3>
-            <p class="kino-lifestyle-desc">Engineered for underarms, underboobs, private parts, and thigh folds with zero irritation.</p>
+          <img src="assets/works-anywhere.jpg" alt="Support That Feels Clean" class="kino-lifestyle-card-img">
+          <div class="kino-lifestyle-card-body">
+            <h3 class="kino-lifestyle-card-title">Support That Feels Clean*</h3>
+            <p class="kino-lifestyle-card-text">
+              Gentle herbs and natural actives that support your skin barrier every day, so you feel lighter and balanced all day long.
+            </p>
           </div>
         </div>
 
         <!-- Card 2 -->
         <div class="kino-lifestyle-card">
-          <div class="kino-lifestyle-img-wrap">
-            <img src="assets/workout-tested.jpg" alt="Workout & Sweat Tested">
-          </div>
-          <div class="kino-lifestyle-body">
-            <h3 class="kino-lifestyle-title">Workout &amp; Sweat Tested</h3>
-            <p class="kino-lifestyle-desc">Survives intense cardio, gym sessions, and humid outdoor heat with clinically proven ease.</p>
+          <img src="assets/zero-stains.jpg" alt="Made for Every Day" class="kino-lifestyle-card-img">
+          <div class="kino-lifestyle-card-body">
+            <h3 class="kino-lifestyle-card-title">Made for Every Day</h3>
+            <p class="kino-lifestyle-card-text">
+              A pea-sized drop when you wake, or right after your shower. Underarms, underboobs, private parts, and feet.
+            </p>
           </div>
         </div>
 
         <!-- Card 3 -->
         <div class="kino-lifestyle-card">
-          <div class="kino-lifestyle-img-wrap">
-            <img src="assets/zero-stains.jpg" alt="Zero Stains & Invisible">
-            <span class="kino-lifestyle-badge">72-HOUR ODOR CONTROL</span>
-          </div>
-          <div class="kino-lifestyle-body">
-            <h3 class="kino-lifestyle-title">Zero Stains &amp; Invisible</h3>
-            <p class="kino-lifestyle-desc">Glides on clear with no white residue, keeping your dark and white clothes flawless.</p>
+          <img src="assets/kino-tube-cream-texture.png" alt="Straight From the Tube" class="kino-lifestyle-card-img">
+          <div class="kino-lifestyle-card-body">
+            <h3 class="kino-lifestyle-card-title">Straight From the Tube</h3>
+            <p class="kino-lifestyle-card-text">
+              Silky smooth cream that absorbs invisibly in seconds without stickiness or white chalk residue.
+            </p>
           </div>
         </div>
+
+        <!-- Card 4 -->
+        <div class="kino-lifestyle-card">
+          <img src="assets/workout-tested.jpg" alt="Small Tube, High Standards" class="kino-lifestyle-card-img">
+          <div class="kino-lifestyle-card-body">
+            <h3 class="kino-lifestyle-card-title">Small Tube, High Standards</h3>
+            <p class="kino-lifestyle-card-text">
+              Triple-tested, made in a GMP-certified facility in the USA, and held to standards we'd want for our own families.
+            </p>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <!-- ================= 4. CLEAN BOTANICALS WITH USER ANIMATED GIF & BOTANICALS SHOWCASE ================= -->
-    <section class="kino-clean-ingr-section" id="clean-ingredients">
-      <div class="kino-sec-header">
-        <h2>A Thoughtful Blend of Clean Botanicals</h2>
-        <p>Skincare-grade actives that neutralize odor while nourishing delicate skin.</p>
+    <!-- ================= 3. BOTANICALS INGREDIENT SECTION (Exact Lymphoria Screenshot 5) ================= -->
+    <section class="kino-botanicals-section">
+      <div class="kino-botanicals-header">
+        <h2>A Thoughtful Blend of Traditional Botanicals</h2>
+        <p>Each herb is carefully chosen to create a gentle, nature-inspired daily wellness ritual.</p>
       </div>
 
-      <!-- Center Botanical Composite Transparent Showcase -->
-      <div class="kino-botanicals-showcase-card">
-        <img src="assets/kino-botanicals-center.png" alt="Kino Clean Botanicals Formula" class="kino-botanicals-img">
+      <div class="kino-botanicals-layout">
+        <!-- Visual Column -->
+        <div class="kino-botanicals-visual-wrap">
+          <img
+            src="assets/kino-botanicals-center.png"
+            alt="Kino Botanicals Blend"
+            class="kino-botanicals-visual-img"
+          >
+        </div>
+
+        <!-- 2x2 Ingredient Cards Grid (Exact Lymphoria Screenshot 5) -->
+        <div class="kino-botanicals-cards-grid">
+          
+          <div class="kino-ingr-card">
+            <div class="kino-ingr-card-icon">
+              <i class="fa-solid fa-seedling"></i>
+            </div>
+            <div class="kino-ingr-card-body">
+              <h3>Arrowroot Powder</h3>
+              <p>Helps you feel light and comfortable by supporting normal fluid and moisture balance naturally.*</p>
+            </div>
+          </div>
+
+          <div class="kino-ingr-card">
+            <div class="kino-ingr-card-icon">
+              <i class="fa-solid fa-spa"></i>
+            </div>
+            <div class="kino-ingr-card-body">
+              <h3>Organic Shea Butter</h3>
+              <p>The rich plant butter herbalists reach for to support smooth, deeply conditioned skin flow.*</p>
+            </div>
+          </div>
+
+          <div class="kino-ingr-card">
+            <div class="kino-ingr-card-icon">
+              <i class="fa-solid fa-leaf"></i>
+            </div>
+            <div class="kino-ingr-card-body">
+              <h3>Coconut Fatty Acids</h3>
+              <p>Supports healthy skin barrier flora so you feel fresh and ready for whatever the day brings.*</p>
+            </div>
+          </div>
+
+          <div class="kino-ingr-card">
+            <div class="kino-ingr-card-icon">
+              <i class="fa-solid fa-feather"></i>
+            </div>
+            <div class="kino-ingr-card-body">
+              <h3>Green Tea &amp; Santal</h3>
+              <p>Supports everyday energy through busy mornings and full afternoons with clean freshness.*</p>
+            </div>
+          </div>
+
+        </div>
       </div>
-      
-      <div class="kino-ingr-grid-items">
-        <div class="kino-ingr-card">
-          <div class="kino-ingr-card-head">
-            <i class="fa-solid fa-droplet"></i>
-            <h4>Niacinamide (Vitamin B3)</h4>
-          </div>
-          <p>Soothes delicate skin, calms shaving irritation, and helps restore natural skin barrier health.</p>
-        </div>
 
-        <div class="kino-ingr-card">
-          <div class="kino-ingr-card-head">
-            <i class="fa-solid fa-seedling"></i>
-            <h4>Avocado &amp; Coconut Oils</h4>
-          </div>
-          <p>Provides deep, non-greasy hydration while naturally balancing skin moisture levels.</p>
-        </div>
-
-        <div class="kino-ingr-card">
-          <div class="kino-ingr-card-head">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
-            <h4>Resveratrol &amp; Apple Extract</h4>
-          </div>
-          <p>Antioxidant powerhouses that inhibit the oxidation of sweat lipids that causes foul odor.</p>
-        </div>
-
-        <div class="kino-ingr-card">
-          <div class="kino-ingr-card-head">
-            <i class="fa-solid fa-shield-heart"></i>
-            <h4>Vitamin E (Tocopherol)</h4>
-          </div>
-          <p>Protective anti-inflammatory that keeps sensitive areas soft, calm, and chafe-free.</p>
-        </div>
-      </div>
-
-      <!-- DTC High-Converting CTA Button as seen in reference screenshot -->
+      <!-- Bottom Try Kino CTA -->
       <div class="kino-botanicals-cta-wrap">
-        <button class="kino-botanicals-atc-btn" onclick="document.getElementById('kino-order-sec').scrollIntoView({behavior: 'smooth'})">
-          <i class="fa-solid fa-lock"></i> CLAIM OFFER &amp; ADD TO CART
-        </button>
-      </div>
-    </section>
-
-    <!-- ================= 5. 5 REASONS PEOPLE CHOOSE KINO ================= -->
-    <section class="kino-reasons-section">
-      <div class="kino-sec-header">
-        <h2>5 Reasons People Choose Kino</h2>
-        <p>Everything you want in a deodorant, nothing you don't.</p>
-      </div>
-
-      <div class="kino-reasons-grid">
-        <div class="kino-reason-card">
-          <div class="kino-reason-body">
-            <span class="kino-reason-header-pill">REASON 01</span>
-            <h3 class="kino-reason-title">Stops Odor Before It Starts</h3>
-            <p class="kino-reason-desc">Unlike ordinary sprays and sticks that just mask odor with heavy fragrance, Kino targets and neutralizes bacteria before sweat ever smells.</p>
-          </div>
-        </div>
-
-        <div class="kino-reason-card">
-          <div class="kino-reason-body">
-            <span class="kino-reason-header-pill">REASON 02</span>
-            <h3 class="kino-reason-title">Safe for Privates &amp; Skin Folds</h3>
-            <p class="kino-reason-desc">Formulated without aluminum salts, parabens, or harsh baking soda — zero stinging, burning, redness, or post-shave rash.</p>
-          </div>
-        </div>
-
-        <div class="kino-reason-card">
-          <div class="kino-reason-body">
-            <span class="kino-reason-header-pill">REASON 03</span>
-            <h3 class="kino-reason-title">Invisible, Non-Staining Cream</h3>
-            <p class="kino-reason-desc">Glides on completely transparent and dries in seconds. No chalky residue, no yellow underarm armpit stains on your favorite shirts.</p>
-          </div>
-        </div>
-
-        <div class="kino-reason-card">
-          <div class="kino-reason-body">
-            <span class="kino-reason-header-pill">REASON 04</span>
-            <h3 class="kino-reason-title">72-Hour Clinical Protection</h3>
-            <p class="kino-reason-desc">Scientifically tested to keep you fresh through intense cardio sessions, humid outdoor heat, stressful days, and busy routines.</p>
-          </div>
-        </div>
-
-        <div class="kino-reason-card">
-          <div class="kino-reason-body">
-            <span class="kino-reason-header-pill">REASON 05</span>
-            <h3 class="kino-reason-title">Doctor-Formulated &amp; Clean</h3>
-            <p class="kino-reason-desc">Made with pride in the USA in an FDA-registered facility. Cruelty-free, vegan-certified, and dermatologist approved for everyday confidence.</p>
-          </div>
-        </div>
-
-        <div class="kino-reason-card" style="background: var(--kino-primary); color: #ffffff;">
-          <div class="kino-reason-body" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
-            <i class="fa-solid fa-heart" style="font-size: 32px; color: #34d399; margin-bottom: 12px;"></i>
-            <h3 class="kino-reason-title" style="color: #ffffff;">Join 50,000+ Fresh Bodies</h3>
-            <p class="kino-reason-desc" style="color: #d1fae5;">Experience odor-free freedom today with our 30-day money-back guarantee.</p>
-            <button class="kino-ingredients-btn" style="background: #ffffff; color: var(--kino-primary); margin-top: 14px;" onclick="document.getElementById('kino-order-sec').scrollIntoView({behavior: 'smooth'})">
-              Claim Your Bundle
-            </button>
-          </div>
+        <a href="#kino-order-sec" class="kino-botanicals-atc-btn">
+          <span>Try Kino Today</span>
+        </a>
+        <div class="kino-guarantee-note">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>30 Day Money Back Guarantee</span>
         </div>
       </div>
     </section>
 
-    <!-- ================= 6. COMPARISON TABLE SECTION ================= -->
-    <section class="kino-compare-section">
-      <div class="kino-sec-header">
-        <h2>Experience the Difference</h2>
-        <p>See why thousands are tossing out their drugstore sticks for Kino.</p>
+    <!-- ================= 4. REVIEWS SECTION ================= -->
+    <section class="kino-reviews-section">
+      <div class="kino-reviews-header">
+        <div class="kino-stars" style="justify-content: center; margin-bottom: 8px;">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p style="font-size: 13px; font-weight: 700; color: #059669; text-transform: uppercase; margin: 0 0 6px;">Loved by our customers</p>
+        <h2>What people are saying about Kino</h2>
       </div>
 
-      <div class="kino-compare-table-wrapper">
-        <table class="kino-compare-table">
-          <thead>
-            <tr>
-              <th>Feature</th>
-              <th class="col-kino">
-                <img src="assets/kino-single-tube-v3.png" alt="Kino Whole Body Deodorant" style="max-height: 48px; object-fit: contain; margin: 0 auto 6px; display: block;">
-                Kino® Cream
-              </th>
-              <th class="col-others">Ordinary Sticks</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Eliminates Odor at Source</strong></td>
-              <td class="col-kino"><i class="fa-solid fa-check"></i> Yes</td>
-              <td class="col-others"><i class="fa-solid fa-xmark"></i> Just masks</td>
-            </tr>
-            <tr>
-              <td><strong>Full Body &amp; Private Safe</strong></td>
-              <td class="col-kino"><i class="fa-solid fa-check"></i> Yes</td>
-              <td class="col-others"><i class="fa-solid fa-xmark"></i> Pits only</td>
-            </tr>
-            <tr>
-              <td><strong>100% Aluminum &amp; Baking Soda Free</strong></td>
-              <td class="col-kino"><i class="fa-solid fa-check"></i> Yes</td>
-              <td class="col-others"><i class="fa-solid fa-xmark"></i> Contains irritants</td>
-            </tr>
-            <tr>
-              <td><strong>Zero Stains or White Chalk</strong></td>
-              <td class="col-kino"><i class="fa-solid fa-check"></i> Yes</td>
-              <td class="col-others"><i class="fa-solid fa-xmark"></i> Stains clothes</td>
-            </tr>
-            <tr>
-              <td><strong>72-Hour Clinical Defense</strong></td>
-              <td class="col-kino"><i class="fa-solid fa-check"></i> Yes</td>
-              <td class="col-others"><i class="fa-solid fa-xmark"></i> Fades in hours</td>
-            </tr>
-            <tr>
-              <td><strong>30-Day Money-Back Guarantee</strong></td>
-              <td class="col-kino"><i class="fa-solid fa-check"></i> Yes</td>
-              <td class="col-others"><i class="fa-solid fa-xmark"></i> Non-refundable</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- ================= 7. FAQ ACCORDION ================= -->
-    <section class="kino-faq-section">
-      <div class="kino-sec-header">
-        <h2>Frequently Asked Questions</h2>
-        <p>Everything you need to know about Kino Whole Body Cream Deodorant.</p>
-      </div>
-
-      <div class="kino-faq-item open">
-        <div class="kino-faq-question">
-          <span>How and where do I apply Kino?</span>
-          <i class="fa-solid fa-chevron-down"></i>
-        </div>
-        <div class="kino-faq-answer">
-          Squeeze a pea-sized amount onto your fingertip and apply to clean, dry skin anywhere on your body — underarms, private parts, inner thighs, underboob, belly folds, or feet. Rub gently until it disappears transparently into skin.
-        </div>
-      </div>
-
-      <div class="kino-faq-item">
-        <div class="kino-faq-question">
-          <span>Is Kino safe for sensitive intimate areas?</span>
-          <i class="fa-solid fa-chevron-down"></i>
-        </div>
-        <div class="kino-faq-answer">
-          Yes! Kino is gynecologist and dermatologist approved, doctor-formulated with gentle natural oils and skin barrier actives. It is 100% free of aluminum, alcohol, parabens, and abrasive baking soda.
-        </div>
-      </div>
-
-      <div class="kino-faq-item">
-        <div class="kino-faq-question">
-          <span>How long does one tube last?</span>
-          <i class="fa-solid fa-chevron-down"></i>
-        </div>
-        <div class="kino-faq-answer">
-          One 2.65 oz tube lasts approximately 4 to 6 weeks with daily multi-area use. Our 3-pack bundle provides a full 3 months of whole-body protection, while our 5-pack delivers 5 months plus free gifts.
-        </div>
-      </div>
-
-      <div class="kino-faq-item">
-        <div class="kino-faq-question">
-          <span>Will Kino stain my light or dark clothes?</span>
-          <i class="fa-solid fa-chevron-down"></i>
-        </div>
-        <div class="kino-faq-answer">
-          Not at all. Unlike solid white sticks and yellowing aluminum antiperspirants, Kino dries clear within 10 seconds of application, keeping all your garments spotless.
-        </div>
-      </div>
-
-      <div class="kino-faq-item">
-        <div class="kino-faq-question">
-          <span>What is your 30-Day Money-Back Guarantee?</span>
-          <i class="fa-solid fa-chevron-down"></i>
-        </div>
-        <div class="kino-faq-answer">
-          We want you to try Kino completely risk-free. If for any reason you aren't completely thrilled with your odor control and skin comfort, simply email support@kinodeodorant.com within 30 days for a prompt, courteous full refund.
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 8. 30-DAY GUARANTEE BANNER ================= -->
-    <div class="kino-guar-box">
-      <div class="kino-guar-icon">
-        <i class="fa-solid fa-shield-heart"></i>
-      </div>
-      <div>
-        <h3 class="kino-guar-title">Backed by Our 30-Day 100% Money-Back Guarantee</h3>
-        <p class="kino-guar-desc">Try Kino completely risk-free. If it doesn't leave you feeling cleaner, fresher, and more confident than any deodorant you've ever tried, we will cheerfully refund your entire purchase.</p>
-      </div>
-    </div>
-
-    <!-- ================= 9. JUDGE.ME CUSTOMER REVIEWS WIDGET AT BOTTOM ================= -->
-    <section class="kino-judgeme-section" id="judgeme-reviews">
-      <div class="jdgm-widget-box">
-        
-        <!-- Header -->
-        <div class="jdgm-header">
-          <h2 class="jdgm-title">Customer Reviews</h2>
-          
-          <div class="jdgm-summary-flex">
-            <!-- Big Score -->
-            <div class="jdgm-big-rating">
-              <div class="jdgm-big-number">4.9</div>
-              <div class="jdgm-stars-big">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <div class="jdgm-count-label">Based on 1,475 reviews</div>
-            </div>
-
-            <!-- Histogram Breakdown Bars -->
-            <div class="jdgm-histogram">
-              <div class="jdgm-histo-row">
-                <span class="jdgm-histo-label">5 ★</span>
-                <div class="jdgm-histo-track"><div class="jdgm-histo-fill" style="width: 92%;"></div></div>
-                <span class="jdgm-histo-qty">1,357</span>
-              </div>
-              <div class="jdgm-histo-row">
-                <span class="jdgm-histo-label">4 ★</span>
-                <div class="jdgm-histo-track"><div class="jdgm-histo-fill" style="width: 6%;"></div></div>
-                <span class="jdgm-histo-qty">88</span>
-              </div>
-              <div class="jdgm-histo-row">
-                <span class="jdgm-histo-label">3 ★</span>
-                <div class="jdgm-histo-track"><div class="jdgm-histo-fill" style="width: 1%;"></div></div>
-                <span class="jdgm-histo-qty">15</span>
-              </div>
-              <div class="jdgm-histo-row">
-                <span class="jdgm-histo-label">2 ★</span>
-                <div class="jdgm-histo-track"><div class="jdgm-histo-fill" style="width: 0.5%;"></div></div>
-                <span class="jdgm-histo-qty">8</span>
-              </div>
-              <div class="jdgm-histo-row">
-                <span class="jdgm-histo-label">1 ★</span>
-                <div class="jdgm-histo-track"><div class="jdgm-histo-fill" style="width: 0.5%;"></div></div>
-                <span class="jdgm-histo-qty">7</span>
-              </div>
-            </div>
-
-            <!-- Write Review Button -->
-            <div>
-              <button class="jdgm-write-btn" onclick="alert('Thank you for sharing your experience! Review submission form opens here.');">
-                <i class="fa-solid fa-pen"></i> Write a review
-              </button>
-            </div>
+      <div class="kino-reviews-grid">
+        <div class="kino-review-card">
+          <div class="kino-rev-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
           </div>
+          <div class="kino-rev-title">Great product! It really works!</div>
+          <p class="kino-rev-text">
+            "So far I'm on day 5 and can feel a huge difference in freshness. My underarms and thigh folds feel so light and clean all day!"
+          </p>
+          <div class="kino-rev-author">Sarah M.</div>
+          <div class="kino-rev-verified"><i class="fa-solid fa-circle-check"></i> Verified Buyer</div>
         </div>
 
-        <!-- Toolbar: Filter Tabs & Sorting -->
-        <div class="jdgm-toolbar">
-          <div class="jdgm-tabs">
-            <button class="jdgm-tab-btn active">Reviews (1,475)</button>
-            <button class="jdgm-tab-btn">With Photos (142)</button>
+        <div class="kino-review-card">
+          <div class="kino-rev-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
           </div>
-          <div>
-            <select class="jdgm-sort-select" aria-label="Sort reviews">
-              <option>Most Recent</option>
-              <option>Highest Rating</option>
-              <option>Lowest Rating</option>
-            </select>
-          </div>
+          <div class="kino-rev-title">No more yellow stains!</div>
+          <p class="kino-rev-text">
+            "Finally an aluminum-free formula that actually works through gym workouts and doesn't ruin my white shirts. 10/10!"
+          </p>
+          <div class="kino-rev-author">Jessica T.</div>
+          <div class="kino-rev-verified"><i class="fa-solid fa-circle-check"></i> Verified Buyer</div>
         </div>
 
-        <!-- REAL CUSTOMER REVIEWS LIST -->
-        <div class="jdgm-reviews-list">
-          
-          <!-- Review 1: Debra Smith -->
-          <div class="jdgm-review-item">
-            <div class="jdgm-rev-header">
-              <div class="jdgm-rev-author-wrap">
-                <div class="jdgm-rev-avatar">DS</div>
-                <div>
-                  <div class="jdgm-rev-author-name">Debra Smith</div>
-                  <div class="jdgm-rev-badge"><i class="fa-solid fa-circle-check"></i> Verified Buyer</div>
-                </div>
-              </div>
-              <div class="jdgm-rev-date">11/14/2026</div>
-            </div>
-            <div class="jdgm-rev-stars">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-            </div>
-            <div class="jdgm-rev-title">Smells amazing</div>
-            <p class="jdgm-rev-body">Besides smelling amazing it has also worked just as advertised. Love this product!!</p>
-            <div class="jdgm-rev-footer">
-              <span>Was this review helpful?</span>
-              <button class="jdgm-helpful-btn"><i class="fa-regular fa-thumbs-up"></i> (18)</button>
-              <button class="jdgm-helpful-btn"><i class="fa-regular fa-thumbs-down"></i> (0)</button>
-            </div>
+        <div class="kino-review-card">
+          <div class="kino-rev-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
           </div>
-
-          <!-- Review 2: Kathleen Jones -->
-          <div class="jdgm-review-item">
-            <div class="jdgm-rev-header">
-              <div class="jdgm-rev-author-wrap">
-                <div class="jdgm-rev-avatar">KJ</div>
-                <div>
-                  <div class="jdgm-rev-author-name">Kathleen Jones</div>
-                  <div class="jdgm-rev-badge"><i class="fa-solid fa-circle-check"></i> Verified Buyer</div>
-                </div>
-              </div>
-              <div class="jdgm-rev-date">11/11/2026</div>
-            </div>
-            <div class="jdgm-rev-stars">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-            </div>
-            <div class="jdgm-rev-title">Nice To Use</div>
-            <p class="jdgm-rev-body">This deodorant was so much better than the much-advertised brand I initially tried. That deodorant smelled like spoiled milk. The Kino deodorant was so much better.</p>
-            <div class="jdgm-rev-footer">
-              <span>Was this review helpful?</span>
-              <button class="jdgm-helpful-btn"><i class="fa-regular fa-thumbs-up"></i> (24)</button>
-              <button class="jdgm-helpful-btn"><i class="fa-regular fa-thumbs-down"></i> (0)</button>
-            </div>
-          </div>
-
-          <!-- Review 3: Glitterglo -->
-          <div class="jdgm-review-item">
-            <div class="jdgm-rev-header">
-              <div class="jdgm-rev-author-wrap">
-                <div class="jdgm-rev-avatar">G</div>
-                <div>
-                  <div class="jdgm-rev-author-name">Glitterglo</div>
-                  <div class="jdgm-rev-badge"><i class="fa-solid fa-circle-check"></i> Verified Buyer</div>
-                </div>
-              </div>
-              <div class="jdgm-rev-date">09/04/2026</div>
-            </div>
-            <div class="jdgm-rev-stars">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-            </div>
-            <div class="jdgm-rev-title">Love this deodorant!</div>
-            <p class="jdgm-rev-body">Best deodorant I have ever used!</p>
-            <div class="jdgm-rev-footer">
-              <span>Was this review helpful?</span>
-              <button class="jdgm-helpful-btn"><i class="fa-regular fa-thumbs-up"></i> (9)</button>
-              <button class="jdgm-helpful-btn"><i class="fa-regular fa-thumbs-down"></i> (0)</button>
-            </div>
-          </div>
-
-          <!-- Review 4: Patricia Robinson -->
-          <div class="jdgm-review-item">
-            <div class="jdgm-rev-header">
-              <div class="jdgm-rev-author-wrap">
-                <div class="jdgm-rev-avatar">PR</div>
-                <div>
-                  <div class="jdgm-rev-author-name">Patricia Robinson</div>
-                  <div class="jdgm-rev-badge"><i class="fa-solid fa-circle-check"></i> Verified Buyer</div>
-                </div>
-              </div>
-              <div class="jdgm-rev-date">06/16/2026</div>
-            </div>
-            <div class="jdgm-rev-stars">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-            </div>
-            <div class="jdgm-rev-title">Love this product!!</div>
-            <p class="jdgm-rev-body">This was my second order and I love this deodorant! It absolutely is as they say!! I just wish the coconut fragrance was kept in stock!</p>
-            <div class="jdgm-rev-footer">
-              <span>Was this review helpful?</span>
-              <button class="jdgm-helpful-btn"><i class="fa-regular fa-thumbs-up"></i> (15)</button>
-              <button class="jdgm-helpful-btn"><i class="fa-regular fa-thumbs-down"></i> (1)</button>
-            </div>
-          </div>
-
-          <!-- Review 5: Cynthia S. -->
-          <div class="jdgm-review-item">
-            <div class="jdgm-rev-header">
-              <div class="jdgm-rev-author-wrap">
-                <div class="jdgm-rev-avatar">CS</div>
-                <div>
-                  <div class="jdgm-rev-author-name">Cynthia S.</div>
-                  <div class="jdgm-rev-badge"><i class="fa-solid fa-circle-check"></i> Verified Buyer</div>
-                </div>
-              </div>
-              <div class="jdgm-rev-date">03/09/2024</div>
-            </div>
-            <div class="jdgm-rev-stars">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-            </div>
-            <div class="jdgm-rev-title">Game-changer for sensitive skin</div>
-            <p class="jdgm-rev-body">As someone with sensitive skin, I've struggled to find a deodorant that doesn't cause irritation. Kino Whole Body Deodorant is a game-changer! The formula is gentle, yet it effectively keeps me feeling fresh all day.</p>
-            <div class="jdgm-rev-footer">
-              <span>Was this review helpful?</span>
-              <button class="jdgm-helpful-btn"><i class="fa-regular fa-thumbs-up"></i> (31)</button>
-              <button class="jdgm-helpful-btn"><i class="fa-regular fa-thumbs-down"></i> (0)</button>
-            </div>
-          </div>
-
-          <!-- Review 6: Isabella M. -->
-          <div class="jdgm-review-item">
-            <div class="jdgm-rev-header">
-              <div class="jdgm-rev-author-wrap">
-                <div class="jdgm-rev-avatar">IM</div>
-                <div>
-                  <div class="jdgm-rev-author-name">Isabella M.</div>
-                  <div class="jdgm-rev-badge"><i class="fa-solid fa-circle-check"></i> Verified Buyer</div>
-                </div>
-              </div>
-              <div class="jdgm-rev-date">03/11/2024</div>
-            </div>
-            <div class="jdgm-rev-stars">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-            </div>
-            <div class="jdgm-rev-title">Lives up to the hype</div>
-            <p class="jdgm-rev-body">Lives up to the hype. Lasts 2 full days and I don't even notice that I haven't showered. Dries perfectly and doesn't stain my clothes.</p>
-            <div class="jdgm-rev-footer">
-              <span>Was this review helpful?</span>
-              <button class="jdgm-helpful-btn"><i class="fa-regular fa-thumbs-up"></i> (42)</button>
-              <button class="jdgm-helpful-btn"><i class="fa-regular fa-thumbs-down"></i> (0)</button>
-            </div>
-          </div>
-
-          <!-- Review 7: Lisa Y. -->
-          <div class="jdgm-review-item">
-            <div class="jdgm-rev-header">
-              <div class="jdgm-rev-author-wrap">
-                <div class="jdgm-rev-avatar">LY</div>
-                <div>
-                  <div class="jdgm-rev-author-name">Lisa Y.</div>
-                  <div class="jdgm-rev-badge"><i class="fa-solid fa-circle-check"></i> Verified Buyer</div>
-                </div>
-              </div>
-              <div class="jdgm-rev-date">03/19/2024</div>
-            </div>
-            <div class="jdgm-rev-stars">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-            </div>
-            <div class="jdgm-rev-title">Hands down the best full-body deodorant</div>
-            <p class="jdgm-rev-body">Hands down the best full-body deodorant I have used. It left my body not only smelling amazing but also hydrated. I found that other full-body deodorants would dry out my skin, and as someone who has sensitive skin, that was a no no. Loved Zesty Rose!</p>
-            <div class="jdgm-rev-footer">
-              <span>Was this review helpful?</span>
-              <button class="jdgm-helpful-btn"><i class="fa-regular fa-thumbs-up"></i> (28)</button>
-              <button class="jdgm-helpful-btn"><i class="fa-regular fa-thumbs-down"></i> (0)</button>
-            </div>
-          </div>
-
+          <div class="kino-rev-title">Pleasantly surprised</div>
+          <p class="kino-rev-text">
+            "Received my package quickly. The cream absorbs immediately and the scent is so subtle and clean. I bought the 3-pack bundle!"
+          </p>
+          <div class="kino-rev-author">Amanda R.</div>
+          <div class="kino-rev-verified"><i class="fa-solid fa-circle-check"></i> Verified Buyer</div>
         </div>
-
-        <div class="jdgm-powered-by">
-          <span>Reviews verified by <strong>Judge.me</strong> <i class="fa-solid fa-star" style="color:#f59e0b;"></i></span>
-        </div>
-
       </div>
     </section>
 
   </div>
 
-  <!-- Store Footer -->
+  <!-- Footer -->
   <footer class="kino-footer">
-    <a href="#" class="kino-footer-logo">KINO</a>
-    <p>© 2026 Kino Whole Body Deodorant. All rights reserved.</p>
-    <p>Doctor formulated for all skin types. 100% Aluminum-Free &amp; Paraben-Free. Made in the USA.</p>
+    <div style="font-weight: 800; font-size: 18px; color: #fff; margin-bottom: 12px; letter-spacing: 2px;">KINO</div>
+    <p>&copy; 2026 Kino Body Care. All Rights Reserved. Statements on this site have not been evaluated by the FDA.</p>
+    <div style="margin-top: 14px;">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Contact Us</a>
+    </div>
   </footer>
 
-  <!-- INTERACTIVE JS -->
+  <!-- Interactive JavaScript -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      
-      // 1. Thumbnail Click Switcher
+      // 1. Thumbnail Switcher
       const mainImg = document.getElementById('kinoMainImage');
       const thumbs = document.querySelectorAll('.kino-thumb-item');
       thumbs.forEach(thumb => {
@@ -2329,103 +1198,29 @@
           thumbs.forEach(t => t.classList.remove('active'));
           this.classList.add('active');
           const src = this.getAttribute('data-src');
-          if (src && mainImg) {
-            mainImg.src = src;
-          }
+          if (src && mainImg) mainImg.src = src;
         });
       });
 
-      // 2. Bundle Tier Click Switcher (Updates Hero Image & Discounts Dynamically)
+      // 2. Bundle Card Switcher
       const bundleCards = document.querySelectorAll('.kino-bundle-card');
-      const dynamicSaveSpan = document.getElementById('kinoSaveDynamic');
-      const topSaveBadge = document.getElementById('kinoTopSaveBadge');
-      const giftSection = document.getElementById('kinoGiftsUnlocked');
-      const giftTitle = document.getElementById('kinoGiftTitle');
-      const giftDesc = document.getElementById('kinoGiftDesc');
-
       bundleCards.forEach(card => {
         card.addEventListener('click', function () {
           bundleCards.forEach(c => c.classList.remove('active'));
           this.classList.add('active');
-
-          const tier = this.getAttribute('data-tier');
-          const save = this.getAttribute('data-save');
-          const badge = this.getAttribute('data-badge');
           const heroImg = this.getAttribute('data-hero-img');
-
-          if (dynamicSaveSpan) dynamicSaveSpan.textContent = save;
-          if (topSaveBadge) topSaveBadge.textContent = badge;
-          if (heroImg && mainImg) {
-            mainImg.src = heroImg;
-          }
-
-          if (tier === '1') {
-            if (giftSection) giftSection.style.display = 'none';
-          } else if (tier === '2') {
-            if (giftSection) {
-              giftSection.style.display = 'flex';
-              giftTitle.textContent = 'FREE Kino Gentle Exfoliating Soap Bar Added!';
-              giftDesc.textContent = '100% natural, full-body brightening cleansing bar automatically added to your order.';
-            }
-          } else if (tier === '3') {
-            if (giftSection) {
-              giftSection.style.display = 'flex';
-              giftTitle.textContent = 'FREE Soap Bar + Body Scrubber + Free Shipping Added!';
-              giftDesc.textContent = 'Full luxury bundle with 2 free physical gifts + priority US delivery automatically included.';
-            }
-          }
+          if (heroImg && mainImg) mainImg.src = heroImg;
         });
       });
 
-      // 3. Subscription Toggle
-      const btnOneTime = document.getElementById('btnOneTime');
-      const btnSubscribe = document.getElementById('btnSubscribe');
-      let isSub = false;
-
-      if (btnOneTime && btnSubscribe) {
-        btnOneTime.addEventListener('click', function () {
-          btnOneTime.classList.add('active');
-          btnSubscribe.classList.remove('active');
-          isSub = false;
-        });
-
-        btnSubscribe.addEventListener('click', function () {
-          btnSubscribe.classList.add('active');
-          btnOneTime.classList.remove('active');
-          isSub = true;
-        });
-      }
-
-      // 4. ATC Button Click
-      const atcBtn = document.getElementById('kinoAtcBtn');
-      const atcText = document.getElementById('atcBtnText');
-      if (atcBtn) {
-        atcBtn.addEventListener('click', function () {
-          const original = atcText.textContent;
-          atcBtn.disabled = true;
-          atcText.textContent = 'ADDED TO CART! ✓';
-          atcBtn.style.background = '#059669';
-          setTimeout(() => {
-            atcBtn.disabled = false;
-            atcText.textContent = original;
-            atcBtn.style.background = 'var(--kino-primary)';
-          }, 1800);
-        });
-      }
-
-      // 5. FAQ Accordion Toggle
-      const faqQuestions = document.querySelectorAll('.kino-faq-question');
-      faqQuestions.forEach(q => {
-        q.addEventListener('click', function () {
-          const item = this.parentElement;
-          const wasOpen = item.classList.contains('open');
-          document.querySelectorAll('.kino-faq-item').forEach(i => i.classList.remove('open'));
-          if (!wasOpen) {
-            item.classList.add('open');
-          }
+      // 3. Purchase Type Toggle
+      const toggleBtns = document.querySelectorAll('.kino-toggle-btn');
+      toggleBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+          toggleBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
         });
       });
-
     });
   </script>
 </body>
