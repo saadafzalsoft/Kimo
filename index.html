@@ -1,6 +1,7 @@
 <!DOCTYPE html><html class="js" lang="en"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23ffffff'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-weight='900' font-size='44' fill='%23064e3b'%3EK%3C/text%3E%3C/svg%3E">
 
 
 
@@ -56,6 +57,104 @@
 <script type="text/javascript" src="js/slick.min.js"></script>
 <script src="js/lp_pdp.js" async="async"></script>
 <link href="css/lp_pdp.css" rel="stylesheet" type="text/css" media="all">
+
+<style id="kino-final-overrides">
+  /* Hide Gifts Unlocked & Still Deciding Popup */
+  .ninja-offer__gifts,
+  .section-still-deciding-popup,
+  #shopify-section-template--20177150607499__custom_time_based_popup_pEjFUJ,
+  .sd-popup {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  /* Mobile Fixes */
+  @media (max-width: 916px) {
+    /* Push FAQS / What To Expect / Reviews below all purchase options cleanly */
+    .change_position_enabled,
+    .change_position_enabled.section_hidden_tabs {
+      margin-top: 24px !important;
+      margin-bottom: 24px !important;
+      width: 100% !important;
+      position: relative !important;
+      z-index: 2 !important;
+      clear: both !important;
+    }
+    .section2_lp {
+      margin-top: 24px !important;
+      position: relative !important;
+      z-index: 1 !important;
+    }
+    .pdp_section2_img {
+      margin-top: 0 !important;
+      width: 100% !important;
+      margin-left: 0 !important;
+    }
+
+    /* 30-Day Money Back Guarantee Mobile Layout */
+    #shopify-section-template--20177150607499__two_layer_richtext_3mfJRP .richtext_blocks_new,
+    #shopify-section-template--20177150607499__two_layer_richtext_3mfJRP .block_template--20177150607499__two_layer_richtext_3mfJRP {
+      padding: 32px 20px 24px !important;
+      border-radius: 14px !important;
+      min-height: auto !important;
+      display: block !important;
+    }
+    #shopify-section-template--20177150607499__two_layer_richtext_3mfJRP .custom-flex_two_ad {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      gap: 20px !important;
+    }
+    #shopify-section-template--20177150607499__two_layer_richtext_3mfJRP .custom-flex_item_ad_1,
+    #shopify-section-template--20177150607499__two_layer_richtext_3mfJRP .custom-flex_item_ad_2 {
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+    #shopify-section-template--20177150607499__two_layer_richtext_3mfJRP .icon_with_text_item {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center !important;
+      gap: 14px !important;
+      position: static !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    #shopify-section-template--20177150607499__two_layer_richtext_3mfJRP .money_left_icon img {
+      position: static !important;
+      transform: none !important;
+      margin: 0 auto !important;
+      width: 68px !important;
+      height: 68px !important;
+    }
+    #shopify-section-template--20177150607499__two_layer_richtext_3mfJRP .icon_with_text_item_texts {
+      text-align: center !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      gap: 10px !important;
+    }
+    #shopify-section-template--20177150607499__two_layer_richtext_3mfJRP .icon_with_text_item_texts strong {
+      display: block !important;
+      font-size: 24px !important;
+      line-height: 1.2 !important;
+    }
+    #shopify-section-template--20177150607499__two_layer_richtext_3mfJRP .rich-text_custom__image {
+      position: static !important;
+      margin: 0 auto !important;
+      text-align: center !important;
+      width: 100% !important;
+    }
+    #shopify-section-template--20177150607499__two_layer_richtext_3mfJRP .rich-text_custom__image .mobile_only {
+      transform: none !important;
+      max-width: 240px !important;
+      width: 100% !important;
+      height: auto !important;
+      margin: 0 auto !important;
+      display: block !important;
+    }
+  }
+</style>
  
 
 
@@ -2462,7 +2561,7 @@ touchMove: false,
           </div>
         </div>
 
-        <div class="landing_product_media_inner"><div id="MediaGallery-media_gallery_HgiHRz" class="media-gallery" data-offer-swap="true" data-slide-gap="20" data-thumb-gap="12" style="--mg-gap: 10px; --mg-thumb-gap: 12px; --mg-thumb-radius: 4px;" data-swap-source-1="default" data-swap-source-2="custom" data-swap-source-3="custom" data-swap-image-1="images/product/KINO_Whole_Body_Cream_Deodorant_a2932772_2K.jpg" data-swap-image-2="images/kino-bundle-2-pack.jpg" data-swap-image-3="images/trio.png"><div class="media-gallery__thumbs">
+        <div class="landing_product_media_inner"><div id="MediaGallery-media_gallery_HgiHRz" class="media-gallery" data-offer-swap="false" data-slide-gap="20" data-thumb-gap="12" style="--mg-gap: 10px; --mg-thumb-gap: 12px; --mg-thumb-radius: 4px;" data-swap-source-1="default" data-swap-source-2="custom" data-swap-source-3="custom" data-swap-image-1="images/product/KINO_Whole_Body_Cream_Deodorant_a2932772_2K.jpg" data-swap-image-2="images/kino-bundle-2-pack.jpg" data-swap-image-3="images/trio.png"><div class="media-gallery__thumbs">
                       <div class="swiper media-gallery__thumbs-swiper">
                         <div class="swiper-wrapper"><div class="swiper-slide media-gallery__thumb media-gallery__thumb--1 is-active" data-index="0">
     <img decoding="async" src="images/product/KINO_Whole_Body_Cream_Deodorant_a2932772_2K.jpg" alt="Kino Whole Body Cream Deodorant" width="200" height="200" loading="lazy" sizes="90px" class="media-gallery__thumb-img">
@@ -11836,966 +11935,7 @@ The Summer Coconut scent is so clean and fresh, and it works amazingly on undera
 </section>
 
 </div><div id="shopify-section-template--20177150607499__popup_bought_DaYQX6" class="shopify-section">
-</div><section id="shopify-section-template--20177150607499__custom_time_based_popup_pEjFUJ" class="shopify-section section-still-deciding-popup"><style>
-  @font-face { font-display: swap; 
-  font-family: Inter;
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src: url("fonts/inter_n4.b2a3f24c19b4de56e8871f609e73ca7f6d2e2bb9.woff2") format("woff2"),
-       url("fonts/inter_n4.af8052d517e0c9ffac7b814872cecc27ae1fa132.woff") format("woff");
-}
-
-@font-face { font-display: swap; 
-  font-family: Inter;
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-  src: url("fonts/inter_n6.771af0474a71b3797eb38f3487d6fb79d43b6877.woff2") format("woff2"),
-       url("fonts/inter_n6.88c903d8f9e157d48b73b7777d0642925bcecde7.woff") format("woff");
-}
-@font-face { font-display: swap; 
-  font-family: Inter;
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-  src: url("fonts/inter_n7.02711e6b374660cfc7915d1afc1c204e633421e4.woff2") format("woff2"),
-       url("fonts/inter_n7.6dab87426f6b8813070abd79972ceaf2f8d3b012.woff") format("woff");
-}
-#StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ {
-    --sd-bg: #00542b;
-    --sd-text: #ffffff;
-    --sd-border: #ffffff;
-    --sd-card-bg: rgba(255, 255, 255, 0.05);
-    --sd-hover-bg: rgba(255, 255, 255, 0.08);
-    --sd-btn-bg: #ffffff;
-    --sd-btn-text: #00542b;
-    --sd-overlay: rgba(0, 0, 0, 0.6);
-    --sd-width: 320px;
-    --sd-font: Inter, sans-serif;
-    --sd-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-
-    position: fixed;
-    inset: 0;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 16px;
-    font-family: var(--sd-font);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  @media screen and (min-width: 750px) {
-    #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ { --sd-width: 320px; }
-  }
-
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ[hidden] { display: none !important; }
-
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ.is-instant,
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ.is-instant * { transition: none !important; }
-
-  /* Overlay */
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__overlay {
-    position: absolute;
-    inset: 0;
-    background: var(--sd-overlay);
-    opacity: 0;
-    transition: opacity 0.35s ease;
-    cursor: pointer;
-  }
-
-  /* Dialog */
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__dialog {
-    position: relative;
-    width: min(var(--sd-width), 100%);
-    max-height: calc(100vh - 32px);
-    max-height: calc(100dvh - 32px);
-    overflow-x: hidden;
-    overflow-y: auto;
-    overscroll-behavior: contain;
-    scrollbar-width: none;
-    background: var(--sd-bg);
-    color: var(--sd-text);
-    border-radius: 10px;
-    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
-    text-align: left;
-    outline: none;
-    opacity: 0;
-    transform: translateY(24px) scale(0.96);
-    transition: opacity 0.3s ease, transform 0.45s var(--sd-ease-out);
-    -webkit-tap-highlight-color: transparent;
-  }
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__dialog::-webkit-scrollbar { display: none; }
-
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ.is-open .sd-popup__overlay { opacity: 1; }
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ.is-open .sd-popup__dialog { opacity: 1; transform: none; }
-
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ.is-closing .sd-popup__overlay { transition-duration: 0.28s; }
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ.is-closing .sd-popup__dialog {
-    opacity: 0;
-    transform: translateY(12px) scale(0.98);
-    transition: opacity 0.22s ease, transform 0.28s ease-in;
-  }
-
-  /* Focus styles (overrides theme defaults so they read on the green) */
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ *:focus-visible {
-    outline: 2px solid var(--sd-text);
-    outline-offset: 2px;
-    box-shadow: none;
-  }
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ [tabindex="-1"]:focus,
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ [tabindex="-1"]:focus-visible { outline: none; box-shadow: none; }
-
-  /* Icon buttons */
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__icon-btn {
-    position: absolute;
-    z-index: 3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    border-radius: 50%;
-    background: none;
-    color: var(--sd-text);
-    cursor: pointer;
-    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.25));
-    -webkit-tap-highlight-color: transparent;
-    transition: opacity 0.25s ease, transform 0.3s var(--sd-ease-out), visibility 0s linear 0s;
-  }
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__icon-btn svg { display: block; pointer-events: none; }
-  @media (hover: hover) {
-    #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__icon-btn:hover { opacity: 0.8; }
-  }
-
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__close { top: 3px; right: 6px; }
-
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__back {
-    top: 6px;
-    left: 13px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateX(6px);
-    transition: opacity 0.25s ease, transform 0.3s var(--sd-ease-out), visibility 0s linear 0.25s;
-  }
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ.is-tab-view .sd-popup__back {
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-    transition: opacity 0.3s ease 0.05s, transform 0.35s var(--sd-ease-out) 0.05s, visibility 0s linear 0s;
-  }
-
-  /* Media */
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__media {
-    position: relative;
-    aspect-ratio: 320 / 206;
-    overflow: hidden;
-    background: var(--sd-bg);
-  }
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__media img,
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__media .sd-popup__placeholder {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__placeholder {
-    background: var(--sd-hover-bg);
-    fill: var(--sd-card-bg);
-  }
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__media-fade {
-    position: absolute;
-    left: -1px;
-    right: -1px;
-    bottom: 0;
-    height: 27%;
-    background: linear-gradient(188.83deg, var(--sd-bg-fade) 7.08%, var(--sd-bg) 93.66%);
-    pointer-events: none;
-  }
-
-  /* Body */
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__body {
-    position: relative;
-    z-index: 1;
-    margin-top: -13px;
-    padding: 0 15px;
-  }
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__heading {
-    margin: 0;
-    font-family: inherit;
-    font-size: 25px;
-    font-weight: 600;
-    line-height: 30px;
-    letter-spacing: 0;
-    text-align: center;
-    color: inherit;
-  }
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__subheading {
-    margin: 4px 0 0;
-    font-family: inherit;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 18px;
-    letter-spacing: 0;
-    text-align: center;
-    color: inherit;
-  }
-
-  /* Views and panels */
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__views {
-    position: relative;
-    transition: height 0.4s var(--sd-ease-out);
-  }
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__panel {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(8px);
-    pointer-events: none;
-    transition: opacity 0.22s ease, transform 0.35s var(--sd-ease-out), visibility 0s linear 0.22s;
-  }
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__panel.is-active {
-    position: relative;
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-    pointer-events: auto;
-    transition: opacity 0.3s ease 0.08s, transform 0.4s var(--sd-ease-out) 0.05s, visibility 0s linear 0s;
-  }
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__panel--options { padding: 20px 0 26px; }
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__panel--tab { padding: 20px 0 30px; }
-
-  /* Option buttons */
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__options {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__option {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 7px;
-    width: 100%;
-    min-height: 44px;
-    margin: 0;
-    padding: 10px 16px;
-    border: 1px solid var(--sd-border);
-    border-radius: 8px;
-    background: transparent;
-    color: var(--sd-text);
-    font-family: inherit;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 1.3;
-    letter-spacing: 0;
-    text-align: center;
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-    transition: background-color 0.2s ease, transform 0.15s ease;
-  }
-  @media (hover: hover) {
-    #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__option:hover { background: var(--sd-hover-bg); }
-  }
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__option:active { transform: scale(0.98); }
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__emoji { display: inline-block; line-height: 1; }
-
-  /* Card */
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__card {
-    padding: 18px 18px 18px 16px;
-    border: 1px solid var(--sd-border);
-    border-radius: 8px;
-    background: var(--sd-card-bg);
-  }
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__card-title {
-    margin: 0 0 10px;
-    font-family: inherit;
-    font-size: 15px;
-    font-weight: 600;
-    line-height: 20px;
-    letter-spacing: 0;
-    color: inherit;
-  }
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__card-title .sd-popup__emoji { margin-right: 6px; }
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__card-text {
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 19px;
-    letter-spacing: 0;
-    color: inherit;
-  }
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__card-text p { margin: 0; font: inherit; color: inherit; }
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__card-text p + p { margin-top: 10px; }
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__card-text strong,
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__card-text b { font-weight: 700; }
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__card-text a { color: inherit; text-decoration: underline; }
-
-  /* CTA */
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__cta-wrap {
-    display: flex;
-    justify-content: center;
-    margin-top: 26px;
-  }
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__cta {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 234px;
-    min-height: 45px;
-    margin: 0;
-    padding: 12px 24px;
-    border: 1px solid var(--sd-btn-bg);
-    border-radius: 50px;
-    background: var(--sd-btn-bg);
-    color: var(--sd-btn-text);
-    font-family: inherit;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 19px;
-    letter-spacing: 0;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  @media (hover: hover) {
-    #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__cta:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
-    }
-  }
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__cta:active { transform: scale(0.98); box-shadow: none; }
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__cta:focus-visible { outline-offset: 3px; }
-
-  /* Hidden proxy trigger used to open the supplement facts popup */
-  #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__proxy {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    white-space: nowrap;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ *,
-    #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__overlay,
-    #StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ .sd-popup__dialog {
-      transition-duration: 0.01ms !important;
-      transition-delay: 0s !important;
-    }
-  }
-</style>
-
-<still-deciding-popup id="StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ" class="sd-popup" data-section-id="template--20177150607499__custom_time_based_popup_pEjFUJ" data-auto-open="false" data-delay="0" data-overlay-close="true" data-scroll-offset="20" hidden="">
-  <div class="sd-popup__overlay" data-sd-overlay=""></div>
-
-  <div class="sd-popup__dialog" role="dialog" aria-modal="true" aria-labelledby="StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ-heading" tabindex="-1" data-sd-dialog="">
-    <button type="button" class="sd-popup__icon-btn sd-popup__back" aria-label="Back" data-sd-back="">
-      <svg width="32" height="24" viewBox="0 0 32 24" fill="none" aria-hidden="true" focusable="false">
-        <path d="M30.5 12H2.5M12 2.5 2.5 12l9.5 9.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path>
-      </svg>
-    </button>
-
-    <button type="button" class="sd-popup__icon-btn sd-popup__close" aria-label="Close" data-sd-close="">
-      <svg width="19" height="19" viewBox="0 0 19 19" fill="none" aria-hidden="true" focusable="false">
-        <path d="M2 2l15 15M17 2 2 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-      </svg>
-    </button>
-
-    <div class="sd-popup__media"><img decoding="async" src="images/Group_1.png" alt=""  width="960" height="618" loading="lazy" sizes="(min-width: 750px) 320px, 320px" fetchpriority="low" style="object-position: 50.0% 50.0%;">
-<div class="sd-popup__media-fade" aria-hidden="true"></div>
-    </div>
-
-    <div class="sd-popup__body">
-      <h2 id="StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ-heading" class="sd-popup__heading">Still deciding?</h2><p class="sd-popup__subheading">What’s holding you back?</p><div class="sd-popup__views" data-sd-views="">
-        <div class="sd-popup__panel sd-popup__panel--options is-active" data-sd-panel="options">
-          <div class="sd-popup__options"><button type="button" class="sd-popup__option" aria-controls="StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ-panel-reason_BcFMd9" data-sd-option="reason_BcFMd9"><span class="sd-popup__emoji" aria-hidden="true">💰</span><span>Price</span>
-              </button><button type="button" class="sd-popup__option" aria-controls="StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ-panel-reason_PfcwCU" data-sd-option="reason_PfcwCU"><span class="sd-popup__emoji" aria-hidden="true">🤔</span><span>Not sure it’ll work for me</span>
-              </button><button type="button" class="sd-popup__option" aria-controls="StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ-panel-reason_8cmkPd" data-sd-option="reason_8cmkPd"><span class="sd-popup__emoji" aria-hidden="true">🌿</span><span>Ingredients</span>
-              </button><button type="button" class="sd-popup__option" aria-controls="StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ-panel-reason_6tBeyJ" data-sd-option="reason_6tBeyJ"><span class="sd-popup__emoji" aria-hidden="true">💬</span><span>Something else</span>
-              </button></div>
-        </div><div class="sd-popup__panel sd-popup__panel--tab" id="StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ-panel-reason_BcFMd9" data-sd-panel="reason_BcFMd9" aria-hidden="true" inert="">
-            <div class="sd-popup__card">
-              <h3 class="sd-popup__card-title" tabindex="-1" data-sd-panel-title=""><span class="sd-popup__emoji" aria-hidden="true">💰</span>Want to make sure it’s worth it?</h3><div class="sd-popup__card-text"><p>The 3-Pack brings the cost down to .28 per tube (compared with .95 for one tube) — plus FREE Soap Bar, Scrubber & Free Shipping!</p><p>That gives you 6+ months of fresh, aluminum-free protection for home, gym bag, and travel.</p><p>Your first order is covered by our <strong>30-day money-back guarantee</strong>.</p></div></div><div class="sd-popup__cta-wrap"><button type="button" class="sd-popup__cta" data-sd-cta="" data-action="scroll" data-target="#lymphoria_main_buy_box">View My Options</button></div></div><div class="sd-popup__panel sd-popup__panel--tab" id="StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ-panel-reason_PfcwCU" data-sd-panel="reason_PfcwCU" aria-hidden="true" inert="">
-            <div class="sd-popup__card">
-              <h3 class="sd-popup__card-title" tabindex="-1" data-sd-panel-title=""><span class="sd-popup__emoji" aria-hidden="true">🤔</span>72-Hour Freshness Without Compromise</h3><p>Kino glides on like a lightweight moisturizer, absorbs clear in seconds, and stops odor-causing bacteria for 3 full days — safe for underarms, private parts, underboob, and feet.</p></button></div></div><div class="sd-popup__panel sd-popup__panel--tab" id="StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ-panel-reason_8cmkPd" data-sd-panel="reason_8cmkPd" aria-hidden="true" inert="">
-            <div class="sd-popup__card">
-              <h3 class="sd-popup__card-title" tabindex="-1" data-sd-panel-title=""><span class="sd-popup__emoji" aria-hidden="true">🌿</span>Want to see every clean ingredient?</h3><div class="sd-popup__card-text"><p>Kino is formulated with skin-loving Niacinamide, Avocado Oil, Rose Hips Oil, Coconut Oil, Tea Tree Oil, Sea Salt, and Resveratrol — zero aluminum, zero parabens, and zero harsh baking soda.</p></div></div><div class="sd-popup__cta-wrap"><button type="button" class="sd-popup__cta" data-sd-cta="" data-action="popup" data-target="">See Formula Details</button></div></div><div class="sd-popup__panel sd-popup__panel--tab" id="StillDeciding-template--20177150607499__custom_time_based_popup_pEjFUJ-panel-reason_6tBeyJ" data-sd-panel="reason_6tBeyJ" aria-hidden="true" inert="">
-            <div class="sd-popup__card">
-              <h3 class="sd-popup__card-title" tabindex="-1" data-sd-panel-title=""><span class="sd-popup__emoji" aria-hidden="true">💬</span>Got another question?</h3><div class="sd-popup__card-text"><p>You’ll find answers to the most common ones in our FAQ, right here on this page.</p></div></div><div class="sd-popup__cta-wrap"><button type="button" class="sd-popup__cta" data-sd-cta="" data-action="scroll" data-target="#custom_faqs_scroll">See FAQs</button></div></div></div>
-    </div>
-  </div>
-
-  <button type="button" class="sd-popup__proxy" data-popup-open="" data-sd-proxy="" tabindex="-1" aria-hidden="true"></button>
-</still-deciding-popup>
-
-<script>
-  (function () {
-    if (!window.customElements || window.customElements.get('still-deciding-popup')) return;
-
-    var editorState = { section: null, block: null };
-    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    var FOCUSABLE =
-      'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
-    var CLOSE_FALLBACK_MS = 450;
-    var HEIGHT_RESET_MS = 450;
-    var LOG_PREFIX = '[Still deciding popup] ';
-
-    class StillDecidingPopup extends HTMLElement {
-      connectedCallback() {
-        this.sectionId = this.dataset.sectionId;
-        this.dialog = this.querySelector('[data-sd-dialog]');
-        this.views = this.querySelector('[data-sd-views]');
-        this.proxy = this.querySelector('[data-sd-proxy]');
-        this.isEditor = !!(window.Shopify && window.Shopify.designMode);
-        this.panels = {};
-        this.querySelectorAll('[data-sd-panel]').forEach((panel) => {
-          this.panels[panel.dataset.sdPanel] = panel;
-        });
-        this.activeKey = 'options';
-        this.state = 'closed';
-        this.lastOption = null;
-
-        this.handleClick = this.handleClick.bind(this);
-        this.handleKeydown = this.handleKeydown.bind(this);
-        this.handleEditor = this.handleEditor.bind(this);
-
-        this.addEventListener('click', this.handleClick);
-        document.addEventListener('keydown', this.handleKeydown);
-
-        if (this.isEditor) {
-          this.editorEvents = [
-            'shopify:section:select',
-            'shopify:section:deselect',
-            'shopify:block:select',
-            'shopify:block:deselect'
-          ];
-          this.editorEvents.forEach((name) => document.addEventListener(name, this.handleEditor));
-
-          // Keep the popup visible while settings are edited (the section re-renders on each change).
-          if (editorState.section === this.sectionId) {
-            this.open({ instant: true });
-            if (editorState.block) this.showPanel(editorState.block, { animate: false });
-          }
-          return;
-        }
-
-        if (this.dataset.autoOpen === 'true') this.scheduleAutoOpen();
-      }
-
-      disconnectedCallback() {
-        clearTimeout(this.autoTimer);
-        clearTimeout(this.closeTimer);
-        clearTimeout(this.heightTimer);
-        if (this.loadHandler) window.removeEventListener('load', this.loadHandler);
-        this.removeEventListener('click', this.handleClick);
-        document.removeEventListener('keydown', this.handleKeydown);
-        if (this.editorEvents) {
-          this.editorEvents.forEach((name) => document.removeEventListener(name, this.handleEditor));
-        }
-        this.unlockScroll();
-      }
-
-      /* ---------- Opening and closing ---------- */
-
-      scheduleAutoOpen() {
-        var delay = Math.max(parseFloat(this.dataset.delay) || 0, 0) * 1000;
-        var start = () => {
-          this.autoTimer = setTimeout(() => this.open(), delay);
-        };
-
-        if (document.readyState === 'complete') {
-          start();
-        } else {
-          this.loadHandler = start;
-          window.addEventListener('load', this.loadHandler, { once: true });
-        }
-      }
-
-      open(options) {
-        options = options || {};
-        if (this.state === 'open') return;
-        clearTimeout(this.autoTimer);
-
-        if (this.state === 'closing') {
-          this.cancelClose();
-        } else {
-          this.returnFocus = options.trigger || document.activeElement;
-          this.showPanel('options', { animate: false });
-          this.hidden = false;
-          this.lockScroll();
-        }
-
-        this.state = 'open';
-        if (options.instant) this.classList.add('is-instant');
-        this.classList.remove('is-closing');
-
-        // Force a reflow so the opening transition always runs.
-        void this.dialog.offsetWidth;
-        this.classList.add('is-open');
-
-        if (!this.isEditor) this.dialog.focus({ preventScroll: true });
-        if (options.instant) requestAnimationFrame(() => this.classList.remove('is-instant'));
-      }
-
-      close(options) {
-        options = options || {};
-        if (this.state !== 'open') return;
-
-        this.state = 'closing';
-        this.afterClose = typeof options.after === 'function' ? options.after : null;
-        this.classList.remove('is-open');
-        this.classList.add('is-closing');
-
-        if (options.instant || reducedMotion.matches) {
-          this.finishClose();
-          return;
-        }
-
-        this.closeEndHandler = (event) => {
-          if (event.target === this.dialog && event.propertyName === 'transform') this.finishClose();
-        };
-        this.dialog.addEventListener('transitionend', this.closeEndHandler);
-        this.closeTimer = setTimeout(() => this.finishClose(), CLOSE_FALLBACK_MS);
-      }
-
-      cancelClose() {
-        clearTimeout(this.closeTimer);
-        if (this.closeEndHandler) this.dialog.removeEventListener('transitionend', this.closeEndHandler);
-        this.closeEndHandler = null;
-        this.afterClose = null;
-      }
-
-      finishClose() {
-        if (this.state !== 'closing') return;
-
-        var after = this.afterClose;
-        this.cancelClose();
-        this.state = 'closed';
-        this.classList.remove('is-closing');
-        this.hidden = true;
-        this.unlockScroll();
-
-        if (after) {
-          after();
-          return;
-        }
-
-        var target = this.returnFocus;
-        this.returnFocus = null;
-        if (
-          !this.isEditor &&
-          target &&
-          target !== document.body &&
-          document.contains(target) &&
-          typeof target.focus === 'function'
-        ) {
-          target.focus({ preventScroll: true });
-        }
-      }
-
-      /* ---------- Views ---------- */
-
-      showPanel(key, options) {
-        options = options || {};
-        var next = this.panels[key];
-        if (!next) return;
-
-        var current = this.panels[this.activeKey];
-        this.classList.toggle('is-tab-view', key !== 'options');
-
-        if (next !== current) {
-          var animate = options.animate !== false && this.state === 'open' && !reducedMotion.matches;
-          var views = this.views;
-
-          clearTimeout(this.heightTimer);
-          if (animate) views.style.height = views.offsetHeight + 'px';
-
-          if (current) this.setPanelState(current, false);
-          this.setPanelState(next, true);
-          this.activeKey = key;
-
-          if (animate) {
-            views.style.height = next.offsetHeight + 'px';
-            this.heightTimer = setTimeout(() => {
-              views.style.height = '';
-            }, HEIGHT_RESET_MS);
-          } else {
-            views.style.height = '';
-          }
-
-          if (this.dialog.scrollTop > 0) {
-            this.dialog.scrollTo({ top: 0, behavior: animate ? 'smooth' : 'auto' });
-          }
-        }
-
-        if (options.focusTitle) {
-          var title = next.querySelector('[data-sd-panel-title]');
-          if (title) title.focus({ preventScroll: true });
-        }
-
-        if (options.focusOption && this.lastOption) {
-          this.lastOption.focus({ preventScroll: true });
-        }
-      }
-
-      setPanelState(panel, active) {
-        panel.classList.toggle('is-active', active);
-        panel.inert = !active;
-        if (active) {
-          panel.removeAttribute('aria-hidden');
-          panel.removeAttribute('inert');
-        } else {
-          panel.setAttribute('aria-hidden', 'true');
-          panel.setAttribute('inert', '');
-        }
-      }
-
-      /* ---------- Events ---------- */
-
-      handleClick(event) {
-        var t = event.target;
-        if (!(t instanceof Element)) return;
-
-        if (t.closest('[data-sd-close]')) {
-          this.close();
-          return;
-        }
-
-        if (t.closest('[data-sd-back]')) {
-          this.showPanel('options', { focusOption: true });
-          return;
-        }
-
-        if (t.closest('[data-sd-overlay]')) {
-          if (this.dataset.overlayClose === 'true') this.close();
-          return;
-        }
-
-        var option = t.closest('[data-sd-option]');
-        if (option) {
-          this.lastOption = option;
-          this.showPanel(option.dataset.sdOption, { focusTitle: true });
-          return;
-        }
-
-        var cta = t.closest('[data-sd-cta]');
-        if (cta) {
-          event.preventDefault();
-          this.runAction(cta.dataset.action, (cta.dataset.target || '').trim());
-        }
-      }
-
-      handleKeydown(event) {
-        if (this.state !== 'open') return;
-
-        if (event.key === 'Escape') {
-          event.preventDefault();
-          this.close();
-          return;
-        }
-
-        if (event.key !== 'Tab') return;
-
-        var items = Array.prototype.filter.call(this.dialog.querySelectorAll(FOCUSABLE), (el) => {
-          return (
-            !el.closest('[inert]') &&
-            el.getClientRects().length > 0 &&
-            window.getComputedStyle(el).visibility !== 'hidden'
-          );
-        });
-
-        if (!items.length) {
-          event.preventDefault();
-          return;
-        }
-
-        var first = items[0];
-        var last = items[items.length - 1];
-        var active = document.activeElement;
-        var outside = !this.dialog.contains(active);
-
-        if (event.shiftKey && (active === first || active === this.dialog || outside)) {
-          event.preventDefault();
-          last.focus();
-        } else if (!event.shiftKey && (active === last || outside)) {
-          event.preventDefault();
-          first.focus();
-        }
-      }
-
-      handleEditor(event) {
-        var detail = event.detail || {};
-        if (detail.sectionId !== this.sectionId) return;
-
-        switch (event.type) {
-          case 'shopify:section:select':
-            editorState.section = this.sectionId;
-            this.open({ instant: !!detail.load });
-            break;
-          case 'shopify:section:deselect':
-            editorState.section = null;
-            editorState.block = null;
-            this.close({ instant: true });
-            break;
-          case 'shopify:block:select':
-            editorState.section = this.sectionId;
-            editorState.block = detail.blockId;
-            this.open({ instant: !!detail.load });
-            this.showPanel(detail.blockId, { animate: !detail.load });
-            break;
-          case 'shopify:block:deselect':
-            editorState.block = null;
-            if (this.state === 'open') this.showPanel('options');
-            break;
-        }
-      }
-
-      /* ---------- CTA actions ---------- */
-
-      runAction(action, target) {
-        switch (action) {
-          case 'scroll':
-            this.close({ after: () => this.scrollToTarget(target) });
-            break;
-          case 'popup':
-            this.close({ after: () => this.openOtherPopup(target) });
-            break;
-          case 'link':
-            if (!target) {
-              this.close();
-              break;
-            }
-            this.close({
-              after: () => {
-                window.location.href = target;
-              }
-            });
-            break;
-          default:
-            this.close();
-        }
-      }
-
-      resolveTarget(value) {
-        if (!value) return null;
-        var id = value.charAt(0) === '#' ? value.slice(1) : value;
-        var byId = document.getElementById(id);
-        if (byId) return byId;
-        try {
-          return document.querySelector(value);
-        } catch (error) {
-          return null;
-        }
-      }
-
-      getScrollOffset() {
-        var offset = parseFloat(this.dataset.scrollOffset) || 0;
-        var header = document.querySelector('.shopify-section-header-sticky, .section-header');
-
-        if (header && !header.classList.contains('shopify-section-header-hidden')) {
-          var position = window.getComputedStyle(header).position;
-          if (position === 'sticky' || position === 'fixed') {
-            offset += header.getBoundingClientRect().height;
-          }
-        }
-
-        return offset;
-      }
-
-      scrollToTarget(selector) {
-        var target = this.resolveTarget(selector);
-        if (!target) {
-          console.warn(LOG_PREFIX + 'Scroll target not found: ' + selector);
-          return;
-        }
-
-        var behavior = reducedMotion.matches ? 'auto' : 'smooth';
-        var getTop = () =>
-          Math.max(target.getBoundingClientRect().top + window.pageYOffset - this.getScrollOffset(), 0);
-
-        window.scrollTo({ top: getTop(), behavior: behavior });
-
-        // One correction pass in case lazy content (reviews apps, images) shifts the layout mid scroll.
-        // Skipped if the shopper starts scrolling on their own.
-        var cancelled = false;
-        var cancel = () => {
-          cancelled = true;
-        };
-        var events = ['wheel', 'touchstart', 'keydown'];
-        events.forEach((name) => window.addEventListener(name, cancel, { passive: true }));
-
-        setTimeout(() => {
-          events.forEach((name) => window.removeEventListener(name, cancel));
-          if (cancelled) return;
-          var top = getTop();
-          if (Math.abs(top - window.pageYOffset) > 8) window.scrollTo({ top: top, behavior: behavior });
-        }, 1000);
-      }
-
-      openOtherPopup(targetId) {
-        var id = (targetId || '').replace(/^#/, '');
-        var getTargetId = (el) => el.getAttribute('data-popup-target') || el.getAttribute('aria-controls') || '';
-        var triggers = Array.prototype.filter.call(
-          document.querySelectorAll('[data-popup-open]'),
-          (el) => !this.contains(el)
-        );
-        var trigger = null;
-
-        if (id) {
-          trigger = triggers.find((el) => getTargetId(el) === id) || null;
-        } else {
-          // No ID set: use the trigger that opens the supplement facts (nutrition) popup.
-          trigger =
-            triggers.find((el) => {
-              var modal = document.getElementById(getTargetId(el));
-              return modal && modal.querySelector('.nutrition-popup__dialog');
-            }) || null;
-          if (trigger) id = getTargetId(trigger);
-        }
-
-        if (!id) {
-          var nutritionDialog = document.querySelector('.nutrition-popup__dialog');
-          var modal = nutritionDialog && nutritionDialog.parentElement
-            ? nutritionDialog.parentElement.closest('[id]')
-            : null;
-          if (modal) id = modal.id;
-        }
-
-        if (!id || !document.getElementById(id)) {
-          console.warn(LOG_PREFIX + 'Could not find the popup to open' + (id ? ': ' + id : '.'));
-          return;
-        }
-
-        if (!window.nutritionPopupInitialized) {
-          console.warn(LOG_PREFIX + 'The supplement facts popup script is not loaded on this page.');
-        }
-
-        // Use the page's own trigger when it is a plain button, otherwise the hidden proxy.
-        var usePageTrigger = trigger && trigger.tagName === 'BUTTON' && trigger.type === 'button';
-        if (!usePageTrigger) {
-          trigger = this.proxy;
-          trigger.setAttribute('data-popup-target', id);
-          trigger.setAttribute('aria-controls', id);
-        }
-
-        trigger.click();
-      }
-
-      /* ---------- Scroll lock ---------- */
-
-      lockScroll() {
-        if (this.scrollLocked) return;
-        var html = document.documentElement;
-        var body = document.body;
-        var scrollbar = window.innerWidth - html.clientWidth;
-
-        this.prevStyles = {
-          htmlOverflow: html.style.overflow,
-          bodyOverflow: body.style.overflow,
-          bodyPadding: body.style.paddingRight
-        };
-
-        html.style.overflow = 'hidden';
-        body.style.overflow = 'hidden';
-        if (scrollbar > 0) body.style.paddingRight = scrollbar + 'px';
-        this.scrollLocked = true;
-      }
-
-      unlockScroll() {
-        if (!this.scrollLocked) return;
-        var html = document.documentElement;
-        var body = document.body;
-
-        html.style.overflow = this.prevStyles.htmlOverflow;
-        body.style.overflow = this.prevStyles.bodyOverflow;
-        body.style.paddingRight = this.prevStyles.bodyPadding;
-        this.scrollLocked = false;
-      }
-    }
-
-    window.customElements.define('still-deciding-popup', StillDecidingPopup);
-
-    /* ---------- Public hooks ---------- */
-
-    var getInstance = function (id) {
-      return id ? document.getElementById(id) : document.querySelector('still-deciding-popup');
-    };
-
-    window.StillDecidingPopup = {
-      open: function (id) {
-        var el = getInstance(id);
-        if (el && typeof el.open === 'function') el.open();
-      },
-      close: function (id) {
-        var el = getInstance(id);
-        if (el && typeof el.close === 'function') el.close();
-      }
-    };
-
-    document.addEventListener('click', function (event) {
-      var trigger = event.target instanceof Element ? event.target.closest('[data-still-deciding-open]') : null;
-      if (!trigger) return;
-      event.preventDefault();
-      var el = getInstance(trigger.getAttribute('data-still-deciding-open'));
-      if (el && typeof el.open === 'function') el.open({ trigger: trigger });
-    });
-  })();
-</script>
-<script>
-  (function () {
-  var DELAY_MS = 60000; // 1 minute after page load
-
-  function otherModalOpen() {
-    var html = document.documentElement;
-    var body = document.body;
-    return html.style.overflow === 'hidden' || body.style.overflow === 'hidden' || body.classList.contains('overflow-hidden_custom');
-  }
-
-  function show() {
-    var popup = document.querySelector('still-deciding-popup');
-    if (!popup || popup.state === 'open') return;
-    if (otherModalOpen()) { setTimeout(show, 1000); return; }
-    customElements.whenDefined('still-deciding-popup').then(function () {
-      document.documentElement.classList.add('sd-popup-enabled');
-      popup.open();
-    });
-  }
-
-  function schedule() {
-    var nav = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
-    var loadedAt = nav && nav.loadEventEnd ? nav.loadEventEnd : performance.now();
-    setTimeout(show, Math.max(DELAY_MS - (performance.now() - loadedAt), 0));
-  }
-
-  if (document.readyState === 'complete') schedule();
-  else window.addEventListener('load', schedule, { once: true });
-})();
-</script>
-<style>
-    html:not(.sd-popup-enabled):not(.shopify-design-mode) .section-still-deciding-popup {
-        display: none !important;
-    }
-</style>
-
-
-
-
-</section><div id="shopify-section-template--20177150607499__updating_sticky_form_DEDBgB" class="shopify-section">
+</div><div id="shopify-section-template--20177150607499__updating_sticky_form_DEDBgB" class="shopify-section">
 <style>
     
 
