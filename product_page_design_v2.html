@@ -459,8 +459,18 @@
 
     /* ================= 3. REVIEWS CAROUSEL ================= */
     .kino-reviews-eyebrow { text-align: center; font-size: 12px; color: var(--text-dark); margin-bottom: 6px; }
-    .kino-3grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .kino-3grid {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      gap: 16px;
+      scrollbar-width: none;
+    }
+    .kino-3grid::-webkit-scrollbar { display: none; }
     .kino-review-card {
+      flex: 0 0 calc((100% - 32px) / 3);
+      scroll-snap-align: start;
       background: var(--green-mint);
       border: 1px solid var(--green-soft-border);
       border-radius: 8px;
@@ -618,14 +628,23 @@
     }
 
     /* ================= 6. 5 REASONS CAROUSEL ================= */
-    .kino-reasons-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .kino-reasons-grid {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      gap: 16px;
+      scrollbar-width: none;
+    }
+    .kino-reasons-grid::-webkit-scrollbar { display: none; }
     .kino-reason-card {
+      flex: 0 0 calc((100% - 32px) / 3);
+      scroll-snap-align: start;
       background: #ffffff;
       border: 1px solid var(--green-soft-border);
       border-radius: 8px;
       overflow: hidden;
     }
-    .kino-reason-card.is-hidden { display: none; }
     .kino-reason-card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
     .kino-reason-body { padding: 14px 16px 16px; }
     .kino-reason-pill {
@@ -945,20 +964,6 @@
         <div class="kino-gallery-sticky">
           <div class="kino-main-stage">
             <img id="kinoMainImg" src="images/real/kino_real_6.jpg" alt="Kino Whole Body Cream Deodorant">
-            <div class="kino-hero-overlay">
-              <div class="kino-overlay-item">
-                <img src="images/Vector_034442c0-1380-4d60-9102-a5c6fe842d81.svg" alt="">
-                <span>72-Hour<br>Odor Defense</span>
-              </div>
-              <div class="kino-overlay-item">
-                <img src="images/Vector_99d41f0c-b8a6-4a4c-908a-07dfcd28198b.svg" alt="">
-                <span>Aluminum &amp;<br>Paraben Free</span>
-              </div>
-              <div class="kino-overlay-item">
-                <img src="images/Vector_48196a1b-f97e-48cb-87bb-2b68b2224bc1.svg" alt="">
-                <span>Whole Body<br>Safe*</span>
-              </div>
-            </div>
           </div>
 
           <div class="kino-thumbs" id="kinoThumbs">
@@ -1143,7 +1148,7 @@
     <div class="kino-wrap">
       <div class="kino-reviews-eyebrow"><span class="kino-stars-green">★★★★★</span> Loved by our customers</div>
       <h2 class="kino-sec-title" style="margin-bottom:28px;">What people are saying about Kino</h2>
-      <div class="kino-3grid">
+      <div class="kino-3grid" id="kinoReviewsTrack">
         <div class="kino-review-card">
           <div>
             <div class="kino-review-top">5/5 <span class="kino-stars-green">★★★★★</span></div>
@@ -1161,38 +1166,31 @@
         <div class="kino-review-card">
           <div>
             <div class="kino-review-top">5/5 <span class="kino-stars-green">★★★★★</span></div>
-            <p>Finally a whole body deodorant that doesn’t sting after shaving. Works great for underarms, underboob, inner thighs, and feet too. Summer Coconut smells so clean and absorbs right into my skin like moisturizer. No crumbling and no yellow pit stains on white tees.</p>
+            <p>Finally a whole body deodorant that doesn’t sting after shaving. Works great for underarms, underboob, inner thighs, and feet too.</p>
           </div>
           <div class="kino-review-author">Amanda R. | <img src="images/verified.svg" alt="" style="width:14px;height:14px;"> Verified Buyer</div>
-        </div>
-          <div class="kino-review-card">
-          <div>
-            <div class="kino-review-top">5/5 <span class="kino-stars-green">★★★★★</span></div>
-            <p>Great product!!! It really works as advertised. Zesty Rose lasts through hot yoga and 12-hour shifts with zero irritation.</p>
-          </div>
-          <div class="kino-review-author">Sarah M. | <img src="images/verified.svg" alt="" style="width:14px;height:14px;"> Verified Buyer</div>
         </div>
         <div class="kino-review-card">
           <div>
             <div class="kino-review-top">5/5 <span class="kino-stars-green">★★★★★</span></div>
-            <p>Summer Coconut smells so clean and absorbs right into my skin like moisturizer. No crumbling and no yellow pit stains on white tees.</p>
+            <p>I’ve tried every natural deodorant out there and Kino is the only one that actually holds up for 3 days without baking soda rash.</p>
           </div>
-          <div class="kino-review-author">Jessica T. | <img src="images/verified.svg" alt="" style="width:14px;height:14px;"> Verified Buyer</div>
+          <div class="kino-review-author">Lauren K. | <img src="images/verified.svg" alt="" style="width:14px;height:14px;"> Verified Buyer</div>
         </div>
         <div class="kino-review-card">
           <div>
             <div class="kino-review-top">5/5 <span class="kino-stars-green">★★★★★</span></div>
-            <p>Finally a whole body deodorant that doesn’t sting after shaving. Works great for underarms, underboob, inner thighs, and feet too. Summer Coconut smells so clean and absorbs right into my skin like moisturizer. No crumbling and no yellow pit stains on white tees.</p>
+            <p>Bought the 2-pack with Zesty Rose and Summer Coconut. A pea-sized amount goes a long way and leaves zero marks on black tops.</p>
           </div>
-          <div class="kino-review-author">Amanda R. | <img src="images/verified.svg" alt="" style="width:14px;height:14px;"> Verified Buyer</div>
+          <div class="kino-review-author">Maya P. | <img src="images/verified.svg" alt="" style="width:14px;height:14px;"> Verified Buyer</div>
         </div>
       </div>
       <div class="kino-carousel-nav">
-        <span class="kino-arrow-circle">‹</span>
-        <div class="kino-dots">
+        <button type="button" class="kino-arrow-circle" id="revPrev" aria-label="Previous review">‹</button>
+        <div class="kino-dots" id="revDots">
           <span class="kino-dot is-active"></span><span class="kino-dot"></span><span class="kino-dot"></span><span class="kino-dot"></span><span class="kino-dot"></span>
         </div>
-        <span class="kino-arrow-circle">›</span>
+        <button type="button" class="kino-arrow-circle" id="revNext" aria-label="Next review">›</button>
       </div>
     </div>
   </section>
@@ -1327,7 +1325,7 @@
             <p>Glides on smoothly and absorbs completely clear — never leaves yellow pit stains or white streaks.</p>
           </div>
         </div>
-        <div class="kino-reason-card is-hidden" data-reason="3">
+        <div class="kino-reason-card" data-reason="3">
           <img src="images/real/Woman_using_KINO_body_deodorant_f9b98095_2K.jpg" alt="Reason 4" loading="lazy">
           <div class="kino-reason-body">
             <span class="kino-reason-pill">Reason 4</span>
@@ -1335,7 +1333,7 @@
             <p>Powered by Niacinamide, Avocado Oil, Rose Hips Oil, Sea Salt &amp; Resveratrol to nourish skin.</p>
           </div>
         </div>
-        <div class="kino-reason-card is-hidden" data-reason="4">
+        <div class="kino-reason-card" data-reason="4">
           <img src="images/product/KINO_product_usage_infographic_s…_125187bb_2K.jpg" alt="Reason 5" loading="lazy">
           <div class="kino-reason-body">
             <span class="kino-reason-pill">Reason 5</span>
@@ -1345,12 +1343,15 @@
         </div>
       </div>
       <div class="kino-carousel-nav">
-        <button type="button" class="kino-arrow-circle" id="reasonPrev">‹</button>
-        <div class="kino-dots">
-          <span class="kino-dot is-active" id="rDot1"></span>
-          <span class="kino-dot" id="rDot2"></span>
+        <button type="button" class="kino-arrow-circle" id="reasonPrev" aria-label="Previous reason">‹</button>
+        <div class="kino-dots" id="reasonDots">
+          <span class="kino-dot is-active"></span>
+          <span class="kino-dot"></span>
+          <span class="kino-dot"></span>
+          <span class="kino-dot"></span>
+          <span class="kino-dot"></span>
         </div>
-        <button type="button" class="kino-arrow-circle" id="reasonNext">›</button>
+        <button type="button" class="kino-arrow-circle" id="reasonNext" aria-label="Next reason">›</button>
       </div>
     </div>
   </section>
@@ -1555,19 +1556,49 @@
       });
     });
 
-    // 5 Reasons slider toggle
-    let reasonPage = 0;
-    function renderReasons() {
-      const cards = document.querySelectorAll('#kinoReasonsGrid .kino-reason-card');
-      cards.forEach((c, idx) => {
-        const show = reasonPage === 0 ? idx < 3 : idx >= 2;
-        c.classList.toggle('is-hidden', !show);
+    // Reusable horizontal slider helper (desktop & mobile)
+    function initSlider(trackId, prevId, nextId, dotsId, cardSelector) {
+      const track = document.getElementById(trackId);
+      const prev = document.getElementById(prevId);
+      const next = document.getElementById(nextId);
+      const dots = Array.from(document.querySelectorAll('#' + dotsId + ' .kino-dot'));
+      if (!track || !prev || !next) return;
+
+      function getStep() {
+        const card = track.querySelector(cardSelector);
+        const gap = parseFloat(getComputedStyle(track).gap) || 16;
+        return card ? card.getBoundingClientRect().width + gap : 300;
+      }
+
+      function syncDots() {
+        const step = getStep();
+        const maxScroll = Math.max(1, track.scrollWidth - track.clientWidth);
+        let idx = Math.round(track.scrollLeft / step);
+        if (track.scrollLeft >= maxScroll - 4) idx = dots.length - 1;
+        dots.forEach((d, i) => d.classList.toggle('is-active', i === idx));
+      }
+
+      prev.addEventListener('click', () => {
+        track.scrollBy({ left: -getStep(), behavior: 'smooth' });
       });
-      document.getElementById('rDot1').classList.toggle('is-active', reasonPage === 0);
-      document.getElementById('rDot2').classList.toggle('is-active', reasonPage === 1);
+      next.addEventListener('click', () => {
+        const maxScroll = track.scrollWidth - track.clientWidth;
+        if (track.scrollLeft >= maxScroll - 4) {
+          track.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          track.scrollBy({ left: getStep(), behavior: 'smooth' });
+        }
+      });
+      dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+          track.scrollTo({ left: i * getStep(), behavior: 'smooth' });
+        });
+      });
+      track.addEventListener('scroll', syncDots, { passive: true });
     }
-    document.getElementById('reasonNext').addEventListener('click', () => { reasonPage = 1; renderReasons(); });
-    document.getElementById('reasonPrev').addEventListener('click', () => { reasonPage = 0; renderReasons(); });
+
+    initSlider('kinoReviewsTrack', 'revPrev', 'revNext', 'revDots', '.kino-review-card');
+    initSlider('kinoReasonsGrid', 'reasonPrev', 'reasonNext', 'reasonDots', '.kino-reason-card');
   </script>
 </body>
 </html>
