@@ -649,7 +649,8 @@
       align-items: center;
     }
     .kino-compare-photo { border-radius: 10px; overflow: hidden; }
-    .kino-compare-photo img { width: 100%; height: auto; display: block; }
+    .kino-compare-photo img,
+    .kino-compare-photo video { width: 100%; height: 340px; object-fit: cover; display: block; border-radius: 10px; }
     .kino-compare-box { position: relative; padding-top: 36px; }
     .kino-compare-table {
       width: 100%;
@@ -1248,7 +1249,10 @@
       <h2 class="kino-sec-title" style="margin-bottom:28px;">Experience It for Yourself</h2>
       <div class="kino-compare-wrap">
         <div class="kino-compare-photo">
-          <img src="images/real/freesoap.jpeg" alt="Kino Cream Deodorant" loading="lazy">
+          <video playsinline autoplay loop muted preload="metadata" poster="images/real/kino_real_6.jpg">
+            <source src="media/0ae94078ccac43ffbc1133caca3b25ed.SD-480p-0.9Mbps-62582070.mp4" type="video/mp4">
+            <img src="images/real/kino_real_6.jpg" alt="Kino Cream Deodorant" loading="lazy">
+          </video>
         </div>
         <div class="kino-compare-box">
           <table class="kino-compare-table">
