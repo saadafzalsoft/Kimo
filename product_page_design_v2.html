@@ -296,24 +296,24 @@
       box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.25);
     }
 
-    /* Mint-Outline CTA Button (Exact Screenshot) */
+    /* Solid Emerald CTA Button (Matching Lymphoria) */
     .kino-cta-mint {
       width: 100%;
-      padding: 11px 18px;
-      border-radius: 8px;
-      border: 1.5px solid var(--green-border);
-      background: #cdf5ea;
-      color: #169c73;
+      padding: 13px 18px;
+      border-radius: 6px;
+      border: 0;
+      background: #059678;
+      color: #ffffff;
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 2px;
+      gap: 3px;
       transition: background 0.18s;
     }
-    .kino-cta-mint:hover { background: #b9efe0; }
-    .kino-cta-mint-main { font-size: 16.5px; font-weight: 500; }
-    .kino-cta-mint-sub { font-size: 11px; font-weight: 500; opacity: 0.9; }
+    .kino-cta-mint:hover { background: #047c63; }
+    .kino-cta-mint-main { font-size: 16.5px; font-weight: 500; color: #ffffff; }
+    .kino-cta-mint-sub { font-size: 11.5px; font-weight: 400; opacity: 0.95; color: #ffffff; }
 
     /* Solid Emerald CTA Button (Mid-page) */
     .kino-cta-solid {
@@ -800,14 +800,18 @@
 
     /* ================= MOBILE RESPONSIVE ================= */
     @media (max-width: 900px) {
-      .kino-hero { padding: 14px 0 28px; }
+      .kino-section { padding: 38px 0; }
+      .kino-hero { padding: 12px 0 28px; }
       .kino-hero-grid { grid-template-columns: 1fr; gap: 14px; }
       .kino-hero-right { display: contents; }
       .kino-hero-head { order: 1; }
       .kino-gallery-sticky { order: 2; position: static; }
       .kino-hero-controls { order: 3; }
+      .kino-rating-row { font-size: 12px; margin-bottom: 8px; }
+      .kino-title { font-size: 26px; font-weight: 500; line-height: 1.14; letter-spacing: -0.02em; margin-bottom: 8px; }
+      .kino-sub { font-size: 14px; line-height: 1.38; color: #111827; margin-bottom: 4px; }
       .kino-hero-overlay { width: 34%; padding: 10px 6px; }
-      .kino-overlay-item span { font-size: 11px; }
+      .kino-overlay-item span { font-size: 11.5px; line-height: 1.25; }
       .kino-thumbs {
         display: flex;
         overflow-x: auto;
@@ -816,29 +820,33 @@
       }
       .kino-thumbs::-webkit-scrollbar { display: none; }
       .kino-thumb { flex: 0 0 calc((100% - 32px) / 5); }
-      .kino-title { font-size: 24px; }
-      .kino-sec-title { font-size: 22px; }
+      .kino-toggle-btn { align-items: center; text-align: center; padding: 14px 10px; }
+      .kino-radio-dot { display: none; }
+      .kino-toggle-price { padding-left: 0; font-size: 13px; }
+      .kino-sec-title { font-size: 25px; font-weight: 500; line-height: 1.15; letter-spacing: -0.02em; }
+      .kino-sec-sub { font-size: 13.5px; line-height: 1.4; }
 
       /* Section 2: Horizontal accordion rows on mobile */
-      .kino-4grid { grid-template-columns: 1fr; gap: 10px; }
-      .kino-feature-card { flex-direction: row; align-items: stretch; cursor: pointer; }
-      .kino-feature-card img { width: 92px; min-height: 70px; aspect-ratio: auto; flex-shrink: 0; }
+      .kino-4grid { grid-template-columns: 1fr; gap: 12px; }
+      .kino-feature-card { flex-direction: row; align-items: stretch; cursor: pointer; min-height: 76px; }
+      .kino-feature-card img { width: 96px; min-height: 76px; aspect-ratio: auto; flex-shrink: 0; }
       .kino-feature-card-body {
         flex: 1;
-        padding: 12px 14px;
+        padding: 12px 16px;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
         gap: 6px;
       }
-      .kino-feature-card-body h3 { margin: 0; padding: 0; border: 0; font-size: 13.5px; flex: 1; }
-      .kino-mob-plus { display: inline-flex; font-size: 18px; font-weight: 400; color: var(--text-dark); line-height: 1; transition: transform 0.2s; }
-      .kino-feature-card-body p { display: none; width: 100%; font-size: 12px; padding-top: 6px; }
+      .kino-feature-card-body h3 { margin: 0; padding: 0; border: 0; font-size: 15px; font-weight: 400; line-height: 1.25; flex: 1; color: #111827; }
+      .kino-mob-plus { display: inline-flex; font-size: 20px; font-weight: 300; color: var(--text-dark); line-height: 1; transition: transform 0.2s; }
+      .kino-feature-card-body p { display: none; width: 100%; font-size: 12.5px; padding-top: 6px; }
       .kino-feature-card.is-open .kino-feature-card-body p { display: block; }
       .kino-feature-card.is-open .kino-mob-plus { transform: rotate(45deg); }
 
       /* Section 3 & 6: Horizontal peek carousels on mobile */
+      .kino-reviews-eyebrow { font-size: 13px; margin-bottom: 10px; }
       .kino-3grid,
       .kino-reasons-grid {
         display: flex;
@@ -851,29 +859,43 @@
       .kino-reasons-grid::-webkit-scrollbar { display: none; }
       .kino-review-card,
       .kino-reason-card { flex: 0 0 84%; scroll-snap-align: start; }
+      .kino-review-card p { font-size: 13px; line-height: 1.5; }
+      .kino-review-author { font-size: 12.5px; }
       .kino-reason-card.is-hidden { display: block; }
+      .kino-reason-card img { aspect-ratio: 16 / 10; }
+      .kino-reason-body { padding: 14px 16px 18px; }
+      .kino-reason-pill { font-size: 11.5px; padding: 3px 14px; margin-bottom: 10px; }
+      .kino-reason-body h3 { font-size: 17px; font-weight: 500; margin-bottom: 6px; }
+      .kino-reason-body p { font-size: 13px; line-height: 1.45; }
 
       /* Section 5: Diagram + horizontal accordion botanical rows */
-      .kino-botanicals-wrap { grid-template-columns: 1fr; gap: 18px; }
-      .kino-diagram { padding: 14px 0; min-height: 270px; }
-      .kino-diagram-center { width: 132px; }
-      .kino-callout { width: 84px; }
-      .kino-callout img { width: 50px; height: 50px; }
-      .kino-callout span { font-size: 10px; }
-      .kino-2x2 { grid-template-columns: 1fr; gap: 10px; }
+      .kino-botanicals-wrap { grid-template-columns: 1fr; gap: 20px; }
+      .kino-diagram { padding: 14px 0; min-height: 280px; }
+      .kino-diagram-center { width: 152px; }
+      .kino-callout { width: 88px; }
+      .kino-callout img { width: 54px; height: 54px; }
+      .kino-callout span { font-size: 11px; color: #111827; }
+      .kino-2x2 { grid-template-columns: 1fr; gap: 12px; }
       .kino-ing-card { padding: 0; overflow: hidden; cursor: pointer; }
-      .kino-ing-head { padding: 0 14px 0 0; margin: 0; border-bottom: 0; }
-      .kino-ing-head img { width: 86px; height: 64px; border-radius: 0; }
-      .kino-ing-head h4 { flex: 1; font-size: 13.5px; }
-      .kino-ing-card p { display: none; padding: 10px 14px 12px; border-top: 1px dashed #e2ece7; }
+      .kino-ing-head { padding: 0 16px 0 0; margin: 0; border-bottom: 0; min-height: 74px; }
+      .kino-ing-head img { width: 96px; height: 74px; border-radius: 0; }
+      .kino-ing-head h4 { flex: 1; font-size: 15px; font-weight: 400; color: #111827; }
+      .kino-ing-card p { display: none; padding: 10px 14px 12px; border-top: 1px dashed #e2ece7; font-size: 12.5px; }
       .kino-ing-card.is-open p { display: block; }
       .kino-ing-card.is-open .kino-mob-plus { transform: rotate(45deg); }
 
-      /* Section 7: Table only on mobile */
+      /* Section 7: Table only on mobile, left-aligned title */
+      .kino-compare-section .kino-sec-title { text-align: left; font-size: 25px; margin-bottom: 18px !important; }
       .kino-compare-wrap { grid-template-columns: 1fr; }
       .kino-compare-photo { display: none; }
-      .kino-compare-table th, .kino-compare-table td { padding: 10px 8px; font-size: 11.5px; }
-      .kino-col-kino { width: 78px; }
+      .kino-compare-table { border: 0; }
+      .kino-compare-table thead th:first-child { border-bottom: 0; background: transparent; }
+      .kino-compare-table th, .kino-compare-table td { padding: 14px 10px; font-size: 12.5px; }
+      .kino-col-kino { width: 84px; }
+
+      /* Section 8: FAQ left-aligned title on mobile */
+      .kino-faq-section .kino-sec-title { text-align: left; font-size: 26px; line-height: 1.12; }
+      .kino-faq-q { padding: 15px 16px; font-size: 13.5px; }
 
       .kino-faq-grid, .kino-footer-grid { grid-template-columns: 1fr; }
       .kino-trust-row1 { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
@@ -1313,7 +1335,7 @@
   </section>
 
   <!-- 7. EXPERIENCE IT FOR YOURSELF (COMPARISON) -->
-  <section class="kino-section">
+  <section class="kino-section kino-compare-section">
     <div class="kino-wrap">
       <h2 class="kino-sec-title" style="margin-bottom:28px;">Experience It for Yourself</h2>
       <div class="kino-compare-wrap">
@@ -1350,7 +1372,7 @@
   </section>
 
   <!-- 8. FREQUENTLY ASKED QUESTIONS -->
-  <section class="kino-section kino-section--emerald">
+  <section class="kino-section kino-section--emerald kino-faq-section">
     <div class="kino-wrap">
       <h2 class="kino-sec-title" style="margin-bottom:26px;">Frequently Asked Questions</h2>
       <div class="kino-faq-grid">
