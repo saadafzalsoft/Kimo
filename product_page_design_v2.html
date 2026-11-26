@@ -796,21 +796,86 @@
       color: rgba(255, 255, 255, 0.75);
     }
 
+    .kino-mob-plus { display: none; }
+
     /* ================= MOBILE RESPONSIVE ================= */
     @media (max-width: 900px) {
-      .kino-hero { padding: 16px 0 32px; }
-      .kino-hero-grid { grid-template-columns: 1fr; gap: 22px; }
-      .kino-gallery-sticky { position: static; }
-      .kino-hero-overlay { width: 32%; padding: 10px 6px; }
+      .kino-hero { padding: 14px 0 28px; }
+      .kino-hero-grid { grid-template-columns: 1fr; gap: 14px; }
+      .kino-hero-right { display: contents; }
+      .kino-hero-head { order: 1; }
+      .kino-gallery-sticky { order: 2; position: static; }
+      .kino-hero-controls { order: 3; }
+      .kino-hero-overlay { width: 34%; padding: 10px 6px; }
       .kino-overlay-item span { font-size: 11px; }
-      .kino-thumbs { grid-template-columns: repeat(4, 1fr); }
+      .kino-thumbs {
+        display: flex;
+        overflow-x: auto;
+        gap: 8px;
+        scrollbar-width: none;
+      }
+      .kino-thumbs::-webkit-scrollbar { display: none; }
+      .kino-thumb { flex: 0 0 calc((100% - 32px) / 5); }
       .kino-title { font-size: 24px; }
       .kino-sec-title { font-size: 22px; }
-      .kino-4grid, .kino-3grid, .kino-reasons-grid, .kino-2x2, .kino-faq-grid { grid-template-columns: 1fr; }
-      .kino-botanicals-wrap, .kino-compare-wrap, .kino-footer-grid { grid-template-columns: 1fr; }
-      .kino-diagram { padding: 16px 0; }
-      .kino-diagram-center { width: 150px; }
-      .kino-callout img { width: 46px; height: 46px; }
+
+      /* Section 2: Horizontal accordion rows on mobile */
+      .kino-4grid { grid-template-columns: 1fr; gap: 10px; }
+      .kino-feature-card { flex-direction: row; align-items: stretch; cursor: pointer; }
+      .kino-feature-card img { width: 92px; min-height: 70px; aspect-ratio: auto; flex-shrink: 0; }
+      .kino-feature-card-body {
+        flex: 1;
+        padding: 12px 14px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 6px;
+      }
+      .kino-feature-card-body h3 { margin: 0; padding: 0; border: 0; font-size: 13.5px; flex: 1; }
+      .kino-mob-plus { display: inline-flex; font-size: 18px; font-weight: 400; color: var(--text-dark); line-height: 1; transition: transform 0.2s; }
+      .kino-feature-card-body p { display: none; width: 100%; font-size: 12px; padding-top: 6px; }
+      .kino-feature-card.is-open .kino-feature-card-body p { display: block; }
+      .kino-feature-card.is-open .kino-mob-plus { transform: rotate(45deg); }
+
+      /* Section 3 & 6: Horizontal peek carousels on mobile */
+      .kino-3grid,
+      .kino-reasons-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 12px;
+        scrollbar-width: none;
+      }
+      .kino-3grid::-webkit-scrollbar,
+      .kino-reasons-grid::-webkit-scrollbar { display: none; }
+      .kino-review-card,
+      .kino-reason-card { flex: 0 0 84%; scroll-snap-align: start; }
+      .kino-reason-card.is-hidden { display: block; }
+
+      /* Section 5: Diagram + horizontal accordion botanical rows */
+      .kino-botanicals-wrap { grid-template-columns: 1fr; gap: 18px; }
+      .kino-diagram { padding: 14px 0; min-height: 270px; }
+      .kino-diagram-center { width: 132px; }
+      .kino-callout { width: 84px; }
+      .kino-callout img { width: 50px; height: 50px; }
+      .kino-callout span { font-size: 10px; }
+      .kino-2x2 { grid-template-columns: 1fr; gap: 10px; }
+      .kino-ing-card { padding: 0; overflow: hidden; cursor: pointer; }
+      .kino-ing-head { padding: 0 14px 0 0; margin: 0; border-bottom: 0; }
+      .kino-ing-head img { width: 86px; height: 64px; border-radius: 0; }
+      .kino-ing-head h4 { flex: 1; font-size: 13.5px; }
+      .kino-ing-card p { display: none; padding: 10px 14px 12px; border-top: 1px dashed #e2ece7; }
+      .kino-ing-card.is-open p { display: block; }
+      .kino-ing-card.is-open .kino-mob-plus { transform: rotate(45deg); }
+
+      /* Section 7: Table only on mobile */
+      .kino-compare-wrap { grid-template-columns: 1fr; }
+      .kino-compare-photo { display: none; }
+      .kino-compare-table th, .kino-compare-table td { padding: 10px 8px; font-size: 11.5px; }
+      .kino-col-kino { width: 78px; }
+
+      .kino-faq-grid, .kino-footer-grid { grid-template-columns: 1fr; }
       .kino-trust-row1 { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
       .kino-trust-card {
         flex-direction: column;
@@ -887,15 +952,18 @@
         </div>
 
         <!-- Right Column -->
-        <div>
-          <div class="kino-rating-row">
-            <span class="kino-stars-gold">★★★★★</span>
-            <span>Rated 4.9 <strong>‘Excellent’</strong> | <u>1,475+ Reviews</u></span>
+        <div class="kino-hero-right">
+          <div class="kino-hero-head">
+            <div class="kino-rating-row">
+              <span class="kino-stars-gold">★★★★★</span>
+              <span>Rated 4.9 <strong>‘Excellent’</strong> | <u>1,475+ Reviews</u></span>
+            </div>
+            <h1 class="kino-title">Kino® Whole Body Cream Deodorant</h1>
+            <p class="kino-sub">The 30-second daily ritual your whole body odor defense has been waiting for.</p>
           </div>
-          <h1 class="kino-title">Kino® Whole Body Cream Deodorant</h1>
-          <p class="kino-sub">The 30-second daily ritual your whole body odor defense has been waiting for.</p>
 
-          <!-- 3 Bundle Cards -->
+          <div class="kino-hero-controls">
+            <!-- 3 Bundle Cards -->
           <div class="kino-bundles" id="kinoBundles">
             <div class="kino-bundle-card" data-price="$24.99">
               <img class="kino-bundle-img" src="images/real/kino_real_2.jpg" alt="Buy One">
@@ -1005,6 +1073,7 @@
               <div class="kino-mini-acc-body">Orders ship within 24 hours. Backed by our 30-Day Money-Back Guarantee — stay fresh or get a 100% refund.</div>
             </div>
           </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1018,28 +1087,28 @@
         <div class="kino-feature-card">
           <img src="images/real/kino_real_6.jpg" alt="Morning Freshness" loading="lazy">
           <div class="kino-feature-card-body">
-            <h3>Freshness That Feels Good*</h3>
+            <h3>Freshness That Feels Good*</h3><span class="kino-mob-plus">+</span>
             <p>Botanicals that neutralize odor at the root every day, keeping your skin soft, calm, and confident.</p>
           </div>
         </div>
         <div class="kino-feature-card">
           <img src="images/real/kino_real_2.jpg" alt="Made for Every Day" loading="lazy">
           <div class="kino-feature-card-body">
-            <h3>Made for Every Day</h3>
+            <h3>Made for Every Day</h3><span class="kino-mob-plus">+</span>
             <p>A pea-sized dab after your morning shower glides on smoothly and protects for up to 72 hours.</p>
           </div>
         </div>
         <div class="kino-feature-card">
           <img src="images/kino-hero-single-studio.jpg" alt="Zero White Marks" loading="lazy">
           <div class="kino-feature-card-body">
-            <h3>Zero Stains, Zero Residue</h3>
+            <h3>Zero Stains, Zero Residue</h3><span class="kino-mob-plus">+</span>
             <p>Absorbs clear like lightweight lotion — never leaves white streaks on black clothes or yellow pit stains.</p>
           </div>
         </div>
         <div class="kino-feature-card">
           <img src="images/real/kino_real_5.jpg" alt="Whole Body Safe" loading="lazy">
           <div class="kino-feature-card-body">
-            <h3>Pits, Privates &amp; Toes</h3>
+            <h3>Pits, Privates &amp; Toes</h3><span class="kino-mob-plus">+</span>
             <p>Aluminum-free, paraben-free, vegan, and held to clean dermatological standards for sensitive skin.</p>
           </div>
         </div>
@@ -1149,28 +1218,28 @@
           <div class="kino-ing-card">
             <div class="kino-ing-head">
               <img src="images/real/Rose_hips_and_grapefruit_slices_2425bb45_2K.jpg" alt="Rose Hips &amp; Grapefruit" loading="lazy">
-              <h4>Rose Hips &amp; Grapefruit</h4>
+              <h4>Rose Hips &amp; Grapefruit</h4><span class="kino-mob-plus">+</span>
             </div>
             <p>Botanical antioxidant blend behind our signature Zesty Rose scent that keeps skin bright.*</p>
           </div>
           <div class="kino-ing-card">
             <div class="kino-ing-head">
               <img src="images/real/Coconut_and_apple_extract_81237375_2K.jpg" alt="Coconut &amp; Apple Extract" loading="lazy">
-              <h4>Coconut &amp; Apple Extract</h4>
+              <h4>Coconut &amp; Apple Extract</h4><span class="kino-mob-plus">+</span>
             </div>
             <p>Lightweight plant moisture behind Summer Coconut — glides smoothly with zero pore clogging.*</p>
           </div>
           <div class="kino-ing-card">
             <div class="kino-ing-head">
               <img src="images/real/Avocado_and_niacinamide_serum_46ad0497_2K.jpg" alt="Niacinamide &amp; Avocado" loading="lazy">
-              <h4>Niacinamide &amp; Avocado</h4>
+              <h4>Niacinamide &amp; Avocado</h4><span class="kino-mob-plus">+</span>
             </div>
             <p>Calms razor irritation, strengthens your natural skin barrier, and keeps delicate skin soft.*</p>
           </div>
           <div class="kino-ing-card">
             <div class="kino-ing-head">
               <img src="images/real/Tea_tree_and_sea_salt_35f8510d_2K.jpg" alt="Tea Tree &amp; Sea Salt" loading="lazy">
-              <h4>Tea Tree &amp; Sea Salt</h4>
+              <h4>Tea Tree &amp; Sea Salt</h4><span class="kino-mob-plus">+</span>
             </div>
             <p>Targets odor-causing bacteria at the root for continuous 72-hour freshness everywhere.*</p>
           </div>
@@ -1425,6 +1494,13 @@
     // Mini hero accordions
     document.querySelectorAll('.kino-mini-acc-trigger').forEach(btn => {
       btn.addEventListener('click', () => btn.parentElement.classList.toggle('is-open'));
+    });
+
+    // Mobile accordion cards (Features & Botanicals)
+    document.querySelectorAll('.kino-feature-card, .kino-ing-card').forEach(card => {
+      card.addEventListener('click', () => {
+        if (window.innerWidth <= 900) card.classList.toggle('is-open');
+      });
     });
 
     // FAQ accordions
