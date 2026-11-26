@@ -6,57 +6,6 @@
   <title>Kino® Whole Body Cream Deodorant | 72-Hour Clinical Odor Protection</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23ffffff'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-weight='900' font-size='44' fill='%23064e3b'%3EK%3C/text%3E%3C/svg%3E">
   <style>
-
-    @font-face {
-      font-family: 'Helvetica Now Display';
-      font-weight: 300;
-      font-style: normal;
-      font-display: swap;
-      src: url("fonts/HelveticaNowDisplay-Light.woff") format("woff");
-    }
-    @font-face {
-      font-family: 'Helvetica Now Display';
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-      src: url("fonts/HelveticaNowDisplay-Regular.woff") format("woff");
-    }
-    @font-face {
-      font-family: 'Helvetica Now Display';
-      font-weight: 500;
-      font-style: normal;
-      font-display: swap;
-      src: url("fonts/HelveticaNowDisplay-Medium.woff") format("woff");
-    }
-    @font-face {
-      font-family: 'Helvetica Now Display';
-      font-weight: 700;
-      font-style: normal;
-      font-display: swap;
-      src: url("fonts/HelveticaNowDisplay-Bold.woff") format("woff");
-    }
-    @font-face {
-      font-family: 'ABC Diatype';
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-      src: url("fonts/abc-diatype-regular.woff") format("woff");
-    }
-    @font-face {
-      font-family: 'ABC Diatype';
-      font-weight: 500;
-      font-style: normal;
-      font-display: swap;
-      src: url("fonts/abc-diatype-medium.woff") format("woff");
-    }
-    @font-face {
-      font-family: 'ABC Diatype';
-      font-weight: 700;
-      font-style: normal;
-      font-display: swap;
-      src: url("fonts/abc-diatype-bold.woff") format("woff");
-    }
-
     @font-face {
       font-family: 'Inter';
       font-weight: 400;
@@ -64,6 +13,13 @@
       font-display: swap;
       src: url("fonts/inter_n4.b2a3f24c19b4de56e8871f609e73ca7f6d2e2bb9.woff2") format("woff2"),
            url("fonts/inter_n4.af8052d517e0c9ffac7b814872cecc27ae1fa132.woff") format("woff");
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+      src: url("fonts/inter_n6.771af0474a71b3797eb38f3487d6fb79d43b6877.woff2") format("woff2");
     }
     @font-face {
       font-family: 'Inter';
@@ -83,17 +39,18 @@
     }
 
     :root {
-      --green-dark: #0b4b32;
+      --green-dark: #085431;
+      --green-emerald: #0d8a64;
       --green-cta: #0b8a60;
-      --green-cta-hover: #076e4c;
-      --green-mint: #eef9f4;
+      --green-mint: #f2fbf7;
+      --green-mint-bg: #eefaf4;
       --green-border: #199b62;
-      --green-soft-border: #bce3d2;
-      --text-dark: #111827;
-      --text-body: #374151;
-      --text-muted: #6b7280;
-      --gold: #f59e0b;
-      --font: 'Helvetica Now Display', 'ABC Diatype', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --green-soft-border: #8fd2b5;
+      --text-dark: #111111;
+      --text-body: #222222;
+      --text-muted: #555555;
+      --gold: #ff9900;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
 
     *, *::before, *::after { box-sizing: border-box; }
@@ -104,13 +61,14 @@
       color: var(--text-dark);
       background: #ffffff;
       -webkit-font-smoothing: antialiased;
-      line-height: 1.5;
+      line-height: 1.45;
+      letter-spacing: 0;
     }
     img { max-width: 100%; display: block; }
     a { color: inherit; text-decoration: none; }
     button { font-family: inherit; cursor: pointer; }
 
-    /* Top Announcement Bar */
+    /* Announcement Bar */
     .kino-topbar {
       background: var(--green-dark);
       color: #ffffff;
@@ -118,12 +76,11 @@
       padding: 8px 16px;
       font-size: 12px;
       font-weight: 600;
-      letter-spacing: 0.02em;
     }
 
     /* Header */
     .kino-header {
-      border-bottom: 1px solid #eef2f0;
+      border-bottom: 1px solid #efefef;
       background: #ffffff;
       position: sticky;
       top: 0;
@@ -141,23 +98,22 @@
     .kino-logo img { height: 32px; width: auto; object-fit: contain; }
     .kino-cart-btn { background: none; border: 0; padding: 4px; color: var(--text-dark); }
 
-    .kino-wrap { max-width: 1160px; margin: 0 auto; padding: 0 20px; }
+    .kino-wrap { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
 
     /* ================= 1. HERO SECTION ================= */
-    .kino-hero { padding: 28px 0 52px; }
+    .kino-hero { padding: 26px 0 48px; }
     .kino-hero-grid {
       display: grid;
-      grid-template-columns: 1.04fr 0.96fr;
+      grid-template-columns: 1.03fr 0.97fr;
       gap: 44px;
       align-items: start;
     }
     .kino-gallery-sticky { position: sticky; top: 76px; }
     .kino-main-stage {
       position: relative;
-      border-radius: 12px;
+      border-radius: 10px;
       overflow: hidden;
       background: #f8faf9;
-      border: 1px solid #e5ece8;
       aspect-ratio: 1 / 1;
     }
     .kino-main-stage img { width: 100%; height: 100%; object-fit: cover; }
@@ -166,13 +122,13 @@
       top: 0;
       right: 0;
       bottom: 0;
-      width: 30%;
-      background: rgba(11, 75, 50, 0.9);
+      width: 31%;
+      background: rgba(8, 84, 49, 0.92);
       color: #ffffff;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
-      padding: 16px 10px;
+      padding: 14px 10px;
       text-align: center;
     }
     .kino-overlay-item {
@@ -180,12 +136,12 @@
       flex-direction: column;
       align-items: center;
       gap: 8px;
-      padding: 10px 4px;
+      padding: 12px 4px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.14);
     }
     .kino-overlay-item:last-child { border-bottom: 0; }
-    .kino-overlay-item svg { width: 26px; height: 26px; color: #ffffff; }
-    .kino-overlay-item span { font-size: 13px; font-weight: 600; line-height: 1.25; }
+    .kino-overlay-item img { width: 32px; height: 32px; filter: brightness(0) invert(1); }
+    .kino-overlay-item span { font-size: 14px; font-weight: 500; line-height: 1.25; }
     .kino-thumbs {
       display: grid;
       grid-template-columns: repeat(8, 1fr);
@@ -199,35 +155,34 @@
       aspect-ratio: 1 / 1;
       padding: 0;
       background: #f3f6f4;
-      transition: border-color 0.18s;
     }
     .kino-thumb.is-active { border-color: var(--green-border); }
     .kino-thumb img { width: 100%; height: 100%; object-fit: cover; }
 
-    /* Right Column */
+    /* Hero Right Column */
     .kino-rating-row {
       display: flex;
       align-items: center;
       gap: 8px;
       font-size: 13px;
-      color: var(--text-body);
+      color: var(--text-dark);
       margin-bottom: 8px;
     }
-    .kino-stars { color: var(--gold); letter-spacing: 1px; font-size: 14.5px; }
-    .kino-rating-row strong { color: var(--green-border); }
+    .kino-stars-gold { color: var(--gold); letter-spacing: 1px; font-size: 14px; }
+    .kino-stars-green { color: var(--green-emerald); letter-spacing: 1px; font-size: 14px; }
+    .kino-rating-row strong { color: var(--green-emerald); font-weight: 600; }
     .kino-title {
-      font-size: 30px;
-      font-weight: 700;
-      line-height: 1.18;
-      letter-spacing: -0.025em;
+      font-size: 29px;
+      font-weight: 500;
+      line-height: 1.2;
       margin: 0 0 8px;
       color: var(--text-dark);
     }
     .kino-sub {
       font-size: 14.5px;
       color: var(--text-body);
-      margin: 0 0 20px;
-      line-height: 1.5;
+      margin: 0 0 18px;
+      line-height: 1.45;
     }
 
     /* Bundle Cards */
@@ -238,120 +193,227 @@
       align-items: center;
       gap: 14px;
       padding: 12px 16px;
-      border: 1.5px solid #d1dbd5;
-      border-radius: 8px;
+      border: 1px solid #d4dcd7;
+      border-radius: 6px;
       background: #ffffff;
       cursor: pointer;
-      transition: border-color 0.18s, background-color 0.18s;
     }
     .kino-bundle-card.is-selected {
-      border-color: var(--green-border);
-      background: #f2fbf7;
-      box-shadow: 0 0 0 1px var(--green-border) inset;
+      border: 1.5px solid var(--green-dark);
+      background: var(--green-mint);
     }
     .kino-bundle-badge {
       position: absolute;
-      top: -11px;
-      right: 16px;
+      top: -10px;
+      right: 14px;
       background: var(--green-dark);
       color: #ffffff;
       font-size: 10.5px;
-      font-weight: 700;
-      padding: 3px 10px;
+      font-weight: 600;
+      padding: 2px 10px;
       border-radius: 999px;
     }
     .kino-bundle-img {
-      width: 46px;
-      height: 46px;
-      border-radius: 6px;
+      width: 44px;
+      height: 44px;
+      border-radius: 4px;
       object-fit: cover;
       flex-shrink: 0;
-      border: 1px solid #e5ece8;
     }
     .kino-bundle-info { flex: 1; min-width: 0; }
-    .kino-bundle-name { font-size: 15px; font-weight: 700; color: var(--text-dark); }
-    .kino-bundle-save { font-size: 12px; color: var(--green-border); font-weight: 600; margin-top: 2px; }
+    .kino-bundle-name { font-size: 14.5px; font-weight: 600; color: var(--text-dark); }
+    .kino-bundle-save { font-size: 11.5px; color: var(--green-border); font-weight: 500; margin-top: 2px; }
     .kino-bundle-prices { text-align: right; flex-shrink: 0; }
-    .kino-price-now { font-size: 16.5px; font-weight: 700; color: var(--green-dark); }
-    .kino-price-was { font-size: 12px; color: #9ca3af; text-decoration: line-through; }
+    .kino-price-now { font-size: 15px; font-weight: 600; color: var(--green-dark); }
+    .kino-price-was { font-size: 11.5px; color: #9ca3af; text-decoration: line-through; }
 
-    /* Purchase Toggle */
-    .kino-toggle-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
+    /* Purchase Toggle (Exact 2-line Radio Cards) */
+    .kino-toggle-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; }
     .kino-toggle-btn {
-      padding: 11px 10px;
+      padding: 10px 14px;
       border-radius: 8px;
-      border: 1.5px solid #d1dbd5;
+      border: 1px solid #d4dcd7;
       background: #ffffff;
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--text-dark);
-      text-align: center;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
     }
     .kino-toggle-btn.is-active {
-      border-color: var(--green-border);
+      border: 1.5px solid var(--green-border);
       background: var(--green-mint);
-      color: var(--green-dark);
+    }
+    .kino-toggle-top {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+    .kino-radio-dot {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border: 1.5px solid #9ca3af;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .kino-toggle-btn.is-active .kino-radio-dot {
+      border-color: var(--green-border);
+    }
+    .kino-toggle-btn.is-active .kino-radio-dot::after {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green-border);
+    }
+    .kino-toggle-price {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-dark);
+      padding-left: 23px;
     }
 
-    .kino-delivery-note { text-align: center; font-size: 12px; color: var(--text-body); margin: 0 0 10px; }
-    .kino-delivery-note span { color: var(--green-border); font-weight: 600; }
+    /* Ready to ship */
+    .kino-ready-ship {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      font-size: 13px;
+      color: var(--text-dark);
+      margin-bottom: 10px;
+    }
+    .kino-pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #16a34a;
+      box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.25);
+    }
 
-    .kino-cta-btn {
+    /* Mint-Outline CTA Button (Exact Screenshot) */
+    .kino-cta-mint {
       width: 100%;
-      padding: 15px 20px;
-      border: 0;
-      border-radius: 6px;
-      background: var(--green-cta);
-      color: #ffffff;
-      font-size: 15px;
-      font-weight: 700;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
+      padding: 11px 18px;
+      border-radius: 8px;
+      border: 1.5px solid var(--green-border);
+      background: #cdf5ea;
+      color: #169c73;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
       transition: background 0.18s;
     }
-    .kino-cta-btn:hover { background: var(--green-cta-hover); }
+    .kino-cta-mint:hover { background: #b9efe0; }
+    .kino-cta-mint-main { font-size: 16.5px; font-weight: 500; }
+    .kino-cta-mint-sub { font-size: 11px; font-weight: 500; opacity: 0.9; }
 
-    .kino-payment-row { margin: 12px 0; display: flex; justify-content: center; }
-    .kino-payment-row img { max-width: 230px; height: auto; }
-
-    .kino-guarantee-pill {
-      background: var(--green-mint);
-      border: 1px solid var(--green-soft-border);
-      border-radius: 8px;
-      padding: 11px 14px;
-      font-size: 12px;
-      color: var(--green-dark);
-      text-align: center;
-      margin-bottom: 14px;
+    /* Solid Emerald CTA Button (Mid-page) */
+    .kino-cta-solid {
+      width: 100%;
+      padding: 13px 20px;
+      border: 0;
+      border-radius: 6px;
+      background: #059678;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
-    .kino-mini-accordions { border-top: 1px solid #e5ece8; }
-    .kino-mini-acc-item { border-bottom: 1px solid #e5ece8; }
+    .kino-payment-row { margin: 12px 0; display: flex; justify-content: center; }
+    .kino-payment-row img { max-width: 220px; height: auto; }
+
+    /* Hero Mini Review Card */
+    .kino-hero-review {
+      background: var(--green-mint);
+      border: 1px solid #d7efe5;
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 14px;
+    }
+    .kino-hr-top { display: flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 600; margin-bottom: 6px; }
+    .kino-hr-quote { font-size: 13px; color: var(--text-dark); margin: 0 0 10px; line-height: 1.45; }
+    .kino-hr-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    .kino-hr-author { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--text-body); }
+    .kino-hr-avatar {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      border: 1px solid #94c9b2;
+      background: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .kino-hr-tags { display: flex; gap: 6px; }
+    .kino-hr-tag {
+      border: 1px solid var(--green-border);
+      background: #ffffff;
+      border-radius: 4px;
+      padding: 3px 9px;
+      font-size: 11px;
+      font-weight: 500;
+    }
+
+    /* Hero 3 Bordered Accordions */
+    .kino-mini-accordions { display: flex; flex-direction: column; gap: 10px; }
+    .kino-mini-acc-item {
+      border: 1px solid #d4dcd7;
+      border-radius: 8px;
+      background: #ffffff;
+    }
     .kino-mini-acc-trigger {
       width: 100%;
       background: none;
       border: 0;
-      padding: 13px 4px;
+      padding: 13px 16px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 14px;
-      font-weight: 600;
+      font-size: 14.5px;
+      font-weight: 500;
       color: var(--text-dark);
       text-align: left;
     }
-    .kino-mini-acc-body {
-      display: none;
-      padding: 0 4px 13px;
+    .kino-acc-left { display: flex; align-items: center; gap: 12px; }
+    .kino-acc-arrow {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 1px solid #cbd5e1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       font-size: 13px;
       color: var(--text-body);
-      line-height: 1.55;
+    }
+    .kino-mini-acc-body {
+      display: none;
+      padding: 0 16px 14px;
+      font-size: 13px;
+      color: var(--text-body);
+      line-height: 1.5;
     }
     .kino-mini-acc-item.is-open .kino-mini-acc-body { display: block; }
 
     /* ================= SHARED SECTION STYLES ================= */
-    .kino-section { padding: 54px 0; }
-    .kino-section--mint { background: var(--green-mint); }
+    .kino-section { padding: 48px 0; }
+    .kino-section--mint {
+      background: var(--green-mint-bg);
+      border-top: 1px solid var(--green-border);
+      border-bottom: 1px solid var(--green-border);
+    }
     .kino-section--emerald {
       background-color: var(--green-dark);
       background-image: url("images/emerald-coconut-blossom-line-art.png");
@@ -361,51 +423,56 @@
     }
     .kino-sec-title {
       text-align: center;
-      font-size: 28px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
+      font-size: 26px;
+      font-weight: 500;
       margin: 0 0 8px;
     }
     .kino-sec-sub {
       text-align: center;
-      font-size: 14.5px;
+      font-size: 13.5px;
       color: var(--text-muted);
-      margin: 0 0 32px;
+      margin: 0 0 28px;
     }
     .kino-section--emerald .kino-sec-sub { color: rgba(255, 255, 255, 0.85); }
 
     /* ================= 2. 4-CARD LIFESTYLE GRID ================= */
-    .kino-4grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .kino-4grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
     .kino-feature-card {
       background: #ffffff;
-      border: 1px solid var(--green-soft-border);
-      border-radius: 10px;
+      border: 1px solid var(--green-border);
+      border-radius: 8px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
     }
     .kino-feature-card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
-    .kino-feature-card-body { padding: 14px; }
-    .kino-feature-card-body h3 { font-size: 15px; font-weight: 700; margin: 0 0 6px; color: var(--text-dark); }
-    .kino-feature-card-body p { font-size: 12.5px; color: var(--text-body); margin: 0; line-height: 1.5; }
+    .kino-feature-card-body { padding: 14px 16px 16px; }
+    .kino-feature-card-body h3 {
+      font-size: 15px;
+      font-weight: 500;
+      margin: 0 0 8px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #eef2f0;
+      color: var(--text-dark);
+    }
+    .kino-feature-card-body p { font-size: 12px; color: var(--text-body); margin: 0; line-height: 1.5; }
 
     /* ================= 3. REVIEWS CAROUSEL ================= */
-    .kino-reviews-eyebrow { text-align: center; font-size: 12.5px; color: var(--text-body); margin-bottom: 6px; }
+    .kino-reviews-eyebrow { text-align: center; font-size: 12px; color: var(--text-dark); margin-bottom: 6px; }
     .kino-3grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
     .kino-review-card {
-      background: #ffffff;
+      background: var(--green-mint);
       border: 1px solid var(--green-soft-border);
-      border-radius: 10px;
-      padding: 18px;
+      border-radius: 8px;
+      padding: 18px 20px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      gap: 12px;
+      gap: 16px;
     }
-    .kino-review-card h4 { font-size: 14px; font-weight: 700; margin: 4px 0 6px; }
-    .kino-review-card p { font-size: 12.5px; color: var(--text-body); margin: 0; line-height: 1.55; }
-    .kino-review-author { font-size: 11.5px; color: var(--text-muted); font-weight: 600; }
-    .kino-review-author span { color: var(--green-border); }
+    .kino-review-top { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 500; margin-bottom: 8px; }
+    .kino-review-card p { font-size: 12px; font-style: italic; color: var(--text-body); margin: 0; line-height: 1.55; }
+    .kino-review-author { font-size: 11.5px; color: var(--text-dark); font-weight: 600; display: flex; align-items: center; gap: 6px; }
     .kino-carousel-nav {
       display: flex;
       align-items: center;
@@ -414,67 +481,67 @@
       margin-top: 22px;
     }
     .kino-arrow-circle {
-      width: 30px;
-      height: 30px;
+      width: 28px;
+      height: 28px;
       border-radius: 50%;
-      border: 1px solid var(--green-soft-border);
+      border: 1px solid var(--green-border);
       background: #ffffff;
       color: var(--green-dark);
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-weight: 700;
+      font-weight: 600;
       font-size: 14px;
     }
     .kino-dots { display: inline-flex; gap: 6px; }
-    .kino-dot { width: 6px; height: 6px; border-radius: 50%; background: #cbd5e1; }
+    .kino-dot { width: 6px; height: 6px; border-radius: 50%; background: #cde5da; }
     .kino-dot.is-active { background: var(--green-dark); }
 
-    /* ================= 4. WHY TRUST KINO? ================= */
+    /* ================= 4. WHY TRUST KINO? (HORIZONTAL ON DESKTOP, VERTICAL ON MOBILE) ================= */
     .kino-trust-row1 {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 14px;
-      max-width: 780px;
+      max-width: 820px;
       margin: 24px auto 14px;
     }
     .kino-trust-card {
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 10px;
-      padding: 18px 14px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 6px;
+      padding: 15px 16px;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
-      text-align: center;
-      gap: 8px;
-      font-size: 13.5px;
-      font-weight: 600;
+      justify-content: center;
+      text-align: left;
+      gap: 12px;
+      font-size: 13px;
+      font-weight: 500;
     }
-    .kino-trust-card svg { width: 26px; height: 26px; color: #6ee7b7; }
-    .kino-trust-row2 { max-width: 320px; margin: 0 auto; }
+    .kino-trust-card img { width: 26px; height: 26px; object-fit: contain; flex-shrink: 0; }
+    .kino-trust-row2 { max-width: 440px; margin: 0 auto; }
 
-    /* ================= 5. BOTANICALS DIAGRAM + 2x2 GRID ================= */
+    /* ================= 5. BOTANICALS DIAGRAM + 2x2 CARDS ================= */
     .kino-botanicals-wrap {
       display: grid;
-      grid-template-columns: 0.95fr 1.05fr;
-      gap: 32px;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 28px;
       align-items: center;
-      margin-bottom: 28px;
+      margin-bottom: 26px;
     }
     .kino-diagram {
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 24px 12px;
+      padding: 28px 14px;
     }
     .kino-diagram-center {
-      width: 190px;
-      border-radius: 14px;
+      width: 185px;
+      border-radius: 12px;
       overflow: hidden;
-      border: 1px solid var(--green-soft-border);
-      box-shadow: 0 10px 25px rgba(11, 75, 50, 0.08);
+      border: 1px solid #e5ece8;
       z-index: 2;
     }
     .kino-callout {
@@ -484,128 +551,183 @@
       align-items: center;
       text-align: center;
       gap: 4px;
-      width: 92px;
+      width: 90px;
       z-index: 3;
     }
     .kino-callout img {
-      width: 58px;
-      height: 58px;
+      width: 56px;
+      height: 56px;
       border-radius: 50%;
       object-fit: cover;
-      border: 2px solid var(--green-soft-border);
+      border: 1.5px solid var(--green-soft-border);
       background: #ffffff;
     }
-    .kino-callout span { font-size: 11px; font-weight: 700; color: var(--text-dark); line-height: 1.2; }
-    .kino-callout--tl { top: 8px; left: 10px; }
-    .kino-callout--tr { top: 8px; right: 10px; }
-    .kino-callout--bl { bottom: 8px; left: 10px; }
-    .kino-callout--br { bottom: 8px; right: 10px; }
+    .kino-callout span { font-size: 11px; font-weight: 500; color: var(--text-dark); line-height: 1.2; }
+    .kino-callout--tl { top: 8px; left: 8px; }
+    .kino-callout--tr { top: 8px; right: 8px; }
+    .kino-callout--bl { bottom: 8px; left: 8px; }
+    .kino-callout--br { bottom: 8px; right: 8px; }
     .kino-2x2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     .kino-ing-card {
       background: #ffffff;
       border: 1px solid var(--green-soft-border);
-      border-radius: 10px;
-      overflow: hidden;
+      border-radius: 8px;
+      padding: 14px;
     }
-    .kino-ing-card img { width: 100%; height: 96px; object-fit: cover; }
-    .kino-ing-card-body { padding: 14px; }
-    .kino-ing-card h4 { font-size: 14px; font-weight: 700; margin: 0 0 6px; color: var(--green-dark); }
-    .kino-ing-card p { font-size: 12px; color: var(--text-body); margin: 0; line-height: 1.5; }
-    .kino-center-cta { max-width: 720px; margin: 0 auto; text-align: center; }
-    .kino-cta-subnote { font-size: 12px; color: var(--text-muted); margin-top: 8px; }
+    .kino-ing-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      border-bottom: 1px dashed #e2ece7;
+    }
+    .kino-ing-head img {
+      width: 72px;
+      height: 46px;
+      border-radius: 4px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    .kino-ing-head h4 { font-size: 14px; font-weight: 600; margin: 0; color: var(--text-dark); }
+    .kino-ing-card p { font-size: 12px; color: var(--text-body); margin: 0; line-height: 1.45; }
+    .kino-center-cta { max-width: 760px; margin: 0 auto; text-align: center; }
+    .kino-cta-subnote {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-top: 10px;
+    }
 
     /* ================= 6. 5 REASONS CAROUSEL ================= */
     .kino-reasons-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
     .kino-reason-card {
       background: #ffffff;
       border: 1px solid var(--green-soft-border);
-      border-radius: 10px;
+      border-radius: 8px;
       overflow: hidden;
     }
     .kino-reason-card.is-hidden { display: none; }
     .kino-reason-card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
-    .kino-reason-body { padding: 15px; }
+    .kino-reason-body { padding: 14px 16px 16px; }
     .kino-reason-pill {
       display: inline-block;
-      background: var(--green-cta);
+      background: var(--green-emerald);
       color: #ffffff;
       font-size: 10.5px;
-      font-weight: 700;
-      padding: 3px 10px;
+      font-weight: 600;
+      padding: 2px 10px;
       border-radius: 999px;
       margin-bottom: 8px;
     }
-    .kino-reason-body h3 { font-size: 15px; font-weight: 700; margin: 0 0 6px; }
-    .kino-reason-body p { font-size: 12.5px; color: var(--text-body); margin: 0; line-height: 1.5; }
+    .kino-reason-body h3 { font-size: 14.5px; font-weight: 600; margin: 0 0 6px; }
+    .kino-reason-body p { font-size: 12px; color: var(--text-body); margin: 0; line-height: 1.5; }
 
     /* ================= 7. EXPERIENCE IT FOR YOURSELF (COMPARISON) ================= */
     .kino-compare-wrap {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.05fr 0.95fr;
       gap: 36px;
       align-items: center;
     }
-    .kino-compare-photo { border-radius: 12px; overflow: hidden; border: 1px solid #e5ece8; }
+    .kino-compare-photo { border-radius: 10px; overflow: hidden; }
+    .kino-compare-photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
     .kino-compare-box { position: relative; padding-top: 32px; }
     .kino-compare-table {
       width: 100%;
       border-collapse: collapse;
-      border-radius: 10px;
-      overflow: visible;
-      border: 1px solid var(--green-soft-border);
+      border-radius: 8px;
+      border: 1px solid #d7efe5;
+      background: var(--green-mint);
     }
     .kino-compare-table th, .kino-compare-table td {
       padding: 12px 14px;
-      font-size: 12.5px;
-      border-bottom: 1px solid #e5ece8;
+      font-size: 12px;
+      border-bottom: 1px dashed #cde5da;
       text-align: center;
     }
+    .kino-compare-table thead th {
+      background: #ffffff;
+      border-bottom: 1px solid #e5ece8;
+      font-weight: 600;
+      font-size: 12px;
+    }
     .kino-compare-table td:first-child,
-    .kino-compare-table th:first-child { text-align: left; font-weight: 600; }
+    .kino-compare-table th:first-child { text-align: left; font-weight: 500; }
     .kino-col-kino {
-      background: var(--green-dark);
+      background: var(--green-dark) !important;
       color: #ffffff;
-      font-weight: 700;
+      font-weight: 600;
       position: relative;
-      width: 112px;
+      width: 106px;
+      border-bottom-color: rgba(255,255,255,0.14) !important;
+    }
+    .kino-compare-table thead th.kino-col-kino {
+      border-radius: 8px 8px 0 0;
     }
     .kino-col-tube-pop {
-      width: 44px;
-      height: 44px;
+      width: 40px;
+      height: 40px;
       object-fit: cover;
-      border-radius: 8px;
+      border-radius: 6px;
       border: 2px solid #ffffff;
-      margin: -34px auto 6px;
+      margin: -34px auto 4px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
-    .kino-check { color: #34d399; font-weight: 700; font-size: 15px; }
-    .kino-cross { color: #ef4444; font-weight: 700; font-size: 15px; }
+    .kino-badge-check {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #4ade80;
+      color: #064e3b;
+      font-weight: 700;
+      font-size: 12px;
+    }
+    .kino-badge-cross {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 1.5px solid #dc2626;
+      color: #dc2626;
+      font-weight: 600;
+      font-size: 11px;
+    }
 
     /* ================= 8. FAQS (2-COLUMN EMERALD GRID) ================= */
     .kino-faq-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 12px;
-      max-width: 940px;
+      max-width: 920px;
       margin: 0 auto;
     }
     .kino-faq-item {
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 6px;
       overflow: hidden;
     }
     .kino-faq-q {
       width: 100%;
       background: none;
       border: 0;
-      padding: 14px 16px;
+      padding: 13px 16px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       color: #ffffff;
-      font-size: 13.5px;
-      font-weight: 600;
+      font-size: 13px;
+      font-weight: 500;
       text-align: left;
       gap: 12px;
     }
@@ -633,31 +755,20 @@
 
     /* ================= 9. 30-DAY MONEY BACK GUARANTEE ================= */
     .kino-guarantee-banner {
-      border-radius: 14px;
-      padding: 36px 42px;
+      border-radius: 12px;
+      padding: 32px 42px;
       display: grid;
       grid-template-columns: 1.25fr 0.75fr;
       gap: 28px;
       align-items: center;
     }
     .kino-guarantee-left { display: flex; align-items: center; gap: 22px; }
-    .kino-guarantee-badge {
-      width: 74px;
-      height: 74px;
-      border-radius: 50%;
-      background: #d1fae5;
-      color: var(--green-dark);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .kino-guarantee-left h2 { font-size: 25px; font-weight: 700; margin: 0 0 8px; }
-    .kino-guarantee-left p { font-size: 14px; margin: 0; color: rgba(255, 255, 255, 0.9); }
+    .kino-guarantee-left h2 { font-size: 24px; font-weight: 600; margin: 0 0 8px; }
+    .kino-guarantee-left p { font-size: 13.5px; margin: 0; color: rgba(255, 255, 255, 0.9); }
     .kino-guarantee-right img { max-width: 230px; margin: 0 auto; }
 
     /* ================= 10. FOOTER ================= */
-    .kino-footer { padding: 48px 0 32px; }
+    .kino-footer { padding: 48px 0 28px; }
     .kino-footer-grid {
       display: grid;
       grid-template-columns: 1.3fr 0.8fr 0.8fr 1.1fr;
@@ -665,13 +776,13 @@
       margin-bottom: 28px;
     }
     .kino-footer-logo { height: 34px; width: auto; filter: brightness(0) invert(1); margin-bottom: 12px; }
-    .kino-footer h4 { font-size: 13.5px; font-weight: 700; margin: 0 0 12px; }
+    .kino-footer h4 { font-size: 13.5px; font-weight: 600; margin: 0 0 12px; }
     .kino-footer ul { list-style: none; padding: 0; margin: 0; }
-    .kino-footer li { margin-bottom: 8px; font-size: 12.5px; color: rgba(255, 255, 255, 0.82); }
-    .kino-footer p { font-size: 12px; color: rgba(255, 255, 255, 0.78); line-height: 1.55; }
+    .kino-footer li { margin-bottom: 8px; font-size: 12px; color: rgba(255, 255, 255, 0.82); }
+    .kino-footer p { font-size: 11.5px; color: rgba(255, 255, 255, 0.78); line-height: 1.55; }
     .kino-newsletter { display: flex; gap: 8px; margin-top: 10px; }
-    .kino-newsletter input { flex: 1; padding: 9px 12px; border-radius: 6px; border: 0; font-size: 12.5px; }
-    .kino-newsletter button { padding: 9px 14px; border-radius: 6px; border: 0; background: #ffffff; color: var(--green-dark); font-weight: 700; font-size: 12.5px; }
+    .kino-newsletter input { flex: 1; padding: 9px 12px; border-radius: 4px; border: 0; font-size: 12px; }
+    .kino-newsletter button { padding: 9px 14px; border-radius: 4px; border: 0; background: #ffffff; color: var(--green-dark); font-weight: 600; font-size: 12px; }
     .kino-footer-bottom {
       border-top: 1px solid rgba(255, 255, 255, 0.16);
       padding-top: 18px;
@@ -693,14 +804,20 @@
       .kino-overlay-item span { font-size: 11px; }
       .kino-thumbs { grid-template-columns: repeat(4, 1fr); }
       .kino-title { font-size: 24px; }
-      .kino-sec-title { font-size: 23px; }
+      .kino-sec-title { font-size: 22px; }
       .kino-4grid, .kino-3grid, .kino-reasons-grid, .kino-2x2, .kino-faq-grid { grid-template-columns: 1fr; }
       .kino-botanicals-wrap, .kino-compare-wrap, .kino-footer-grid { grid-template-columns: 1fr; }
       .kino-diagram { padding: 16px 0; }
       .kino-diagram-center { width: 150px; }
       .kino-callout img { width: 46px; height: 46px; }
       .kino-trust-row1 { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
-      .kino-trust-card { padding: 14px 6px; font-size: 11.5px; }
+      .kino-trust-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 14px 6px;
+        font-size: 11.5px;
+        gap: 8px;
+      }
       .kino-trust-row2 { max-width: 220px; }
       .kino-guarantee-banner { grid-template-columns: 1fr; padding: 32px 20px 24px; text-align: center; }
       .kino-guarantee-left { flex-direction: column; gap: 14px; }
@@ -723,7 +840,7 @@
         <img src="images/real/KINO__2_-removebg-preview.avif" alt="Kino">
       </a>
       <button type="button" class="kino-cart-btn" aria-label="Cart">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 34 34" fill="none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 34 34" fill="none">
           <path d="M8.5 2.83398L4.25 8.50065V28.334C4.25 29.0854 4.54851 29.8061 5.07986 30.3375C5.61122 30.8688 6.33189 31.1673 7.08333 31.1673H26.9167C27.6681 31.1673 28.3888 30.8688 28.9201 30.3375C29.4515 29.8061 29.75 29.0854 29.75 28.334V8.50065L25.5 2.83398H8.5Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
           <path d="M4.25 8.5H29.75" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
           <path d="M22.6666 14.166C22.6666 15.6689 22.0696 17.1102 21.0069 18.1729C19.9442 19.2357 18.5028 19.8327 16.9999 19.8327C15.497 19.8327 14.0557 19.2357 12.993 18.1729C11.9303 17.1102 11.3333 15.6689 11.3333 14.166" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -739,22 +856,31 @@
         <!-- Left Sticky Gallery -->
         <div class="kino-gallery-sticky">
           <div class="kino-main-stage">
-            <img id="kinoMainImg" src="images/product/KINO_Whole_Body_Cream_Deodorant_a2932772_2K.jpg" alt="Kino Whole Body Cream Deodorant">
+            <img id="kinoMainImg" src="images/real/kino_real_6.jpg" alt="Kino Whole Body Cream Deodorant">
             <div class="kino-hero-overlay">
-              <div class="kino-overlay-item"><img src="images/Vector_034442c0-1380-4d60-9102-a5c6fe842d81.svg" alt="" style="width:28px;height:28px;filter:brightness(0) invert(1);"><span>72-Hour<br>Odor Defense</span></div>
-              <div class="kino-overlay-item"><img src="images/Vector_99d41f0c-b8a6-4a4c-908a-07dfcd28198b.svg" alt="" style="width:28px;height:28px;filter:brightness(0) invert(1);"><span>Aluminum &amp;<br>Paraben Free</span></div>
-              <div class="kino-overlay-item"><img src="images/Vector_48196a1b-f97e-48cb-87bb-2b68b2224bc1.svg" alt="" style="width:28px;height:28px;filter:brightness(0) invert(1);"><span>Whole Body<br>Safe*</span></div>
+              <div class="kino-overlay-item">
+                <img src="images/Vector_034442c0-1380-4d60-9102-a5c6fe842d81.svg" alt="">
+                <span>72-Hour<br>Odor Defense</span>
+              </div>
+              <div class="kino-overlay-item">
+                <img src="images/Vector_99d41f0c-b8a6-4a4c-908a-07dfcd28198b.svg" alt="">
+                <span>Aluminum &amp;<br>Paraben Free</span>
+              </div>
+              <div class="kino-overlay-item">
+                <img src="images/Vector_48196a1b-f97e-48cb-87bb-2b68b2224bc1.svg" alt="">
+                <span>Whole Body<br>Safe*</span>
+              </div>
             </div>
           </div>
 
           <div class="kino-thumbs" id="kinoThumbs">
-            <button type="button" class="kino-thumb is-active" data-src="images/product/KINO_Whole_Body_Cream_Deodorant_a2932772_2K.jpg"><img src="images/product/KINO_Whole_Body_Cream_Deodorant_a2932772_2K.jpg" alt="Kino 1"></button>
-            <button type="button" class="kino-thumb" data-src="images/product/KINO_cream_texture_product_infog…_cfca9f42_2K.jpg"><img src="images/product/KINO_cream_texture_product_infog…_cfca9f42_2K.jpg" alt="Kino 2"></button>
-            <button type="button" class="kino-thumb" data-src="images/product/KINO_product_benefits_infographic_7e2cf0c2_2K.jpg"><img src="images/product/KINO_product_benefits_infographic_7e2cf0c2_2K.jpg" alt="Kino 3"></button>
-            <button type="button" class="kino-thumb" data-src="images/product/KINO_product_features_infographic_4e5104d3_2K.jpg"><img src="images/product/KINO_product_features_infographic_4e5104d3_2K.jpg" alt="Kino 4"></button>
-            <button type="button" class="kino-thumb" data-src="images/product/KINO_product_usage_infographic_s…_125187bb_2K.jpg"><img src="images/product/KINO_product_usage_infographic_s…_125187bb_2K.jpg" alt="Kino 5"></button>
-            <button type="button" class="kino-thumb" data-src="images/product/KINO_whole_body_cream_deodorant_364c7d7e_2K.jpg"><img src="images/product/KINO_whole_body_cream_deodorant_364c7d7e_2K.jpg" alt="Kino 6"></button>
-            <button type="button" class="kino-thumb" data-src="images/product/Kino_body_cream_deodorant_infogr…_7fbcd1a2_2K.jpg"><img src="images/product/Kino_body_cream_deodorant_infogr…_7fbcd1a2_2K.jpg" alt="Kino 7"></button>
+            <button type="button" class="kino-thumb is-active" data-src="images/real/kino_real_6.jpg"><img src="images/real/kino_real_6.jpg" alt="Zesty Rose"></button>
+            <button type="button" class="kino-thumb" data-src="images/real/kino_real_5.jpg"><img src="images/real/kino_real_5.jpg" alt="Summer Coconut"></button>
+            <button type="button" class="kino-thumb" data-src="images/product/KINO_cream_texture_product_infog…_cfca9f42_2K.jpg"><img src="images/product/KINO_cream_texture_product_infog…_cfca9f42_2K.jpg" alt="Kino 3"></button>
+            <button type="button" class="kino-thumb" data-src="images/product/KINO_product_benefits_infographic_7e2cf0c2_2K.jpg"><img src="images/product/KINO_product_benefits_infographic_7e2cf0c2_2K.jpg" alt="Kino 4"></button>
+            <button type="button" class="kino-thumb" data-src="images/product/KINO_product_features_infographic_4e5104d3_2K.jpg"><img src="images/product/KINO_product_features_infographic_4e5104d3_2K.jpg" alt="Kino 5"></button>
+            <button type="button" class="kino-thumb" data-src="images/product/KINO_product_usage_infographic_s…_125187bb_2K.jpg"><img src="images/product/KINO_product_usage_infographic_s…_125187bb_2K.jpg" alt="Kino 6"></button>
+            <button type="button" class="kino-thumb" data-src="images/product/KINO_whole_body_cream_deodorant_364c7d7e_2K.jpg"><img src="images/product/KINO_whole_body_cream_deodorant_364c7d7e_2K.jpg" alt="Kino 7"></button>
             <button type="button" class="kino-thumb" data-src="images/product/Product_scent_comparison_infogra…_94877a1b_2K.jpg"><img src="images/product/Product_scent_comparison_infogra…_94877a1b_2K.jpg" alt="Kino 8"></button>
           </div>
         </div>
@@ -762,8 +888,8 @@
         <!-- Right Column -->
         <div>
           <div class="kino-rating-row">
-            <span class="kino-stars">★★★★★</span>
-            <span>Rated 4.9 <strong>"Excellent"</strong> | <u>1,475+ Reviews</u></span>
+            <span class="kino-stars-gold">★★★★★</span>
+            <span>Rated 4.9 <strong>‘Excellent’</strong> | <u>1,475+ Reviews</u></span>
           </div>
           <h1 class="kino-title">Kino® Whole Body Cream Deodorant</h1>
           <p class="kino-sub">The 30-second daily ritual your whole body odor defense has been waiting for.</p>
@@ -809,34 +935,73 @@
             </div>
           </div>
 
+          <!-- Purchase Toggle (Exact 2-line Radio Cards) -->
           <div class="kino-toggle-row">
-            <button type="button" class="kino-toggle-btn">One-Time Purchase</button>
-            <button type="button" class="kino-toggle-btn is-active">Subscribe &amp; Save (15% Off)</button>
+            <button type="button" class="kino-toggle-btn is-active" data-mode="once">
+              <div class="kino-toggle-top"><span class="kino-radio-dot"></span> One-time purchase</div>
+              <div class="kino-toggle-price" id="oncePrice">$49.98</div>
+            </button>
+            <button type="button" class="kino-toggle-btn" data-mode="sub">
+              <div class="kino-toggle-top"><span class="kino-radio-dot"></span> Subscribe &amp; Save</div>
+              <div class="kino-toggle-price" id="subPrice">$42.48</div>
+            </button>
           </div>
 
-          <p class="kino-delivery-note">Order now for delivery within <span>3–5 business days</span></p>
-          <button type="button" class="kino-cta-btn" id="kinoMainCta">CLAIM OFFER &amp; ADD TO CART — $49.98</button>
+          <div class="kino-ready-ship">
+            <span class="kino-pulse-dot"></span>
+            <span>Ready to ship - arrives within <u>3–5 business days</u></span>
+          </div>
+
+          <button type="button" class="kino-cta-mint" id="kinoMainCta">
+            <span class="kino-cta-mint-main">Add To Cart – $49.98</span>
+            <span class="kino-cta-mint-sub">✓ 30-Day Money Back Guarantee</span>
+          </button>
 
           <div class="kino-payment-row">
             <img src="images/Group_1_1.png" alt="Payment Methods">
           </div>
 
-          <div class="kino-guarantee-pill">
-            <strong>30-Day Money-Back Guarantee</strong> — Stay odor-free for 72 hours or get a 100% refund.
+          <!-- Hero Mini Review Card -->
+          <div class="kino-hero-review">
+            <div class="kino-hr-top">
+              <span>4.9</span>
+              <span class="kino-stars-green">★★★★★</span>
+            </div>
+            <p class="kino-hr-quote">"Fast delivery, easy ordering online. Keeps me odor-free for 72 hours with zero white marks or irritation."</p>
+            <div class="kino-hr-bottom">
+              <div class="kino-hr-author">
+                <span class="kino-hr-avatar">D</span>
+                <span>Diana · Verified Buyer</span>
+              </div>
+              <div class="kino-hr-tags">
+                <span class="kino-hr-tag">72-Hr Freshness</span>
+                <span class="kino-hr-tag">Zero Irritation</span>
+              </div>
+            </div>
           </div>
 
+          <!-- 3 Bordered Accordions with Left Icon + Right Arrow -->
           <div class="kino-mini-accordions">
-            <div class="kino-mini-acc-item is-open">
-              <button type="button" class="kino-mini-acc-trigger"><span>What is Kino Whole Body Deodorant?</span><span>+</span></button>
-              <div class="kino-mini-acc-body">Kino is a dermatologist-recommended whole body cream deodorant in Zesty Rose and Summer Coconut. Free from aluminum and parabens, it controls odor for 72 hours anywhere on your body.</div>
+            <div class="kino-mini-acc-item">
+              <button type="button" class="kino-mini-acc-trigger">
+                <span class="kino-acc-left"><span>ⓘ</span> Product Description</span>
+                <span class="kino-acc-arrow">›</span>
+              </button>
+              <div class="kino-mini-acc-body">Kino is a dermatologist-recommended whole body cream deodorant in Zesty Rose and Summer Coconut. Aluminum-free, paraben-free, and safe for pits, privates, underboob, and feet.</div>
             </div>
             <div class="kino-mini-acc-item">
-              <button type="button" class="kino-mini-acc-trigger"><span>Clean Skin-Loving Ingredients</span><span>+</span></button>
-              <div class="kino-mini-acc-body">Formulated with Niacinamide, Avocado Oil, Rose Hips Oil, Coconut Oil, Tea Tree Oil, Grapefruit Peel Extract, Sea Salt, and Resveratrol — zero aluminum, zero parabens, zero baking soda.</div>
+              <button type="button" class="kino-mini-acc-trigger">
+                <span class="kino-acc-left"><span style="color:#dc2626;font-weight:700;">?</span> Frequently Asked Questions</span>
+                <span class="kino-acc-arrow">›</span>
+              </button>
+              <div class="kino-mini-acc-body">Rub a pea-sized amount on clean skin. Each 2.65 oz (75 g) tube lasts 2+ months and protects against odor for up to 72 hours with zero residue.</div>
             </div>
             <div class="kino-mini-acc-item">
-              <button type="button" class="kino-mini-acc-trigger"><span>How &amp; Where to Apply</span><span>+</span></button>
-              <div class="kino-mini-acc-body">Rub a pea-sized dab onto clean, dry skin — underarms, private parts (external only), underboob, thigh creases, or feet. Dries clear in seconds with zero white marks.</div>
+              <button type="button" class="kino-mini-acc-trigger">
+                <span class="kino-acc-left"><span>🛍️</span> Shipping, Returns &amp; Guarantees</span>
+                <span class="kino-acc-arrow">›</span>
+              </button>
+              <div class="kino-mini-acc-body">Orders ship within 24 hours. Backed by our 30-Day Money-Back Guarantee — stay fresh or get a 100% refund.</div>
             </div>
           </div>
         </div>
@@ -847,35 +1012,34 @@
   <!-- 2. THE NATURAL WAY TO WHOLE BODY FRESHNESS -->
   <section class="kino-section kino-section--mint">
     <div class="kino-wrap">
-      <h2 class="kino-sec-title">The Natural Way to Whole Body Freshness</h2>
-      <p class="kino-sec-sub">72-hour odor defense built for every inch of your body.</p>
+      <h2 class="kino-sec-title" style="margin-bottom:26px;">The Natural Way to Whole Body Freshness</h2>
       <div class="kino-4grid">
         <div class="kino-feature-card">
-          <img src="images/real/kino_real_6.jpg" alt="Zesty Rose" loading="lazy">
+          <img src="images/real/kino_real_6.jpg" alt="Morning Freshness" loading="lazy">
           <div class="kino-feature-card-body">
-            <h3>Morning Freshness</h3>
-            <p>A pea-sized dab keeps you odor-free from morning coffee to midnight without reapplying.</p>
+            <h3>Freshness That Feels Good*</h3>
+            <p>Botanicals that neutralize odor at the root every day, keeping your skin soft, calm, and confident.</p>
           </div>
         </div>
         <div class="kino-feature-card">
-          <img src="images/product/KINO_cream_texture_product_infog…_cfca9f42_2K.jpg" alt="Silky Lotion" loading="lazy">
+          <img src="images/real/kino_real_2.jpg" alt="Made for Every Day" loading="lazy">
           <div class="kino-feature-card-body">
-            <h3>Silky Lotion Feel</h3>
-            <p>Absorbs clear in seconds with zero sticky residue, zero chalky crumbs, and zero white marks.</p>
+            <h3>Made for Every Day</h3>
+            <p>A pea-sized dab after your morning shower glides on smoothly and protects for up to 72 hours.</p>
           </div>
         </div>
         <div class="kino-feature-card">
-          <img src="images/product/KINO_product_benefits_infographic_7e2cf0c2_2K.jpg" alt="Sweat Defense" loading="lazy">
+          <img src="images/kino-hero-single-studio.jpg" alt="Zero White Marks" loading="lazy">
           <div class="kino-feature-card-body">
-            <h3>72-Hour Sweat Defense</h3>
-            <p>Neutralizes odor-causing bacteria at the root — even through intense workouts and hot days.</p>
+            <h3>Zero Stains, Zero Residue</h3>
+            <p>Absorbs clear like lightweight lotion — never leaves white streaks on black clothes or yellow pit stains.</p>
           </div>
         </div>
         <div class="kino-feature-card">
-          <img src="images/real/kino_real_5.jpg" alt="Summer Coconut" loading="lazy">
+          <img src="images/real/kino_real_5.jpg" alt="Whole Body Safe" loading="lazy">
           <div class="kino-feature-card-body">
             <h3>Pits, Privates &amp; Toes</h3>
-            <p>pH-balanced and gentle enough for underarms, intimate areas, underboob, and feet.</p>
+            <p>Aluminum-free, paraben-free, vegan, and held to clean dermatological standards for sensitive skin.</p>
           </div>
         </div>
       </div>
@@ -885,38 +1049,35 @@
   <!-- 3. WHAT PEOPLE ARE SAYING -->
   <section class="kino-section">
     <div class="kino-wrap">
-      <div class="kino-reviews-eyebrow"><span class="kino-stars">★★★★★</span> 4.9/5 Rated by 1,475+ Customers</div>
+      <div class="kino-reviews-eyebrow"><span class="kino-stars-green">★★★★★</span> Loved by our customers</div>
       <h2 class="kino-sec-title" style="margin-bottom:28px;">What people are saying about Kino</h2>
       <div class="kino-3grid">
         <div class="kino-review-card">
           <div>
-            <div class="kino-stars">★★★★★</div>
-            <h4>"Smells incredible &amp; lasts 3 days!"</h4>
-            <p>I switched from aluminum deodorant and this Zesty Rose cream actually lasts through hot yoga and 12-hour shifts. Zero irritation!</p>
+            <div class="kino-review-top">5/5 <span class="kino-stars-green">★★★★★</span></div>
+            <p>Great product!!! It really works as advertised. Zesty Rose lasts through hot yoga and 12-hour shifts with zero irritation.</p>
           </div>
-          <div class="kino-review-author">Sarah M. <span style="display:inline-flex;align-items:center;gap:4px;"><img src="images/verified.svg" alt="" style="width:14px;height:14px;display:inline-block;"> Verified Buyer</span></div>
+          <div class="kino-review-author">Sarah M. | <img src="images/verified.svg" alt="" style="width:14px;height:14px;"> Verified Buyer</div>
         </div>
         <div class="kino-review-card">
           <div>
-            <div class="kino-stars">★★★★★</div>
-            <h4>"Zero white marks on black clothes"</h4>
-            <p>Summer Coconut smells so clean and absorbs right into my skin like moisturizer. No crumbling, no yellow pit stains on white tees.</p>
+            <div class="kino-review-top">5/5 <span class="kino-stars-green">★★★★★</span></div>
+            <p>Summer Coconut smells so clean and absorbs right into my skin like moisturizer. No crumbling and no yellow pit stains on white tees.</p>
           </div>
-          <div class="kino-review-author">Jessica T. <span style="display:inline-flex;align-items:center;gap:4px;"><img src="images/verified.svg" alt="" style="width:14px;height:14px;display:inline-block;"> Verified Buyer</span></div>
+          <div class="kino-review-author">Jessica T. | <img src="images/verified.svg" alt="" style="width:14px;height:14px;"> Verified Buyer</div>
         </div>
         <div class="kino-review-card">
           <div>
-            <div class="kino-stars">★★★★★</div>
-            <h4>"Gentle enough for sensitive areas"</h4>
-            <p>Finally a whole body deodorant that doesn’t sting after shaving. Works great for underboob, inner thighs, and feet too.</p>
+            <div class="kino-review-top">5/5 <span class="kino-stars-green">★★★★★</span></div>
+            <p>Finally a whole body deodorant that doesn’t sting after shaving. Works great for underarms, underboob, inner thighs, and feet too.</p>
           </div>
-          <div class="kino-review-author">Amanda R. <span style="display:inline-flex;align-items:center;gap:4px;"><img src="images/verified.svg" alt="" style="width:14px;height:14px;display:inline-block;"> Verified Buyer</span></div>
+          <div class="kino-review-author">Amanda R. | <img src="images/verified.svg" alt="" style="width:14px;height:14px;"> Verified Buyer</div>
         </div>
       </div>
       <div class="kino-carousel-nav">
         <span class="kino-arrow-circle">‹</span>
         <div class="kino-dots">
-          <span class="kino-dot is-active"></span><span class="kino-dot"></span><span class="kino-dot"></span>
+          <span class="kino-dot is-active"></span><span class="kino-dot"></span><span class="kino-dot"></span><span class="kino-dot"></span><span class="kino-dot"></span>
         </div>
         <span class="kino-arrow-circle">›</span>
       </div>
@@ -928,12 +1089,24 @@
     <div class="kino-wrap">
       <h2 class="kino-sec-title">Why Trust Kino?</h2>
       <div class="kino-trust-row1">
-        <div class="kino-trust-card"><img src="images/section5_icon1.webp" alt="" style="width:34px;height:34px;object-fit:contain;"><span>Dermatologist<br>Recommended</span></div>
-        <div class="kino-trust-card"><img src="images/section5_icon3.webp" alt="" style="width:34px;height:34px;object-fit:contain;"><span>Aluminum &amp;<br>Paraben Free</span></div>
-        <div class="kino-trust-card"><img src="images/section5_icon4.webp" alt="" style="width:34px;height:34px;object-fit:contain;"><span>30-Day<br>Guarantee</span></div>
+        <div class="kino-trust-card">
+          <img src="images/section5_icon1.webp" alt="">
+          <span>Dermatologist Recommended</span>
+        </div>
+        <div class="kino-trust-card">
+          <img src="images/section5_icon3.webp" alt="">
+          <span>Aluminum &amp; Paraben Free</span>
+        </div>
+        <div class="kino-trust-card">
+          <img src="images/section5_icon4.webp" alt="">
+          <span>30-Day Guarantee</span>
+        </div>
       </div>
       <div class="kino-trust-row2">
-        <div class="kino-trust-card"><img src="images/money_icon_21b07699-6f4c-4d4e-8a45-d287f91987c1.webp" alt="" style="width:34px;height:34px;object-fit:contain;"><span>72-Hour Clinical Protection<br>From Pits To Toes</span></div>
+        <div class="kino-trust-card">
+          <img src="images/money_icon_21b07699-6f4c-4d4e-8a45-d287f91987c1.webp" alt="">
+          <span>72-Hour Clinical Protection From Pits To Toes</span>
+        </div>
       </div>
     </div>
   </section>
@@ -942,7 +1115,7 @@
   <section class="kino-section">
     <div class="kino-wrap">
       <h2 class="kino-sec-title">A Thoughtful Blend of Clean Botanicals</h2>
-      <p class="kino-sec-sub">Skin-nourishing ingredients that neutralize odor without harsh chemicals.</p>
+      <p class="kino-sec-sub">Each ingredient is carefully chosen to neutralize odor and nourish sensitive skin.*</p>
       <div class="kino-botanicals-wrap">
         <div class="kino-diagram">
           <div class="kino-callout kino-callout--tl">
@@ -967,47 +1140,49 @@
         </div>
         <div class="kino-2x2">
           <div class="kino-ing-card">
-            <img src="images/real/kino_real_6.jpg" alt="Zesty Rose" loading="lazy">
-            <div class="kino-ing-card-body">
-              <h4>Rose Hips &amp; Grapefruit Peel</h4>
-              <p>Botanical antioxidant blend behind our signature Zesty Rose scent that keeps skin bright.</p>
+            <div class="kino-ing-head">
+              <img src="images/real/kino_real_6.jpg" alt="Rose Hips" loading="lazy">
+              <h4>Rose Hips &amp; Grapefruit</h4>
             </div>
+            <p>Botanical antioxidant blend behind our signature Zesty Rose scent that keeps skin bright.*</p>
           </div>
           <div class="kino-ing-card">
-            <img src="images/real/kino_real_5.jpg" alt="Summer Coconut" loading="lazy">
-            <div class="kino-ing-card-body">
-              <h4>Coconut Oil &amp; Apple Extract</h4>
-              <p>Lightweight plant moisture behind Summer Coconut — glides smoothly with zero pore clogging.</p>
+            <div class="kino-ing-head">
+              <img src="images/real/kino_real_5.jpg" alt="Coconut" loading="lazy">
+              <h4>Coconut &amp; Apple Extract</h4>
             </div>
+            <p>Lightweight plant moisture behind Summer Coconut — glides smoothly with zero pore clogging.*</p>
           </div>
           <div class="kino-ing-card">
-            <img src="images/product/KINO_cream_texture_product_infog…_cfca9f42_2K.jpg" alt="Niacinamide" loading="lazy">
-            <div class="kino-ing-card-body">
-              <h4>Niacinamide &amp; Avocado Oil</h4>
-              <p>Calms razor irritation, strengthens your natural skin barrier, and keeps delicate skin soft.</p>
+            <div class="kino-ing-head">
+              <img src="images/product/KINO_cream_texture_product_infog…_cfca9f42_2K.jpg" alt="Niacinamide" loading="lazy">
+              <h4>Niacinamide &amp; Avocado</h4>
             </div>
+            <p>Calms razor irritation, strengthens your natural skin barrier, and keeps delicate skin soft.*</p>
           </div>
           <div class="kino-ing-card">
-            <img src="images/product/KINO_product_features_infographic_4e5104d3_2K.jpg" alt="Tea Tree" loading="lazy">
-            <div class="kino-ing-card-body">
-              <h4>Tea Tree, Sea Salt &amp; Resveratrol</h4>
-              <p>Targets odor-causing bacteria at the root for continuous 72-hour freshness everywhere.</p>
+            <div class="kino-ing-head">
+              <img src="images/product/KINO_product_features_infographic_4e5104d3_2K.jpg" alt="Tea Tree" loading="lazy">
+              <h4>Tea Tree &amp; Sea Salt</h4>
             </div>
+            <p>Targets odor-causing bacteria at the root for continuous 72-hour freshness everywhere.*</p>
           </div>
         </div>
       </div>
       <div class="kino-center-cta">
-        <button type="button" class="kino-cta-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">CLAIM OFFER &amp; SAVE</button>
-        <div class="kino-cta-subnote">✓ 30-Day Money-Back Guarantee • Free Shipping on 3-Packs</div>
+        <button type="button" class="kino-cta-solid" onclick="window.scrollTo({top:0,behavior:'smooth'})">Try Kino</button>
+        <div class="kino-cta-subnote">
+          <img src="images/verified.svg" alt="" style="width:14px;height:14px;"> 30 Day Money Back Guarantee
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 6. 5 REASONS PEOPLE CHOOSE KINO (INTERACTIVE CAROUSEL) -->
+  <!-- 6. 5 REASONS PEOPLE CHOOSE KINO -->
   <section class="kino-section kino-section--mint">
     <div class="kino-wrap">
       <h2 class="kino-sec-title">5 Reasons People Choose Kino</h2>
-      <p class="kino-sec-sub">Real 72-hour protection. Clean ingredients. Safe everywhere.</p>
+      <p class="kino-sec-sub">Here’s why it earns a spot in your daily routine.</p>
       <div class="kino-reasons-grid" id="kinoReasonsGrid">
         <div class="kino-reason-card" data-reason="0">
           <img src="images/product/Product_scent_comparison_infogra…_94877a1b_2K.jpg" alt="Reason 1" loading="lazy">
@@ -1064,7 +1239,7 @@
   <!-- 7. EXPERIENCE IT FOR YOURSELF (COMPARISON) -->
   <section class="kino-section">
     <div class="kino-wrap">
-      <h2 class="kino-sec-title" style="margin-bottom:32px;">Experience It for Yourself</h2>
+      <h2 class="kino-sec-title" style="margin-bottom:28px;">Experience It for Yourself</h2>
       <div class="kino-compare-wrap">
         <div class="kino-compare-photo">
           <img src="images/kino-hero-single-studio.jpg" alt="Kino Cream Deodorant" loading="lazy">
@@ -1076,18 +1251,18 @@
                 <th></th>
                 <th class="kino-col-kino">
                   <img class="kino-col-tube-pop" src="images/real/kino_real_2.jpg" alt="Kino">
-                  Kino Cream
+                  Kino
                 </th>
                 <th>Regular Sticks</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td>72-Hour Clinical Protection?</td><td class="kino-col-kino"><span class="kino-check">✓</span></td><td><span class="kino-cross">✕</span></td></tr>
-              <tr><td>100% Aluminum &amp; Paraben Free?</td><td class="kino-col-kino"><span class="kino-check">✓</span></td><td><span class="kino-cross">✕</span></td></tr>
-              <tr><td>Safe for Privates, Underboob &amp; Feet?</td><td class="kino-col-kino"><span class="kino-check">✓</span></td><td><span class="kino-cross">✕</span></td></tr>
-              <tr><td>Zero White Marks or Yellow Stains?</td><td class="kino-col-kino"><span class="kino-check">✓</span></td><td>Varies</td></tr>
-              <tr><td>Baking Soda-Free (No Rash)?</td><td class="kino-col-kino"><span class="kino-check">✓</span></td><td>Varies</td></tr>
-              <tr><td>Vegan &amp; Cruelty-Free?</td><td class="kino-col-kino"><span class="kino-check">✓</span></td><td>Varies</td></tr>
+              <tr><td>72-Hour Clinical Protection?</td><td class="kino-col-kino"><span class="kino-badge-check">✓</span></td><td><span class="kino-badge-cross">✕</span></td></tr>
+              <tr><td>100% Aluminum &amp; Paraben Free?</td><td class="kino-col-kino"><span class="kino-badge-check">✓</span></td><td><span class="kino-badge-cross">✕</span></td></tr>
+              <tr><td>Safe for Privates, Underboob &amp; Feet?</td><td class="kino-col-kino"><span class="kino-badge-check">✓</span></td><td><span class="kino-badge-cross">✕</span></td></tr>
+              <tr><td>Zero White Marks or Yellow Stains?</td><td class="kino-col-kino"><span class="kino-badge-check">✓</span></td><td>Varies</td></tr>
+              <tr><td>Baking Soda-Free (No Rash)?</td><td class="kino-col-kino"><span class="kino-badge-check">✓</span></td><td>Varies</td></tr>
+              <tr><td>Vegan &amp; Cruelty-Free?</td><td class="kino-col-kino"><span class="kino-badge-check">✓</span></td><td>Varies</td></tr>
             </tbody>
           </table>
         </div>
@@ -1098,7 +1273,7 @@
   <!-- 8. FREQUENTLY ASKED QUESTIONS -->
   <section class="kino-section kino-section--emerald">
     <div class="kino-wrap">
-      <h2 class="kino-sec-title" style="margin-bottom:28px;">Frequently Asked Questions</h2>
+      <h2 class="kino-sec-title" style="margin-bottom:26px;">Frequently Asked Questions</h2>
       <div class="kino-faq-grid">
         <div class="kino-faq-item">
           <button type="button" class="kino-faq-q"><span>What is Kino Whole Body Deodorant?</span><span class="kino-faq-icon">+</span></button>
@@ -1141,7 +1316,7 @@
     <div class="kino-wrap">
       <div class="kino-guarantee-banner kino-section--emerald">
         <div class="kino-guarantee-left">
-          <img src="images/money_icon_21b07699-6f4c-4d4e-8a45-d287f91987c1.webp" alt="30-Day Guarantee" style="width:90px;height:90px;object-fit:contain;flex-shrink:0;">
+          <img src="images/money_icon_21b07699-6f4c-4d4e-8a45-d287f91987c1.webp" alt="30-Day Guarantee" style="width:84px;height:84px;object-fit:contain;flex-shrink:0;">
           <div>
             <h2>Backed by Our 30-Day Money Back Guarantee</h2>
             <p>Stay odor-free for 30 days or get a 100% full refund — guaranteed.</p>
@@ -1196,6 +1371,8 @@
   </footer>
 
   <script>
+    let currentPrice = '$49.98';
+
     // Thumbnail switcher
     document.querySelectorAll('.kino-thumb').forEach(btn => {
       btn.addEventListener('click', () => {
@@ -1206,11 +1383,22 @@
     });
 
     // Bundle selector
+    function updateCta() {
+      const activeMode = document.querySelector('.kino-toggle-btn.is-active').dataset.mode;
+      const num = parseFloat(currentPrice.replace('$', ''));
+      const sub = '$' + (num * 0.85).toFixed(2);
+      document.getElementById('oncePrice').textContent = currentPrice;
+      document.getElementById('subPrice').textContent = sub;
+      const finalPrice = activeMode === 'sub' ? sub : currentPrice;
+      document.querySelector('.kino-cta-mint-main').textContent = 'Add To Cart – ' + finalPrice;
+    }
+
     document.querySelectorAll('.kino-bundle-card').forEach(card => {
       card.addEventListener('click', () => {
         document.querySelectorAll('.kino-bundle-card').forEach(c => c.classList.remove('is-selected'));
         card.classList.add('is-selected');
-        document.getElementById('kinoMainCta').textContent = 'CLAIM OFFER & ADD TO CART — ' + card.dataset.price;
+        currentPrice = card.dataset.price;
+        updateCta();
       });
     });
 
@@ -1219,6 +1407,7 @@
       btn.addEventListener('click', () => {
         document.querySelectorAll('.kino-toggle-btn').forEach(b => b.classList.remove('is-active'));
         btn.classList.add('is-active');
+        updateCta();
       });
     });
 
@@ -1236,7 +1425,7 @@
       });
     });
 
-    // 5 Reasons slider toggle (1-3 vs 3-5)
+    // 5 Reasons slider toggle
     let reasonPage = 0;
     function renderReasons() {
       const cards = document.querySelectorAll('#kinoReasonsGrid .kino-reason-card');
